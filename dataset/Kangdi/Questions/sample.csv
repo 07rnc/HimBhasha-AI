@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_ques_001,questions,what,What is this?,यह क्या है?,एह क्या है?,eh kyaa hai,30,female,Kangra,Gaggal,false,true,native_speaker,CC-BY-4.0,Basic interrogative statement.
+kng_ques_002,questions,where,Where are you going?,आप कहाँ जा रहे हैं?,तूं कुथू चाला है?,toon kuh-thoo chaa-laa hai,34,male,Hamirpur,Nadaun,false,true,native_speaker,CC-BY-4.0,Kuthu means where.
+kng_ques_003,questions,why,Why are you late?,आपको देरी क्यों हुई?,जो तू जो देर होई?,joh too joh der ho-ee,49,male,Kangra,Nurpur,false,true,native_speaker,CC-BY-4.0,Asking reasons.

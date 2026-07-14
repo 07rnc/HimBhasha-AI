@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_agri_001,agriculture,crop,The wheat crop is ready,गेंहू की फसल तैयार है,कणक दी फसल तैयार है,kuh-nuhk dee fuh-suhl tai-yaar hai,58,male,Kangra,Dehra,false,true,native_speaker,CC-BY-4.0,Kanak means wheat.
+kng_agri_002,agriculture,harvest,Cut the grass,घास काटो,घास खड्डा / कट्टा,ghaas khuhd-daa / kuht-taa,52,female,Kangra,Indora,false,true,native_speaker,CC-BY-4.0,Routine farming task.
+kng_agri_003,agriculture,tool,Bring the plough oxen,हल के बैल लाओ,हले दे बलद आण,huh-leh deh buh-luhd aa-nuh,68,male,Una,Bangana,false,true,native_speaker,CC-BY-4.0,Traditional method of ploughing preparation.

@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_tour_001,tourism,direction,Where is the temple?,मंदिर कहाँ है?,मंदिर कुथू है?,muhn-dir kuh-thoo hai,40,female,Kangra,Jawalamukhi,false,true,native_speaker,CC-BY-4.0,Asking directions for local temple.
+kng_tour_002,tourism,accommodation,Is there a guest house nearby?,क्या पास में कोई गेस्ट हाउस है?,नेड़े कोई गेस्ट हाउस है?,neh-deh koh-ee guest house hai,36,male,Kangra,Dharamshala,false,true,native_speaker,CC-BY-4.0,Nehdeh means near/nearby.
+kng_tour_003,tourism,transport,When does the bus to Kangra come?,कांगड़ा के लिए बस कब आती है?,कांगड़े जो बस कदु औंदी है?,kaang-deh joh buhs kuh-doo aun-dee hai,27,male,Kangra,Gaggal,false,true,native_speaker,CC-BY-4.0,Transport inquiry.

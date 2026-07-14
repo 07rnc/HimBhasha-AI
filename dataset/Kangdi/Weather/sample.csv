@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_wthr_001,weather,condition,It is raining heavily,तेज़ बारिश हो रही है,बड़ी बरखा लद्धी है,buh-dee buhr-khaa luhd-dhee hai,53,male,Kangra,Dharamshala,false,true,native_speaker,CC-BY-4.0,Barkha refers to rain.
+kng_wthr_002,weather,season,Winter is very cold here,यहाँ सर्दियों में बहुत ठंड होती है,इत्थू स्यालें च बड़ी ठंड हुन्दी है,it-thoo syaa-len chuh buh-dee thuhnd hoon-dee hai,66,male,Kangra,Baijnath,false,true,native_speaker,CC-BY-4.0,Syal means winter.
+kng_wthr_003,weather,natural_event,It snowed heavily on the mountain,पहाड़ पर भारी बर्फबारी हुई,धारें पर बड़ी बरफ पई,dhaa-ren puhr buh-dee buh-ruhf puh-ee,45,male,Kangra,Palampur,false,true,native_speaker,CC-BY-4.0,Dhar means mountain peak/range.

@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_greet_001,greetings,greet,Hello,नमस्ते,नमस्ते / बंदगी,nuh-muh-steh / buhn-duh-gee,65,male,Kangra,Dharamshala,false,true,native_speaker,CC-BY-4.0,Common greetings in Kangra valley. Bandagi is traditional.
+kng_greet_002,greetings,greet,How are you?,आप कैसे हैं?,तुहाड़ा क्या हाल है?,tuh-haa-daa kyaa haal hai,55,female,Kangra,Palampur,false,true,native_speaker,CC-BY-4.0,Used when asking about health or general well-being.
+kng_greet_003,greetings,thanks,Thank you,धन्यवाद,धन्यवाद / मेहरबानी,dhuh-nyuh-vaad / meh-ruhr-baa-nee,60,male,Una,Amb,false,true,native_speaker,CC-BY-4.0,Expressing gratitude. Mehrbani is also widely used.

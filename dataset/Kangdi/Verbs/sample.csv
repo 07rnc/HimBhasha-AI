@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_verb_001,verbs,movement,I am going home,मैं घर जा रहा हूँ,मैं घरे जो जादा है,main ghuh-reh joh jaa-daa hai,38,male,Kangra,Palampur,false,true,native_speaker,CC-BY-4.0,Ghare means home-wards.
+kng_verb_002,verbs,communication,He is talking,वह बात कर रहा है,ओह गल्लां करदा है,oh guhl-laan kur-daa hai,41,female,Kangra,Jawali,false,true,native_speaker,CC-BY-4.0,Gallan means talks.
+kng_verb_003,verbs,eating,Eat food,खाना खाओ,रोटी खा,roh-tee khaa,65,female,Una,Haroli,false,true,native_speaker,CC-BY-4.0,Roti refers to food/meal in general.

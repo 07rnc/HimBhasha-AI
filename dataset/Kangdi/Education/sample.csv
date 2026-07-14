@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_edu_001,education,classroom,Open the book,किताब खोलो,किताब खोल्ला,ki-taab khohl-laa,35,female,Kangra,Dharamshala,false,true,native_speaker,CC-BY-4.0,Classroom command from teacher to student.
+kng_edu_002,education,instruction,Study well,अच्छे से पढ़ाई करो,खरी ढांचा ने पढ़्या,khuh-ree dhaan-chaa neh puhd-dyaa,48,male,Kangra,Nurpur,false,true,native_speaker,CC-BY-4.0,Advice for studies.
+kng_edu_003,education,question,What is the answer?,उत्तर क्या है?,जवाब क्या है?,juh-vaab kyaa hai,28,female,Hamirpur,Sujanpur,false,true,native_speaker,CC-BY-4.0,Teacher querying student.

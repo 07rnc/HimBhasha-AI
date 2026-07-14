@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_govt_001,government,document,Apply for Bonafide certificate,बोनाफाइड प्रमाण पत्र के लिए आवेदन करें,बोनाफाइड प्रमाण पत्र बणाणा,boh-naa-faa-eed pruh-maan puh-truh buh-naa-naa,31,male,Kangra,Jawali,false,true,native_speaker,CC-BY-4.0,Refers to resident certificate application.
+kng_govt_002,government,office,Go to the Panchayat office,पंचायत कार्यालय जाएं,पंचायत दफ्तर जाओ,puhn-chaa-yuht duhf-tuhr jaa-oh,55,male,Hamirpur,Bhoranj,false,true,native_speaker,CC-BY-4.0,Panchayat is local self-governing body.
+kng_govt_003,government,official,Meet the Patwari,पटवारी से मिलें,पटवारी जो मिला,puh-twaa-ree joh mi-laa,47,male,Kangra,Baijnath,false,true,native_speaker,CC-BY-4.0,Patwari is local land records official.

@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_fam_001,family,relation,He is my younger brother,वह मेरा छोटा भाई है,ओह मेरा छोटा भाई है,oh meh-raa chho-taa bhaa-ee hai,33,male,Kangra,Dehra,false,true,native_speaker,CC-BY-4.0,Direct family relation.
+kng_fam_002,family,address,Respect the elders,बड़ों का सम्मान करें,वड्डियां जो मान देणा,vuhd-dee-yaan joh maan deh-naa,58,female,Kangra,Palampur,false,true,native_speaker,CC-BY-4.0,Vaddiyan means elders.
+kng_fam_003,family,relation,My grandfather lives here,मेरे दादाजी यहाँ रहते हैं,मेरे दादू इत्थू रैहंदे हैं,meh-reh daa-doo it-thoo raihn-deh hain,67,male,Una,Bangana,false,true,native_speaker,CC-BY-4.0,Dadu means grandfather; itthoo means here.

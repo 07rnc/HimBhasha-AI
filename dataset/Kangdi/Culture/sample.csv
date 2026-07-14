@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_cult_001,culture,festival,Today is Sair festival,आज सैर त्योहार है,अज्ज सैर दा त्योहार है,uhjj sair daa tyoh-haar hai,72,male,Kangra,Pragpur,false,true,native_speaker,CC-BY-4.0,Sair is local monsoon-end festival.
+kng_cult_002,culture,folklore,Sing a folk song,कांगड़ी लोकगीत गाएं,कांगड़ी लोकगीत गावा,kaang-dee lohk-geet gaa-vaa,63,female,Kangra,Palampur,false,true,native_speaker,CC-BY-4.0,Traditional music request.
+kng_cult_003,culture,costume,Wear the traditional cap,हिमाचली टोपी पहनें,हिमाचली टोपी पावा,hi-maa-chuh-lee toh-pee paa-vaa,59,male,Kangra,Dharamshala,false,true,native_speaker,CC-BY-4.0,Cap worn on special occasions.

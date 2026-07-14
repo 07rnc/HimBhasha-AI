@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_emerg_001,emergency,help,Please help me!,कृपया मेरी मदद करें!,मेरी मदद करा भाई!,meh-ree muh-duhd kuh-raa bhaa-ee,50,female,Kangra,Dehra,false,true,native_speaker,CC-BY-4.0,Emergency appeal.
+kng_emerg_002,emergency,fire,There is a fire in the forest,जंगल में आग लगी है,बणे च आग लगी है,buh-neh chuh aag luh-gee hai,44,male,Kangra,Nurpur,false,true,native_speaker,CC-BY-4.0,Ban means forest.
+kng_emerg_003,emergency,medical_emergency,Call the doctor quickly,जल्दी डॉक्टर को बुलाएं,डॉक्टर जो जल्दी सदा,doc-tor joh juhl-dee suh-daa,61,male,Una,Amb,false,true,native_speaker,CC-BY-4.0,Sada means call.

@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_health_001,healthcare,symptom,My head is aching,मेरे सिर में दर्द है,मेरा सिर दुक्खदा है,meh-raa sir dukkh-daa hai,62,female,Kangra,Kangra,false,true,native_speaker,CC-BY-4.0,Describing headache.
+kng_health_002,healthcare,medicine,Take this medicine,यह दवा लो,एह दवाई खा,eh duh-vaa-ee khaa,50,male,Una,Haroli,false,true,native_speaker,CC-BY-4.0,Direct medical instruction.
+kng_health_003,healthcare,symptom,I have a fever,मुझे बुखार है,मंजो ताव चढ़ा है,muhn-joh taav chuh-dyaa hai,45,male,Kangra,Shahpur,false,true,native_speaker,CC-BY-4.0,Taav is the local term for fever.

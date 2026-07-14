@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_food_001,food,dish,I cooked Madra today,मैंने आज मद्रा बनाया है,मैं अज्ज मदरा बणाया है,main uhjj muhd-raa buh-naa-yaa hai,48,female,Kangra,Pragpur,false,true,native_speaker,CC-BY-4.0,Madra is a famous yogurt-based Himachali dish.
+kng_food_002,food,taste,The food is very tasty,खाना बहुत स्वादिष्ट है,रोटी बड़ी खरी बणी है,roh-tee buh-dee khuh-ree buh-nee hai,62,male,Kangra,Dharamshala,false,true,native_speaker,CC-BY-4.0,Khari here means good/tasty.
+kng_food_003,food,ingredient,Bring some cold water,थोड़ा ठंडा पानी लाओ,थोड़ा ठंडा पाणी आण,thoh-daa thuhn-daa paa-nee aa-nuh,26,female,Kangra,Gaggal,false,true,native_speaker,CC-BY-4.0,Paani is pronounced with a retroflex n.

@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_num_001,numbers,cardinal,"One, two, three","एक, दो, तीन","इक्क, दो, तिन्न","ikk, doh, tinn",22,female,Kangra,Gaggal,false,true,native_speaker,CC-BY-4.0,Standard cardinal digits.
+kng_num_002,numbers,ordinal,"First, second, third","पहला, दूसरा, तीसरा","पैहला, दूज्जा, तीज्जा","paih-laa, dooj-jaa, teej-jaa",28,male,Hamirpur,Sujanpur,false,true,native_speaker,CC-BY-4.0,Sequence digits.
+kng_num_003,numbers,measurement,Give me two kilograms,मुझे दो किलोग्राम दीजिए,मंजो दो किलो देया,muhn-joh doh ki-loh deh-yaa,45,male,Kangra,Kangra,false,true,native_speaker,CC-BY-4.0,Standard trade unit query.

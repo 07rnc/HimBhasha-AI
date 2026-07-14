@@ -1,0 +1,4 @@
+id,domain,intent,english,hindi,kangdi,pronunciation,speaker_age,speaker_gender,district,village,audio_available,verified,source,license,notes
+kng_daily_001,daily_conversation,small_talk,What are you doing?,आप क्या कर रहे हैं?,तूं क्या करदा है?,toon kyaa kur-daa hai,42,male,Kangra,Gaggal,false,true,native_speaker,CC-BY-4.0,Common question in informal settings.
+kng_daily_002,daily_conversation,request,Please sit down,कृपया बैठिए,बैठी जा ग्या भाई,bai-thee jaa gyaa bhaa-ee,70,male,Kangra,Pragpur,false,true,native_speaker,CC-BY-4.0,Polite request to sit down.
+kng_daily_003,daily_conversation,agreement,"Yes, I will come","हाँ, मैं आऊँगा","हाँ, मैं औंगा",haan main aun-gaa,30,female,Hamirpur,Nadaun,false,true,native_speaker,CC-BY-4.0,Agreement to a proposal or meeting.
