@@ -136,7 +136,7 @@ export const VoiceRecorder: React.FC<VoiceRecorderProps> = ({
               ? "bg-[#EA580C] text-white border-transparent"
               : state === "speaking"
               ? "bg-primary text-white border-transparent"
-              : "bg-white text-primary border-gray-100 hover:border-gray-200 hover:shadow-xl"
+              : "bg-white dark:bg-white/10 text-primary border-border-val hover:shadow-xl"
           }`}
           whileHover={{ scale: state === "thinking" ? 1 : 1.03 }}
           whileTap={{ scale: state === "thinking" ? 1 : 0.97 }}

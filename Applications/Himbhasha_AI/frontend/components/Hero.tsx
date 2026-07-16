@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
           Preserving Himachal's Regional Languages
         </p>
 
-        <div className="h-px w-20 bg-gray-200 mb-8" />
+        <div className="h-px w-20 bg-border-val mb-8" />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.98, filter: "blur(4px)" }}

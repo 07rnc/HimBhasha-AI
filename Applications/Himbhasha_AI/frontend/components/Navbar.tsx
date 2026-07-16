@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
   const { apiStatus } = useApp();
 
   return (
-    <header className="sticky top-0 z-50 w-full glass-panel border-b border-[#FAFBF9]/10 bg-white/70 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full glass-panel border-t-0 border-x-0 rounded-none bg-opacity-70">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 hover:opacity-85 transition-opacity">
@@ -51,7 +51,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Health Status Indicator */}
-          <div className="h-6 w-px bg-gray-200" />
+          <div className="h-6 w-px bg-border-val" />
           <div className="flex items-center gap-2" title={`Server status: ${apiStatus}`}>
             {apiStatus === "online" && (
               <span className="flex items-center gap-1 text-xs font-semibold text-leaf-green">

@@ -61,4 +61,20 @@ export const api = {
     });
     return response.data; // { result: string, pages_processed: number }
   },
+
+  // POST /contribute
+  contribute: async (payload: {
+    type: string;
+    title: string;
+    content: string;
+    age?: number | "";
+    gender?: string;
+    district?: string;
+    village?: string;
+    consent: boolean;
+    audio_attached: boolean;
+  }) => {
+    const response = await apiClient.post("/contribute", payload);
+    return response.data; // { status: string, contribution_id: string }
+  },
 };

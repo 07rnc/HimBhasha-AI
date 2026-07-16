@@ -7,7 +7,7 @@ import { Navbar } from "../../components/Navbar";
 import { AppleCard } from "../../components/AppleCard";
 import { ContributionType } from "../../types";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { ContributionService } from "../../services/contribution_service";
 export default function PreserveLanguage() {
   const router = useRouter();
   const [type, setType] = useState<ContributionType>("vocabulary");
@@ -23,16 +23,30 @@ export default function PreserveLanguage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!content.trim() || !consent || loading) return;
 
     setLoading(true);
-    // Simulate API push
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      await ContributionService.submitContribution({
+        type,
+        title,
+        content,
+        age,
+        gender,
+        district,
+        village,
+        consent,
+        audio_attached: audioAttached,
+      });
       setSubmitted(true);
-    }, 1200);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to submit contribution. Please check your API server connection.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleReset = () => {
@@ -82,9 +96,9 @@ export default function PreserveLanguage() {
               exit={{ opacity: 0, scale: 0.97 }}
             >
               {/* Introduction card */}
-              <AppleCard className="bg-emerald-50/20 border border-emerald-100/30 p-6 mb-6" hoverEffect={false}>
+              <AppleCard className="bg-emerald-50/20 dark:bg-emerald-950/10 border border-emerald-100/10 p-6 mb-6" hoverEffect={false}>
                 <div className="flex gap-4">
-                  <div className="p-3 rounded-2xl bg-white text-primary self-start">
+                  <div className="p-3 rounded-2xl bg-white dark:bg-white/10 text-primary self-start">
                     <Heart size={20} />
                   </div>
                   <div>
@@ -100,7 +114,7 @@ export default function PreserveLanguage() {
 
               {/* Form card */}
               <form onSubmit={handleSubmit}>
-                <AppleCard className="bg-white p-6 space-y-6" hoverEffect={false}>
+                <AppleCard className="bg-white dark:bg-[#1C1C1E] p-6 space-y-6" hoverEffect={false}>
                   {/* Contribution Type */}
                   <div className="flex flex-col gap-2">
                     <label className="text-xs font-bold text-apple-text uppercase tracking-wider">
@@ -109,7 +123,7 @@ export default function PreserveLanguage() {
                     <select
                       value={type}
                       onChange={(e) => setType(e.target.value as ContributionType)}
-                      className="h-11 w-full px-4 bg-gray-50 border border-gray-100 rounded-xl text-xs font-medium focus:outline-none"
+                      className="h-11 w-full px-4 bg-soft-gray border border-border-val text-apple-text rounded-xl text-xs font-medium focus:outline-none"
                     >
                       {contributionTypes.map((t) => (
                         <option key={t.value} value={t.value}>
@@ -130,7 +144,7 @@ export default function PreserveLanguage() {
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
                       placeholder={type === "vocabulary" ? "e.g., बंदगी" : "e.g., Sair Festival Lore"}
-                      className="h-11 w-full px-4 bg-gray-50 border border-gray-100 rounded-xl text-xs font-medium focus:outline-none focus:border-primary/50 transition-colors"
+                      className="h-11 w-full px-4 bg-soft-gray border border-border-val rounded-xl text-xs font-medium focus:outline-none focus:border-primary/50 transition-colors"
                     />
                   </div>
 
@@ -149,17 +163,17 @@ export default function PreserveLanguage() {
                           : "Write details, stories, or proverbs here..."
                       }
                       rows={5}
-                      className="w-full p-4 bg-gray-50 border border-gray-100 rounded-xl text-xs font-medium resize-none focus:outline-none focus:border-primary/50 transition-colors"
+                      className="w-full p-4 bg-soft-gray border border-border-val rounded-xl text-xs font-medium resize-none focus:outline-none focus:border-primary/50 transition-colors"
                     />
                   </div>
 
                   {/* Audio checkbox */}
-                  <div className="flex items-center gap-3 bg-gray-50 p-4 rounded-2xl">
+                  <div className="flex items-center gap-3 bg-soft-gray p-4 rounded-2xl">
                     <button
                       type="button"
                       onClick={() => setAudioAttached(!audioAttached)}
                       className={`h-9 w-9 rounded-xl flex items-center justify-center transition-all ${
-                        audioAttached ? "bg-primary text-white" : "bg-white text-gray-400 border border-gray-100"
+                        audioAttached ? "bg-primary text-white" : "bg-white dark:bg-white/10 text-gray-400 border border-border-val"
                       }`}
                     >
                       <Mic size={16} />
@@ -179,7 +193,7 @@ export default function PreserveLanguage() {
                         value={age}
                         onChange={(e) => setAge(e.target.value ? parseInt(e.target.value) : "")}
                         placeholder="e.g. 65"
-                        className="h-10 px-3 bg-gray-50 border border-gray-100 rounded-lg text-xs"
+                        className="h-10 px-3 bg-soft-gray border border-border-val rounded-lg text-xs"
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
@@ -187,7 +201,7 @@ export default function PreserveLanguage() {
                       <select
                         value={gender}
                         onChange={(e) => setGender(e.target.value as "male" | "female" | "other" | "")}
-                        className="h-10 px-3 bg-gray-50 border border-gray-100 rounded-lg text-xs"
+                        className="h-10 px-3 bg-soft-gray border border-border-val text-apple-text rounded-lg text-xs"
                       >
                         <option value="">Select</option>
                         <option value="male">Male</option>
@@ -202,7 +216,7 @@ export default function PreserveLanguage() {
                         value={district}
                         onChange={(e) => setDistrict(e.target.value)}
                         placeholder="e.g. Kangra"
-                        className="h-10 px-3 bg-gray-50 border border-gray-100 rounded-lg text-xs"
+                        className="h-10 px-3 bg-soft-gray border border-border-val rounded-lg text-xs"
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
@@ -212,13 +226,13 @@ export default function PreserveLanguage() {
                         value={village}
                         onChange={(e) => setVillage(e.target.value)}
                         placeholder="e.g. Pragpur"
-                        className="h-10 px-3 bg-gray-50 border border-gray-100 rounded-lg text-xs"
+                        className="h-10 px-3 bg-soft-gray border border-border-val rounded-lg text-xs"
                       />
                     </div>
                   </div>
 
                   {/* Privacy details */}
-                  <div className="flex items-start gap-2.5 bg-amber-50/40 p-4 rounded-2xl border border-amber-100/20 text-amber-800">
+                  <div className="flex items-start gap-2.5 bg-amber-50/40 dark:bg-amber-950/10 p-4 rounded-2xl border border-amber-100/10 text-amber-800 dark:text-amber-200">
                     <ShieldAlert size={16} className="text-amber-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-wider">Privacy & Consent Protection</p>
@@ -247,7 +261,7 @@ export default function PreserveLanguage() {
                     <button
                       type="submit"
                       disabled={!consent || !content.trim() || loading}
-                      className="h-11 px-6 rounded-xl bg-primary text-white text-xs font-bold disabled:bg-gray-100 disabled:text-gray-300 transition-colors shadow-sm"
+                      className="h-11 px-6 rounded-xl bg-primary text-white text-xs font-bold disabled:bg-soft-gray disabled:text-gray-400 transition-colors shadow-sm"
                     >
                       {loading ? "Submitting..." : "Submit Contribution"}
                     </button>
@@ -260,9 +274,9 @@ export default function PreserveLanguage() {
               key="success"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-white border border-gray-100 rounded-3xl p-10 shadow-sm flex flex-col items-center justify-center text-center h-[50vh]"
+              className="bg-white dark:bg-[#1C1C1E] border border-border-val rounded-3xl p-10 shadow-sm flex flex-col items-center justify-center text-center h-[50vh]"
             >
-              <div className="h-16 w-16 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center mb-6">
+              <div className="h-16 w-16 rounded-full bg-emerald-50 dark:bg-emerald-950/20 text-emerald-500 flex items-center justify-center mb-6">
                 <Check size={28} className="stroke-[3]" />
               </div>
               <h3 className="text-xl font-bold text-apple-text mb-2">Contribution Submitted!</h3>

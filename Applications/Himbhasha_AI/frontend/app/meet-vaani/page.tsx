@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Send, Sparkles, AlertCircle } from "lucide-react";
 import { useApp } from "../context/AppContext";
-import { api } from "../../lib/api";
+import { ChatService } from "../../services/chat_service";
 import { Message } from "../../types";
 import { Navbar } from "../../components/Navbar";
 import { ChatBubble } from "../../components/ChatBubble";
@@ -52,7 +52,7 @@ export default function MeetVaani() {
     setError(null);
 
     try {
-      const response = await api.chat(userMessage.text);
+      const response = await ChatService.sendMessage(userMessage.text);
       
       const vaaniMessage: Message = {
         id: Math.random().toString(),
@@ -94,7 +94,7 @@ export default function MeetVaani() {
         </div>
 
         {/* Chat Workspace Panel */}
-        <div className="flex-grow bg-white border border-gray-100 rounded-3xl p-6 shadow-sm flex flex-col h-[55vh] overflow-y-auto mb-6">
+        <div className="flex-grow bg-white dark:bg-[#1C1C1E] border border-border-val rounded-3xl p-6 shadow-sm flex flex-col h-[55vh] overflow-y-auto mb-6">
           <div className="flex-grow space-y-4">
             {chatHistory.map((msg) => (
               <ChatBubble
@@ -106,16 +106,16 @@ export default function MeetVaani() {
             ))}
             
             {loading && (
-              <div className="flex items-center gap-1.5 p-3 bg-primary/10 rounded-2xl rounded-tl-none w-20 text-white justify-center">
-                <span className="h-1.5 w-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <span className="h-1.5 w-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <span className="h-1.5 w-1.5 bg-white rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+              <div className="flex items-center gap-1.5 p-3 bg-soft-gray rounded-2xl rounded-tl-none w-16 justify-center">
+                <span className="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                <span className="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                <span className="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
               </div>
             )}
             
             {error && (
-              <div className="flex items-center gap-2 p-4 bg-rose-50 border border-rose-100 text-rose-800 text-xs font-semibold rounded-2xl">
-                <AlertCircle size={16} className="text-rose-500 flex-shrink-0" />
+              <div className="flex items-start gap-2.5 p-4 bg-rose-50 dark:bg-rose-950/10 border border-rose-100/20 text-rose-800 dark:text-rose-200 text-xs font-semibold rounded-2xl">
+                <AlertCircle size={16} className="text-soft-red flex-shrink-0 mt-0.5" />
                 <span>{error}</span>
               </div>
             )}
@@ -132,12 +132,12 @@ export default function MeetVaani() {
             onChange={(e) => setInput(e.target.value)}
             disabled={loading}
             placeholder="Ask Vaani something in Kangdi, Hindi, or English..."
-            className="w-full h-14 pl-6 pr-16 bg-white border border-gray-100 rounded-2xl text-sm font-medium text-apple-text shadow-sm focus:outline-none focus:border-primary/50 focus:shadow-md transition-all"
+            className="w-full h-14 pl-6 pr-16 bg-white dark:bg-[#1C1C1E] border border-border-val rounded-2xl text-sm font-medium text-apple-text shadow-sm focus:outline-none focus:border-primary/50 focus:shadow-md transition-all"
           />
           <button
             type="submit"
             disabled={!input.trim() || loading}
-            className="absolute right-3 h-9 w-9 rounded-xl bg-primary text-white flex items-center justify-center disabled:bg-gray-100 disabled:text-gray-300 hover:opacity-90 active:scale-95 transition-all shadow-sm"
+            className="absolute right-3 h-9 w-9 rounded-xl bg-primary text-white flex items-center justify-center disabled:bg-soft-gray disabled:text-gray-400 hover:opacity-90 active:scale-95 transition-all shadow-sm"
           >
             <Send size={16} />
           </button>

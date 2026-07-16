@@ -40,7 +40,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
       <div
         className={`max-w-[80%] rounded-2xl px-4 py-3 shadow-sm ${
           isUser
-            ? "bg-[#E5E7EB] text-apple-text rounded-tr-none"
+            ? "bg-soft-gray text-apple-text rounded-tr-none"
             : "bg-primary text-white rounded-tl-none border border-primary/20"
         } ${sizeClasses[fontSize]}`}
       >

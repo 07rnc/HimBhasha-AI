@@ -89,7 +89,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
           className={`border-2 border-dashed rounded-3xl p-10 flex flex-col items-center justify-center cursor-pointer transition-colors duration-300 ${
             dragActive
               ? "border-accent bg-accent/5"
-              : "border-gray-200 bg-white hover:border-primary/50 hover:bg-gray-50/50"
+              : "border-border-val bg-white dark:bg-white/5 hover:border-primary/50 hover:bg-gray-50/50 dark:hover:bg-white/10"
           }`}
         >
           <input
@@ -110,10 +110,10 @@ export const FileUpload: React.FC<FileUploadProps> = ({
           </p>
         </motion.div>
       ) : (
-        <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm flex items-center justify-between">
+        <div className="bg-white dark:bg-[#1C1C1E] border border-border-val rounded-3xl p-6 shadow-sm flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className={`h-12 w-12 rounded-2xl flex items-center justify-center ${
-              selectedFile.type === "pdf" ? "bg-red-50 text-red-500" : "bg-blue-50 text-blue-500"
+              selectedFile.type === "pdf" ? "bg-red-50 dark:bg-red-950/20 text-red-500" : "bg-blue-50 dark:bg-blue-950/20 text-blue-500"
             }`}>
               {selectedFile.type === "pdf" ? <FileText size={22} /> : <ImageIcon size={22} />}
             </div>
@@ -130,7 +130,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
           <button
             onClick={clearFile}
             disabled={loading}
-            className="h-8 w-8 rounded-full bg-gray-50 hover:bg-gray-100 flex items-center justify-center text-gray-400 hover:text-gray-600 transition-colors"
+            className="h-8 w-8 rounded-full bg-soft-gray hover:opacity-85 flex items-center justify-center text-gray-400 transition-colors"
           >
             <X size={16} />
           </button>

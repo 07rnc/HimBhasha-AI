@@ -29,7 +29,7 @@ export default function About() {
 
         {/* Content details */}
         <div className="space-y-6">
-          <AppleCard className="bg-white p-8" hoverEffect={false}>
+          <AppleCard className="bg-white dark:bg-[#1C1C1E] p-8" hoverEffect={false}>
             <span className="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/10 px-2.5 py-1 rounded-full">
               Linguistic AI Preservation
             </span>
@@ -38,7 +38,7 @@ export default function About() {
               HimBhasha AI is a production-ready translation, voice-synthesis, and document OCR platform specifically designed to digitize and preserve the endangered regional languages of Himachal Pradesh. Beginning with **Kangdi** as the MVP, the system coordinates custom linguistic context dictionaries with large language models to enable highly natural communication.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-gray-50">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-border-val">
               <div className="flex flex-col gap-1.5">
                 <Compass size={18} className="text-[#2A7AD0]" />
                 <h4 className="text-xs font-bold text-apple-text">Vaani AI</h4>
@@ -66,8 +66,8 @@ export default function About() {
           </AppleCard>
 
           {/* Mission Details */}
-          <AppleCard className="bg-emerald-50/15 border border-emerald-100/20 p-6 flex gap-4" hoverEffect={false}>
-            <div className="p-3 rounded-2xl bg-white text-primary self-start">
+          <AppleCard className="bg-emerald-50/15 dark:bg-emerald-950/10 border border-emerald-100/10 p-6 flex gap-4" hoverEffect={false}>
+            <div className="p-3 rounded-2xl bg-white dark:bg-white/10 text-primary self-start">
               <Heart size={20} />
             </div>
             <div>

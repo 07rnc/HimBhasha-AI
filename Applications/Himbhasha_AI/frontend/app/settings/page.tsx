@@ -40,12 +40,12 @@ export default function Settings() {
 
         {/* Apple Settings style panel */}
         <div className="space-y-6">
-          <AppleCard className="bg-white p-0 divide-y divide-gray-50 overflow-hidden" hoverEffect={false}>
+          <AppleCard className="bg-white dark:bg-[#1C1C1E] p-0 divide-y divide-border-val overflow-hidden" hoverEffect={false}>
             
             {/* Setting Row 1: App Interface Language */}
             <div className="p-6 flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="h-10 w-10 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center">
+                <div className="h-10 w-10 rounded-xl bg-blue-50 dark:bg-blue-950/20 text-blue-500 flex items-center justify-center">
                   <Languages size={18} />
                 </div>
                 <div>
@@ -56,7 +56,7 @@ export default function Settings() {
               <select
                 value={appLanguage}
                 onChange={(e) => setAppLanguage(e.target.value as any)}
-                className="h-9 px-3 bg-gray-50 border border-gray-100 rounded-lg text-xs font-bold text-apple-text cursor-pointer focus:outline-none"
+                className="h-9 px-3 bg-soft-gray border border-border-val rounded-lg text-xs font-bold text-apple-text cursor-pointer focus:outline-none"
               >
                 <option value="english">English</option>
                 <option value="hindi">Hindi</option>
@@ -67,7 +67,7 @@ export default function Settings() {
             {/* Setting Row 2: Voice Autoplay */}
             <div className="p-6 flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="h-10 w-10 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center">
+                <div className="h-10 w-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/20 text-emerald-500 flex items-center justify-center">
                   <Volume2 size={18} />
                 </div>
                 <div>
@@ -86,7 +86,7 @@ export default function Settings() {
             {/* Setting Row 3: Font Size */}
             <div className="p-6 flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="h-10 w-10 rounded-xl bg-purple-50 text-purple-500 flex items-center justify-center">
+                <div className="h-10 w-10 rounded-xl bg-purple-50 dark:bg-purple-950/20 text-purple-500 flex items-center justify-center">
                   <Type size={18} />
                 </div>
                 <div>
@@ -97,7 +97,7 @@ export default function Settings() {
               <select
                 value={fontSize}
                 onChange={(e) => setFontSize(e.target.value as any)}
-                className="h-9 px-3 bg-gray-50 border border-gray-100 rounded-lg text-xs font-bold text-apple-text cursor-pointer focus:outline-none"
+                className="h-9 px-3 bg-soft-gray border border-border-val rounded-lg text-xs font-bold text-apple-text cursor-pointer focus:outline-none"
               >
                 <option value="small">Small</option>
                 <option value="medium">Medium</option>
@@ -108,10 +108,10 @@ export default function Settings() {
           </AppleCard>
 
           {/* Connection diagnostics card */}
-          <AppleCard className="bg-white p-6 flex items-center justify-between" hoverEffect={false}>
+          <AppleCard className="bg-white dark:bg-[#1C1C1E] p-6 flex items-center justify-between" hoverEffect={false}>
             <div className="flex items-center gap-4">
               <div className={`h-10 w-10 rounded-xl flex items-center justify-center ${
-                apiStatus === "online" ? "bg-emerald-50 text-emerald-500" : "bg-rose-50 text-rose-500"
+                apiStatus === "online" ? "bg-emerald-50 dark:bg-emerald-950/20 text-emerald-500" : "bg-rose-50 dark:bg-rose-950/20 text-rose-500"
               }`}>
                 <Radio size={18} className={apiStatus === "checking" ? "animate-pulse" : ""} />
               </div>
@@ -125,7 +125,7 @@ export default function Settings() {
 
             <button
               onClick={checkApiStatus}
-              className="h-9 w-9 rounded-lg bg-gray-50 hover:bg-gray-100 flex items-center justify-center text-gray-400 hover:text-gray-600 transition-colors"
+              className="h-9 w-9 rounded-lg bg-soft-gray hover:opacity-85 flex items-center justify-center text-gray-400 transition-colors"
               title="Test connection status"
             >
               <RefreshCw size={14} className={apiStatus === "checking" ? "animate-spin" : ""} />

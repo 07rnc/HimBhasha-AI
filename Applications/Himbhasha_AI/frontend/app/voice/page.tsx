@@ -6,7 +6,7 @@ import { ArrowLeft, Sparkles, Volume2, User, Mic } from "lucide-react";
 import { Navbar } from "../../components/Navbar";
 import { VoiceRecorder } from "../../components/VoiceRecorder";
 import { AppleCard } from "../../components/AppleCard";
-import { api } from "../../lib/api";
+import { VoiceService } from "../../services/voice_service";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function VoiceAssistant() {
@@ -47,10 +47,10 @@ export default function VoiceAssistant() {
         </div>
 
         {/* Large Central Voice Canvas Card */}
-        <AppleCard className="bg-white p-8 flex flex-col items-center justify-center min-h-[50vh] text-center mb-6">
+        <AppleCard className="bg-white dark:bg-[#1C1C1E] p-8 flex flex-col items-center justify-center min-h-[50vh] text-center mb-6">
           <VoiceRecorder
             onRecordingComplete={handleVoiceComplete}
-            apiCall={api.voice}
+            apiCall={VoiceService.processVoiceStream}
           />
         </AppleCard>
 
@@ -65,10 +65,10 @@ export default function VoiceAssistant() {
               className="space-y-4"
             >
               {/* Dialogue exchange card */}
-              <AppleCard className="bg-white/80 border border-white/60 p-6 flex flex-col gap-4">
+              <AppleCard className="bg-white/80 dark:bg-[#1C1C1E]/80 border border-border-val p-6 flex flex-col gap-4">
                 {/* Transcription (User speech) */}
-                <div className="flex items-start gap-3 border-b border-gray-50 pb-4">
-                  <div className="h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500">
+                <div className="flex items-start gap-3 border-b border-border-val pb-4">
+                  <div className="h-8 w-8 rounded-full bg-soft-gray flex items-center justify-center text-gray-500">
                     <User size={16} />
                   </div>
                   <div className="text-left">

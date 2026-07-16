@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, ArrowLeftRight, Copy, Volume2, Trash2, Loader2, ClipboardCheck } from "lucide-react";
 import { useApp } from "../context/AppContext";
-import { api } from "../../lib/api";
+import { TranslationService } from "../../services/translation_service";
 import { Language } from "../../types";
 import { Navbar } from "../../components/Navbar";
 import { AppleCard } from "../../components/AppleCard";
@@ -28,7 +28,7 @@ export default function Translate() {
     setCopied(false);
 
     try {
-      const res = await api.translate(srcText, srcLang, targetLang);
+      const res = await TranslationService.translateText(srcText, srcLang, targetLang);
       setTranslatedText(res.translated_text);
       if (res.pronunciation) {
         setPronunciation(res.pronunciation);
@@ -97,9 +97,9 @@ export default function Translate() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mb-8">
           
           {/* Source input panel */}
-          <AppleCard className="flex flex-col justify-between h-80 bg-white" hoverEffect={false}>
+          <AppleCard className="flex flex-col justify-between h-80 bg-white dark:bg-[#1C1C1E]" hoverEffect={false}>
             {/* Lang Header selector */}
-            <div className="flex items-center justify-between pb-3 border-b border-gray-50">
+            <div className="flex items-center justify-between pb-3 border-b border-border-val">
               <select
                 value={srcLang}
                 onChange={(e) => setSrcLang(e.target.value as Language)}
@@ -127,7 +127,7 @@ export default function Translate() {
             />
 
             {/* Translate action row */}
-            <div className="flex items-center justify-between pt-3 border-t border-gray-50">
+            <div className="flex items-center justify-between pt-3 border-t border-border-val">
               <span className="text-[10px] font-bold text-gray-400">
                 {srcText.length}/400 characters
               </span>
@@ -135,7 +135,7 @@ export default function Translate() {
               <button
                 onClick={handleTranslate}
                 disabled={!srcText.trim() || loading}
-                className="h-10 px-5 rounded-xl bg-primary text-white text-xs font-bold flex items-center gap-1.5 disabled:bg-gray-100 disabled:text-gray-300 transition-colors shadow-sm"
+                className="h-10 px-5 rounded-xl bg-primary text-white text-xs font-bold flex items-center gap-1.5 disabled:bg-soft-gray disabled:text-gray-400 transition-colors shadow-sm"
               >
                 {loading ? <Loader2 size={14} className="animate-spin" /> : null}
                 <span>Translate</span>
@@ -147,16 +147,16 @@ export default function Translate() {
           <div className="md:hidden flex justify-center">
             <button
               onClick={handleSwap}
-              className="h-12 w-12 rounded-full bg-white border border-gray-100 flex items-center justify-center text-primary shadow-sm hover:shadow-md transition-shadow"
+              className="h-12 w-12 rounded-full bg-white dark:bg-[#1C1C1E] border border-border-val flex items-center justify-center text-primary shadow-sm hover:shadow-md transition-shadow"
             >
               <ArrowLeftRight size={18} className="rotate-90" />
             </button>
           </div>
 
           {/* Target output panel */}
-          <AppleCard className="flex flex-col justify-between h-80 bg-white" hoverEffect={false}>
+          <AppleCard className="flex flex-col justify-between h-80 bg-white dark:bg-[#1C1C1E]" hoverEffect={false}>
             {/* Lang Header selector */}
-            <div className="flex items-center justify-between pb-3 border-b border-gray-50">
+            <div className="flex items-center justify-between pb-3 border-b border-border-val">
               <select
                 value={targetLang}
                 onChange={(e) => setTargetLang(e.target.value as Language)}
@@ -170,7 +170,7 @@ export default function Translate() {
               <div className="hidden md:block">
                 <button
                   onClick={handleSwap}
-                  className="h-8 w-8 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-500 hover:text-primary transition-colors"
+                  className="h-8 w-8 rounded-lg bg-soft-gray border border-border-val flex items-center justify-center text-gray-500 hover:text-primary transition-colors"
                 >
                   <ArrowLeftRight size={14} />
                 </button>
@@ -186,11 +186,11 @@ export default function Translate() {
                   </p>
                   
                   {pronunciation && (
-                    <div className="bg-amber-50/50 border border-amber-100/50 p-2.5 rounded-xl">
+                    <div className="bg-amber-50/50 dark:bg-amber-950/20 border border-amber-100/10 p-2.5 rounded-xl">
                       <p className="text-[10px] font-bold text-amber-600 uppercase tracking-widest">
                         Pronunciation Guide
                       </p>
-                      <p className="text-sm font-semibold text-amber-800 tracking-wide mt-0.5">
+                      <p className="text-sm font-semibold text-amber-800 dark:text-amber-200 tracking-wide mt-0.5">
                         {pronunciation}
                       </p>
                     </div>
@@ -204,12 +204,12 @@ export default function Translate() {
             </div>
 
             {/* Output footer toolbar */}
-            <div className="flex items-center justify-between pt-3 border-t border-gray-50">
+            <div className="flex items-center justify-between pt-3 border-t border-border-val">
               <div className="flex gap-2">
                 <button
                   onClick={handleCopy}
                   disabled={!translatedText}
-                  className="h-9 px-3 rounded-lg bg-gray-50 border border-gray-100 flex items-center gap-1.5 text-xs font-bold text-gray-500 hover:text-primary disabled:opacity-50 transition-all"
+                  className="h-9 px-3 rounded-lg bg-soft-gray border border-border-val flex items-center gap-1.5 text-xs font-bold text-gray-500 hover:text-primary disabled:opacity-50 transition-all"
                 >
                   {copied ? <ClipboardCheck size={14} className="text-leaf-green" /> : <Copy size={14} />}
                   <span>{copied ? "Copied" : "Copy"}</span>
@@ -218,7 +218,7 @@ export default function Translate() {
                 <button
                   onClick={handleSpeak}
                   disabled={!translatedText}
-                  className="h-9 w-9 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-500 hover:text-primary disabled:opacity-50 transition-all"
+                  className="h-9 w-9 rounded-lg bg-soft-gray border border-border-val flex items-center justify-center text-gray-500 hover:text-primary disabled:opacity-50 transition-all"
                 >
                   <Volume2 size={14} />
                 </button>
@@ -230,10 +230,10 @@ export default function Translate() {
         </div>
 
         {/* Translation History Placeholder */}
-        <AppleCard className="bg-white/60">
+        <AppleCard className="bg-white/60 dark:bg-[#1C1C1E]/60">
           <h3 className="text-sm font-bold text-apple-text mb-3">Translation History</h3>
           <div className="space-y-2 text-xs font-semibold text-gray-400">
-            <div className="flex justify-between items-center py-2 border-b border-gray-50/50">
+            <div className="flex justify-between items-center py-2 border-b border-border-val">
               <span>"What are you doing" ➔ "तूं क्या करदा है?"</span>
               <span className="text-[10px]">English to Kangdi</span>
             </div>

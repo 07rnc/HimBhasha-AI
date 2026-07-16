@@ -24,7 +24,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body className="min-h-full bg-[#FAFBF9] text-[#1D1D1F] font-sans flex flex-col transition-colors duration-300">
+      <body className="min-h-full bg-bg-off text-apple-text font-sans flex flex-col transition-colors duration-300">
         <AppProvider>
           {children}
         </AppProvider>

@@ -6,7 +6,7 @@ import { ArrowLeft, FileText, Sparkles, HelpCircle, Activity, ChevronRight, Corn
 import { Navbar } from "../../components/Navbar";
 import { FileUpload } from "../../components/FileUpload";
 import { AppleCard } from "../../components/AppleCard";
-import { api } from "../../lib/api";
+import { DocumentService } from "../../services/document_service";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function DocumentUnderstanding() {
@@ -50,7 +50,7 @@ export default function DocumentUnderstanding() {
     setLogs([]);
 
     const apiCall = () => {
-      api.document(fileData.name, fileData.type, fileData.base64, selectedAction, selectedAction === "ask" ? question : undefined)
+      DocumentService.processDocument(fileData.name, fileData.type, fileData.base64, selectedAction, selectedAction === "ask" ? question : undefined)
         .then((res) => {
           setResult(res.result);
           setLoading(false);
@@ -106,7 +106,7 @@ export default function DocumentUnderstanding() {
                 className={`h-11 px-5 rounded-xl text-xs font-bold flex items-center gap-1.5 border transition-all ${
                   action === "summarize"
                     ? "bg-primary text-white border-transparent shadow-sm"
-                    : "bg-white text-gray-500 border-gray-100 hover:border-gray-200"
+                    : "bg-white dark:bg-[#1C1C1E] text-gray-500 border-border-val hover:border-gray-200 dark:hover:border-white/10"
                 }`}
               >
                 <Sparkles size={14} />
@@ -119,7 +119,7 @@ export default function DocumentUnderstanding() {
                 className={`h-11 px-5 rounded-xl text-xs font-bold flex items-center gap-1.5 border transition-all ${
                   action === "translate"
                     ? "bg-primary text-white border-transparent shadow-sm"
-                    : "bg-white text-gray-500 border-gray-100 hover:border-gray-200"
+                    : "bg-white dark:bg-[#1C1C1E] text-gray-500 border-border-val hover:border-gray-200 dark:hover:border-white/10"
                 }`}
               >
                 <FileText size={14} />
@@ -132,7 +132,7 @@ export default function DocumentUnderstanding() {
                 className={`h-11 px-5 rounded-xl text-xs font-bold flex items-center gap-1.5 border transition-all ${
                   action === "ask"
                     ? "bg-primary text-white border-transparent shadow-sm"
-                    : "bg-white text-gray-500 border-gray-100 hover:border-gray-200"
+                    : "bg-white dark:bg-[#1C1C1E] text-gray-500 border-border-val hover:border-gray-200 dark:hover:border-white/10"
                 }`}
               >
                 <HelpCircle size={14} />
@@ -142,7 +142,7 @@ export default function DocumentUnderstanding() {
 
             {/* Q&A input form */}
             {action === "ask" && (
-              <AppleCard className="bg-white border border-gray-50 p-5">
+              <AppleCard className="bg-white dark:bg-[#1C1C1E] border border-border-val p-5">
                 <div className="flex gap-2">
                   <input
                     type="text"
@@ -150,12 +150,12 @@ export default function DocumentUnderstanding() {
                     onChange={(e) => setQuestion(e.target.value)}
                     disabled={loading}
                     placeholder="Ask a question about the document (e.g., 'What schemes are mentioned?')..."
-                    className="flex-grow h-11 px-4 bg-gray-50 border border-gray-100 rounded-xl text-xs font-medium focus:outline-none focus:border-primary/50 transition-colors"
+                    className="flex-grow h-11 px-4 bg-soft-gray border border-border-val rounded-xl text-xs font-medium focus:outline-none focus:border-primary/50 transition-colors"
                   />
                   <button
                     onClick={() => runDocumentAction("ask")}
                     disabled={!question.trim() || loading}
-                    className="h-11 px-5 rounded-xl bg-primary text-white text-xs font-bold disabled:bg-gray-100 disabled:text-gray-300 transition-colors"
+                    className="h-11 px-5 rounded-xl bg-primary text-white text-xs font-bold disabled:bg-soft-gray disabled:text-gray-400 transition-colors"
                   >
                     Ask
                   </button>
@@ -172,7 +172,7 @@ export default function DocumentUnderstanding() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="glass-panel border border-gray-100 rounded-3xl p-6 flex flex-col gap-4"
+                    className="glass-panel rounded-3xl p-6 flex flex-col gap-4"
                   >
                     <div className="flex items-center gap-2.5">
                       <Activity size={16} className="text-primary animate-pulse" />
@@ -201,9 +201,9 @@ export default function DocumentUnderstanding() {
                     key="result"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm"
+                    className="bg-white dark:bg-[#1C1C1E] border border-border-val rounded-3xl p-6 shadow-sm"
                   >
-                    <h3 className="text-xs font-bold text-primary uppercase tracking-widest border-b border-gray-50 pb-2 mb-4 flex items-center gap-1">
+                    <h3 className="text-xs font-bold text-primary uppercase tracking-widest border-b border-border-val pb-2 mb-4 flex items-center gap-1">
                       <Sparkles size={14} />
                       <span>{action === "summarize" ? "Summary Analysis" : action === "translate" ? "Kangdi Translation" : "Answer Response"}</span>
                     </h3>

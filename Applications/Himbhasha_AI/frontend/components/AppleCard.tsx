@@ -27,12 +27,9 @@ export const AppleCard: React.FC<AppleCardProps> = ({
     <motion.div
       {...hoverAnims}
       onClick={onClick}
-      className={`glass-panel rounded-3xl p-6 transition-shadow duration-300 ${
+      className={`glass-panel rounded-3xl p-6 ${
         onClick ? "cursor-pointer select-none" : ""
       } ${className}`}
-      style={{
-        boxShadow: "0 4px 24px rgba(0, 0, 0, 0.02)",
-      }}
     >
       {children}
     </motion.div>

@@ -33,7 +33,7 @@ export default function Home() {
       desc: "Talk with your personal regional language AI companion.",
       icon: <MessageSquare size={32} className="text-[#1B6B4A]" />,
       route: "/meet-vaani",
-      bgClass: "bg-emerald-50/30 hover:bg-emerald-50/50",
+      bgClass: "bg-emerald-50/30 dark:bg-emerald-950/10 hover:bg-emerald-50/50 dark:hover:bg-emerald-950/20",
     },
     {
       id: "translate",
@@ -41,7 +41,7 @@ export default function Home() {
       desc: "Convert text instantly between Kangdi, Hindi, and English.",
       icon: <Languages size={32} className="text-[#2A7AD0]" />,
       route: "/translate",
-      bgClass: "bg-blue-50/30 hover:bg-blue-50/50",
+      bgClass: "bg-blue-50/30 dark:bg-blue-950/10 hover:bg-blue-50/50 dark:hover:bg-blue-950/20",
     },
     {
       id: "voice",
@@ -49,7 +49,7 @@ export default function Home() {
       desc: "Speak directly in local dialects and hear spoken responses.",
       icon: <Mic size={32} className="text-amber-600" />,
       route: "/voice",
-      bgClass: "bg-amber-50/30 hover:bg-amber-50/50",
+      bgClass: "bg-amber-50/30 dark:bg-amber-950/10 hover:bg-amber-50/50 dark:hover:bg-amber-950/20",
     },
     {
       id: "document",
@@ -57,7 +57,7 @@ export default function Home() {
       desc: "Extract text, summarize, and ask questions of PDFs/images.",
       icon: <FileText size={32} className="text-rose-600" />,
       route: "/document",
-      bgClass: "bg-rose-50/30 hover:bg-rose-50/50",
+      bgClass: "bg-rose-50/30 dark:bg-rose-950/10 hover:bg-rose-50/50 dark:hover:bg-rose-950/20",
     },
     {
       id: "preserve",
@@ -65,7 +65,7 @@ export default function Home() {
       desc: "Contribute native vocabulary, local proverbs, and audio records.",
       icon: <Heart size={32} className="text-[#10B981]" />,
       route: "/preserve",
-      bgClass: "bg-teal-50/30 hover:bg-teal-50/50",
+      bgClass: "bg-teal-50/30 dark:bg-teal-950/10 hover:bg-teal-50/50 dark:hover:bg-teal-950/20",
     },
   ];
 
@@ -78,7 +78,7 @@ export default function Home() {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, filter: "blur(12px)", scale: 1.05 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#FAFBF9]"
+            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-bg-off"
           >
             {/* Splash Animation Logo */}
             <motion.div
@@ -134,7 +134,7 @@ export default function Home() {
                     className={`${feature.bgClass} flex flex-col justify-between h-48 group`}
                   >
                     <div className="flex justify-between items-start">
-                      <div className="p-3 rounded-2xl bg-white shadow-sm border border-gray-50 group-hover:shadow-md transition-shadow">
+                      <div className="p-3 rounded-2xl bg-white dark:bg-white/10 shadow-sm border border-border-val group-hover:shadow-md transition-shadow">
                         {feature.icon}
                       </div>
                       <Compass size={18} className="text-gray-300 group-hover:text-primary transition-colors" />

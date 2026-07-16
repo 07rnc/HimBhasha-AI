@@ -42,3 +42,29 @@ class DocumentRequest(BaseModel):
 class DocumentResponse(BaseModel):
     result: str
     pages_processed: int
+
+# Slashy Feedback models
+class SlashyFeedbackRequest(BaseModel):
+    type: str  # "feedback", "complaint", "moderation"
+    title: str
+    description: str
+
+class SlashyFeedbackResponse(BaseModel):
+    ticket_id: str
+    status: str
+
+# Preservation Contribution models
+class ContributeRequest(BaseModel):
+    type: str  # "vocabulary", "proverb", "story", "conversation", "song"
+    title: str
+    content: str
+    age: Optional[int] = None
+    gender: Optional[str] = None
+    district: Optional[str] = None
+    village: Optional[str] = None
+    consent: bool
+    audio_attached: bool
+
+class ContributeResponse(BaseModel):
+    status: str
+    contribution_id: str
