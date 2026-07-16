@@ -44,6 +44,38 @@ export const api = {
     return response.data; // { transcription: string, response: string, audio_response_base64: string }
   },
 
+  // POST /v1/voice/record
+  voiceRecord: async (sessionId?: string) => {
+    const response = await apiClient.post("/v1/voice/record", {
+      session_id: sessionId,
+    });
+    return response.data; // { status: string, session_id: string }
+  },
+
+  // POST /v1/voice/transcribe
+  voiceTranscribe: async (audioBase64: string, samplingRate?: number) => {
+    const response = await apiClient.post("/v1/voice/transcribe", {
+      audio_base64: audioBase64,
+      sampling_rate: samplingRate || 16000,
+    });
+    return response.data; // { transcription: string, confidence: number }
+  },
+
+  // POST /v1/voice/speak
+  voiceSpeak: async (text: string, language?: string) => {
+    const response = await apiClient.post("/v1/voice/speak", {
+      text,
+      language: language || "hi-IN",
+    });
+    return response.data; // { audio_base64: string }
+  },
+
+  // GET /v1/voice/status
+  voiceStatus: async () => {
+    const response = await apiClient.get("/v1/voice/status");
+    return response.data; // { status: string, service: string, health: boolean }
+  },
+
   // POST /document
   document: async (
     fileName: string,

@@ -9,7 +9,11 @@ from app.schemas.api_models import (
     VoiceRequest, VoiceResponse,
     DocumentRequest, DocumentResponse,
     SlashyFeedbackRequest, SlashyFeedbackResponse,
-    ContributeRequest, ContributeResponse
+    ContributeRequest, ContributeResponse,
+    VoiceRecordRequest, VoiceRecordResponse,
+    VoiceTranscribeRequest, VoiceTranscribeResponse,
+    VoiceSpeakRequest, VoiceSpeakResponse,
+    VoiceStatusResponse
 )
 
 # Services Imports
@@ -18,8 +22,9 @@ from app.services.gemini.service import GeminiService
 from app.services.gemini.types import GeminiChatPayload, GeminiMessage
 
 from app.services.gnani.client import GnaniClient
-from app.services.gnani.service import GnaniService
-from app.services.gnani.types import GnaniSTTPayload, GnaniTTSPayload
+from app.services.gnani.speech_to_text import GnaniSTTService
+from app.services.gnani.text_to_speech import GnaniTTSService
+from app.services.gnani.models import GnaniSttRequest, GnaniTtsRequest
 
 from app.services.paddleocr.client import PaddleOCRClient
 from app.services.paddleocr.service import PaddleOCRService
@@ -52,8 +57,11 @@ keploy_client = KeployClient()
 def get_gemini_service() -> GeminiService:
     return GeminiService(gemini_client)
 
-def get_gnani_service() -> GnaniService:
-    return GnaniService(gnani_client)
+def get_gnani_stt_service() -> GnaniSTTService:
+    return GnaniSTTService(gnani_client)
+
+def get_gnani_tts_service() -> GnaniTTSService:
+    return GnaniTTSService(gnani_client)
 
 def get_ocr_service() -> PaddleOCRService:
     return PaddleOCRService(ocr_client)
@@ -158,23 +166,25 @@ async def api_translate(
 async def api_voice(
     payload: VoiceRequest,
     gemini_svc: GeminiService = Depends(get_gemini_service),
-    gnani_svc: GnaniService = Depends(get_gnani_service),
+    gnani_stt: GnaniSTTService = Depends(get_gnani_stt_service),
+    gnani_tts: GnaniTTSService = Depends(get_gnani_tts_service),
     keploy_svc: KeployService = Depends(get_keploy_service)
 ):
     try:
         # 1. Gnani STT Transcription
-        stt_res = await gnani_svc.speech_to_text(
-            GnaniSTTPayload(audio_base64=payload.audio_base64)
+        stt_res = await gnani_stt.transcribe(
+            GnaniSttRequest(audio_base64=payload.audio_base64)
         )
         transcription = stt_res.transcription or "तुहाड़ा क्या हाल है?"
 
         # 2. Gemini Response generation
+        # TODO: Replace mocked response with Gemini-generated content after Sprint 7.
         gemini_res = await gemini_svc.generate_content(transcription)
         response_text = gemini_res.text
 
         # 3. Gnani TTS speech synthesis
-        tts_res = await gnani_svc.text_to_speech(
-            GnaniTTSPayload(text=response_text)
+        tts_res = await gnani_tts.synthesize(
+            GnaniTtsRequest(text=response_text)
         )
         audio_out = tts_res.audio_base64 or ""
 
@@ -332,4 +342,120 @@ async def api_contribute(
         return ContributeResponse(**response_body)
     except Exception as e:
         logger.error(f"Contribute API error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/v1/voice/record", response_model=VoiceRecordResponse)
+async def api_voice_record(
+    payload: VoiceRecordRequest,
+    keploy_svc: KeployService = Depends(get_keploy_service)
+):
+    try:
+        session_id = payload.session_id or str(uuid.uuid4())
+        response_body = {
+            "status": "success",
+            "session_id": session_id
+        }
+
+        # Log trace to Keploy
+        await keploy_svc.capture_test_case(
+            KeployTracePayload(
+                method="POST",
+                endpoint="/v1/voice/record",
+                request_headers={},
+                request_body=payload.dict(),
+                response_body=response_body,
+                status_code=200
+            )
+        )
+        return VoiceRecordResponse(**response_body)
+    except Exception as e:
+        logger.error(f"Voice Record API error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/v1/voice/transcribe", response_model=VoiceTranscribeResponse)
+async def api_voice_transcribe(
+    payload: VoiceTranscribeRequest,
+    gnani_stt: GnaniSTTService = Depends(get_gnani_stt_service),
+    keploy_svc: KeployService = Depends(get_keploy_service)
+):
+    try:
+        # Pass payload to restructured Gnani STT service class
+        stt_payload = GnaniSttRequest(
+            audio_base64=payload.audio_base64,
+            sampling_rate=payload.sampling_rate or 16000
+        )
+        stt_res = await gnani_stt.transcribe(stt_payload)
+
+        response_body = {
+            "transcription": stt_res.transcription,
+            "confidence": stt_res.confidence
+        }
+
+        # Log trace to Keploy
+        await keploy_svc.capture_test_case(
+            KeployTracePayload(
+                method="POST",
+                endpoint="/v1/voice/transcribe",
+                request_headers={},
+                request_body=payload.dict(),
+                response_body=response_body,
+                status_code=200
+            )
+        )
+        return VoiceTranscribeResponse(**response_body)
+    except Exception as e:
+        logger.error(f"Voice Transcribe API error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/v1/voice/speak", response_model=VoiceSpeakResponse)
+async def api_voice_speak(
+    payload: VoiceSpeakRequest,
+    gnani_tts: GnaniTTSService = Depends(get_gnani_tts_service),
+    keploy_svc: KeployService = Depends(get_keploy_service)
+):
+    try:
+        # Pass payload to restructured Gnani TTS service class
+        tts_payload = GnaniTtsRequest(
+            text=payload.text,
+            language=payload.language or "hi-IN"
+        )
+        tts_res = await gnani_tts.synthesize(tts_payload)
+
+        response_body = {
+            "audio_base64": tts_res.audio_base64
+        }
+
+        # Log trace to Keploy
+        await keploy_svc.capture_test_case(
+            KeployTracePayload(
+                method="POST",
+                endpoint="/v1/voice/speak",
+                request_headers={},
+                request_body=payload.dict(),
+                response_body=response_body,
+                status_code=200
+            )
+        )
+        return VoiceSpeakResponse(**response_body)
+    except Exception as e:
+        logger.error(f"Voice Speak API error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/v1/voice/status", response_model=VoiceStatusResponse)
+async def api_voice_status(
+    gnani_client: GnaniClient = Depends(get_gnani_client)
+):
+    try:
+        healthy = gnani_client.is_healthy()
+        return VoiceStatusResponse(
+            status="healthy" if healthy else "error",
+            service="Gnani Speech Engine",
+            health=healthy
+        )
+    except Exception as e:
+        logger.error(f"Voice Status API error: {e}")
         raise HTTPException(status_code=500, detail=str(e))

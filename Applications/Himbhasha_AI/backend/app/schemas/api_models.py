@@ -68,3 +68,31 @@ class ContributeRequest(BaseModel):
 class ContributeResponse(BaseModel):
     status: str
     contribution_id: str
+
+# Voice API v1 Models
+class VoiceRecordRequest(BaseModel):
+    session_id: Optional[str] = None
+
+class VoiceRecordResponse(BaseModel):
+    status: str
+    session_id: str
+
+class VoiceTranscribeRequest(BaseModel):
+    audio_base64: str
+    sampling_rate: Optional[int] = 16000
+
+class VoiceTranscribeResponse(BaseModel):
+    transcription: str
+    confidence: float
+
+class VoiceSpeakRequest(BaseModel):
+    text: str
+    language: Optional[str] = "hi-IN"
+
+class VoiceSpeakResponse(BaseModel):
+    audio_base64: str
+
+class VoiceStatusResponse(BaseModel):
+    status: str
+    service: str
+    health: bool
