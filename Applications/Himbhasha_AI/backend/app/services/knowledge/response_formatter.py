@@ -1,13 +1,17 @@
 from typing import Dict, Any, List
 
 class ResponseFormatter:
-    """Formats raw entry models and search metrics into the standardized JSON response schema."""
+    """Formats search results into standardized response schemas."""
 
     @staticmethod
-    def format_match(entry: Any, category: str, score: float) -> Dict[str, Any]:
-        entry_dict = entry.model_dump() if hasattr(entry, "model_dump") else entry.__dict__
+    def format_result(match_data: Dict[str, Any], secondary_candidates: List[Dict[str, Any]] = None) -> Dict[str, Any]:
+        entry = match_data["entry"]
+        category = match_data["dataset"]
+        confidence = match_data["confidence"]
         
-        # Build title and answer text based on entry schema type
+        entry_dict = entry.model_dump() if hasattr(entry, "model_dump") else entry.__dict__
+
+        # Format title and answer according to entry type
         if category == "dictionary":
             kangri = entry_dict.get("kangri", "")
             hindi = entry_dict.get("hindi", "")
@@ -22,7 +26,7 @@ class ResponseFormatter:
             if pos:
                 answer_parts.append(f"Part of speech: {pos}")
             answer = "\n".join(answer_parts)
-            related = [hindi, english, pos] if pos else [hindi, english]
+            primary_related = [hindi, english, pos]
 
         elif category == "phrases":
             kangri = entry_dict.get("kangri", "")
@@ -31,7 +35,7 @@ class ResponseFormatter:
             
             title = f"Phrase: {kangri}"
             answer = f"**Kangri**: {kangri}\n**Hindi**: {hindi}\n**English**: {english}"
-            related = ["Translation", "Phrases", hindi]
+            primary_related = ["Translation", "Phrases", hindi]
 
         elif category == "faq":
             question = entry_dict.get("question", "")
@@ -39,7 +43,7 @@ class ResponseFormatter:
             
             title = question
             answer = ans
-            related = ["FAQ", "General Help"]
+            primary_related = ["FAQ", "General Help"]
 
         elif category == "government":
             scheme = entry_dict.get("scheme_name", "")
@@ -49,7 +53,7 @@ class ResponseFormatter:
             
             title = f"Government Scheme: {scheme}"
             answer = f"**{scheme}**\n\n{desc}\n\n**Eligibility**: {elig}\n**Benefits**: {ben}"
-            related = ["Government Schemes", "Himachal Pradesh", "Welfare"]
+            primary_related = ["Government Schemes", "Farmer", "Subsidy", "Agriculture"]
 
         elif category == "agriculture":
             crop = entry_dict.get("crop_name", "")
@@ -59,7 +63,7 @@ class ResponseFormatter:
             
             title = f"Agriculture: {crop}"
             answer = f"**{crop}**\n\n**Ideal Season**: {season}\n**Soil Type**: {soil}\n**Recommendations**: {recs}"
-            related = ["Agriculture", "Crops", "Farming"]
+            primary_related = ["Agriculture", "Crops", "Farming"]
 
         elif category == "healthcare":
             facility = entry_dict.get("facility_name", "")
@@ -68,7 +72,7 @@ class ResponseFormatter:
             
             title = f"Healthcare Facility: {facility}"
             answer = f"**{facility}** ({dist})\n\n**Services Offered**: {services}"
-            related = ["Healthcare", "Hospitals", dist]
+            primary_related = ["Healthcare", "Hospitals", dist]
 
         elif category == "culture":
             fest = entry_dict.get("festival_name", "")
@@ -77,7 +81,7 @@ class ResponseFormatter:
             
             title = f"Culture & Heritage: {fest}"
             answer = f"**{fest}** ({region})\n\n{sig}"
-            related = ["Culture", "Festivals", region]
+            primary_related = ["Culture", "Festivals", region]
 
         elif category == "education":
             inst = entry_dict.get("institution_name", "")
@@ -86,7 +90,7 @@ class ResponseFormatter:
             
             title = f"Education: {inst}"
             answer = f"**{inst}**, {loc}\n\n**Courses**: {courses}"
-            related = ["Education", "Universities", loc]
+            primary_related = ["Education", "Universities", loc]
 
         elif category == "tourism":
             place = entry_dict.get("place_name", "")
@@ -96,19 +100,37 @@ class ResponseFormatter:
             
             title = f"Tourism Spot: {place}"
             answer = f"**{place}** ({dist})\n\n{hist}\n\n**Best Time to Visit**: {best_time}"
-            related = ["Tourism", "Himachal Destinations", dist]
+            primary_related = ["Tourism", "Himachal Destinations", dist]
 
         else:
             title = "Information Result"
             answer = str(entry_dict)
-            related = [category]
+            primary_related = [category]
+
+        # Gather related topics from secondary candidates if available
+        related_topics = [r for r in primary_related if r]
+        if secondary_candidates:
+            for sec in secondary_candidates[:2]:
+                sec_entry = sec["entry"]
+                sec_dict = sec_entry.model_dump() if hasattr(sec_entry, "model_dump") else sec_entry.__dict__
+                sec_title = (
+                    sec_dict.get("kangri")
+                    or sec_dict.get("question")
+                    or sec_dict.get("scheme_name")
+                    or sec_dict.get("crop_name")
+                    or sec_dict.get("english")
+                )
+                if sec_title and sec_title not in related_topics:
+                    related_topics.append(str(sec_title))
 
         return {
+            "success": True,
             "title": title,
             "category": category.capitalize(),
+            "dataset": category,
+            "confidence": int(confidence),
             "answer": answer,
-            "confidence": f"{score * 100:.0f}%",
-            "related_topics": [r for r in related if r]
+            "related_topics": list(dict.fromkeys(related_topics))
         }
 
     @staticmethod

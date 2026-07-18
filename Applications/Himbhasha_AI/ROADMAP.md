@@ -17,3 +17,5 @@
   - **Objective**: Implement text preview modal, copy-to-clipboard, confidence score indicator, and translation triggers.
 - [x] **Ticket 5.3: Offline Knowledge Base Chat Engine Integration**
   - **Objective**: Replaced Gemini chat engine in `POST /chat` route with `KnowledgeService` hybrid search engine over `KnowledgeBase/` categories.
+- [x] **Ticket 5.4: 9-Dataset Search Engine & In-Memory Performance Upgrade**
+  - **Objective**: Upgraded `SearchEngine` and `KnowledgeService` to search across all 9 dataset categories (Dictionary, Phrases, FAQ, Government, Agriculture, Healthcare, Culture, Education, Tourism) using 6-tier matching algorithms and in-memory dataset caching.

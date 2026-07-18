@@ -11,16 +11,15 @@ except ImportError:
 logger = logging.getLogger("knowledge_search_engine")
 
 class SearchEngine:
-    """Hybrid search engine combining Exact Match, Keyword Token Search, and RapidFuzz Similarity."""
+    """Advanced Hybrid Search Engine matching Exact, Keyword, RapidFuzz Ratio, Partial Ratio, and Token Sort Ratio."""
 
     def __init__(self):
         pass
 
     def _extract_searchable_text(self, item: Any) -> Tuple[str, str, List[str], List[str]]:
-        """Extracts primary text, secondary text, keywords, and synonyms from a Pydantic model entry."""
+        """Extracts primary text, secondary text, keywords, and synonyms from entry model."""
         item_dict = item.model_dump() if hasattr(item, "model_dump") else item.__dict__
         
-        # Determine primary and secondary field names based on entry type
         primary = (
             item_dict.get("kangri")
             or item_dict.get("question")
@@ -46,13 +45,14 @@ class SearchEngine:
 
         return str(primary).strip(), str(secondary).strip(), keywords, synonyms
 
-    def search(self, query: str, entries: List[Any], category_name: str) -> List[Tuple[Any, float]]:
-        """Searches a list of category entries and returns candidates scored from 0.0 to 1.0."""
+    def search_category(self, query: str, entries: List[Any], category_name: str) -> List[Dict[str, Any]]:
+        """Searches a category dataset applying 6-tier matching algorithm."""
         if not query or not entries:
             return []
 
         query_clean = query.strip().lower()
-        scored_results: List[Tuple[Any, float]] = []
+        query_words = set(query_clean.split())
+        scored_results: List[Dict[str, Any]] = []
 
         for entry in entries:
             primary, secondary, keywords, synonyms = self._extract_searchable_text(entry)
@@ -60,41 +60,51 @@ class SearchEngine:
             secondary_lower = secondary.lower()
 
             score = 0.0
+            matched_kw: List[str] = []
 
-            # 1. Exact Match Strategy
-            if query_clean == primary_lower or query_clean == secondary_lower:
+            # 1. Exact Match
+            if query_clean == primary_lower:
                 score = 1.0
-            # 2. Keyword & Synonym Search Strategy
+                matched_kw.append(primary)
+            elif query_clean == secondary_lower:
+                score = 0.98
+                matched_kw.append(secondary)
+            # 2. Keyword & Synonym Match
             elif query_clean in keywords or query_clean in synonyms:
-                score = 0.90
+                score = 0.92
+                matched_kw.append(query_clean)
             else:
-                # Token overlap scoring
-                q_tokens = [tok for tok in query_clean.split() if len(tok) > 2]
-                if q_tokens:
-                    matched_toks = sum(1 for tok in q_tokens if tok in primary_lower or tok in secondary_lower)
-                    token_ratio = matched_toks / len(q_tokens)
-                    if token_ratio >= 0.60:
-                        score = round(0.70 + (token_ratio * 0.20), 2)
-                    elif token_ratio >= 0.40:
-                        score = 0.50
-            # 3. RapidFuzz / Difflib Similarity Strategy
-            if score == 0.0:
+                # Token overlap check
+                overlapping = [kw for kw in keywords + synonyms + [primary_lower, secondary_lower] if any(w in kw for w in query_words if len(w) > 2)]
+                if overlapping:
+                    matched_kw.extend(overlapping[:3])
+
+                # 3. RapidFuzz Ratio / 4. Partial Ratio / 5. Token Sort Ratio
                 if HAS_RAPIDFUZZ:
-                    sim_primary = fuzz.token_set_ratio(query_clean, primary_lower) / 100.0
-                    sim_secondary = fuzz.token_set_ratio(query_clean, secondary_lower) / 100.0
+                    r_ratio = max(fuzz.ratio(query_clean, primary_lower), fuzz.ratio(query_clean, secondary_lower)) / 100.0
+                    r_partial = max(fuzz.partial_ratio(query_clean, primary_lower), fuzz.partial_ratio(query_clean, secondary_lower)) / 100.0
+                    r_token_sort = max(fuzz.token_sort_ratio(query_clean, primary_lower), fuzz.token_sort_ratio(query_clean, secondary_lower)) / 100.0
+                    
+                    fuzzy_score = (r_ratio * 0.3) + (r_partial * 0.3) + (r_token_sort * 0.4)
                 else:
                     sim_primary = difflib.SequenceMatcher(None, query_clean, primary_lower).ratio()
                     sim_secondary = difflib.SequenceMatcher(None, query_clean, secondary_lower).ratio()
-                    
-                best_sim = max(sim_primary, sim_secondary)
-                
-                if best_sim >= 0.50:
-                    score = float(best_sim)
+                    fuzzy_score = max(sim_primary, sim_secondary)
 
-            # 4. Ranking cutoff check
-            if score >= 0.40:
-                scored_results.append((entry, round(score, 2)))
+                if fuzzy_score >= 0.45:
+                    score = float(fuzzy_score)
 
-        # Sort by highest score descending
-        scored_results.sort(key=lambda x: x[1], reverse=True)
+            # 6. Ranking Cutoff
+            if score >= 0.45:
+                confidence_pct = int(min(score * 100, 100))
+                scored_results.append({
+                    "entry": entry,
+                    "score": round(score, 2),
+                    "confidence": confidence_pct,
+                    "matched_keywords": list(dict.fromkeys(matched_kw)),
+                    "dataset": category_name
+                })
+
+        # Sort by score descending
+        scored_results.sort(key=lambda x: x["score"], reverse=True)
         return scored_results
