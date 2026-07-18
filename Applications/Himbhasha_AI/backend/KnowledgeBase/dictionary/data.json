@@ -1,0 +1,6913 @@
+[
+  {
+    "id": 1,
+    "kangri": "बंदगी",
+    "hindi": "नमस्ते",
+    "english": "Greetings / Hello",
+    "pronunciation": "ban-da-gee",
+    "part_of_speech": "noun",
+    "category": "Greetings",
+    "description": "Traditional Pahari respectful greeting",
+    "synonyms": [
+      "नमस्ते"
+    ],
+    "keywords": [
+      "greetings / hello",
+      "नमस्ते",
+      "बंदगी",
+      "ban-da-gee",
+      "greetings"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 2,
+    "kangri": "राम राम",
+    "hindi": "नमस्कार",
+    "english": "Greetings / Hello",
+    "pronunciation": "ram-ram",
+    "part_of_speech": "phrase",
+    "category": "Greetings",
+    "description": "Common formal greeting",
+    "synonyms": [
+      "नमस्कार"
+    ],
+    "keywords": [
+      "greetings / hello",
+      "नमस्कार",
+      "राम राम",
+      "ram-ram",
+      "greetings"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 3,
+    "kangri": "खुश रहो",
+    "hindi": "प्रसन्न रहो",
+    "english": "Stay blessed",
+    "pronunciation": "khush-raho",
+    "part_of_speech": "phrase",
+    "category": "Greetings",
+    "description": "Blessing given to younger ones",
+    "synonyms": [
+      "प्रसन्न रहो"
+    ],
+    "keywords": [
+      "stay blessed",
+      "प्रसन्न रहो",
+      "खुश रहो",
+      "khush-raho",
+      "greetings"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 4,
+    "kangri": "सुख-सांद",
+    "hindi": "कुशल-मंगल",
+    "english": "Well-being",
+    "pronunciation": "sukh-saand",
+    "part_of_speech": "noun",
+    "category": "Greetings",
+    "description": "Inquiring about family welfare",
+    "synonyms": [
+      "कुशल-मंगल"
+    ],
+    "keywords": [
+      "well-being",
+      "कुशल-मंगल",
+      "सुख-सांद",
+      "sukh-saand",
+      "greetings"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 5,
+    "kangri": "आओ जी",
+    "hindi": "पधारिए",
+    "english": "Welcome",
+    "pronunciation": "aao-ji",
+    "part_of_speech": "phrase",
+    "category": "Greetings",
+    "description": "Welcoming a guest into home",
+    "synonyms": [
+      "पधारिए"
+    ],
+    "keywords": [
+      "welcome",
+      "पधारिए",
+      "आओ जी",
+      "aao-ji",
+      "greetings"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 6,
+    "kangri": "बापू",
+    "hindi": "पिता",
+    "english": "Father",
+    "pronunciation": "baa-poo",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Father in family context",
+    "synonyms": [
+      "पिता"
+    ],
+    "keywords": [
+      "father",
+      "पिता",
+      "बापू",
+      "baa-poo",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 7,
+    "kangri": "अम्मां",
+    "hindi": "माता",
+    "english": "Mother",
+    "pronunciation": "am-maan",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Mother in family context",
+    "synonyms": [
+      "माता"
+    ],
+    "keywords": [
+      "mother",
+      "माता",
+      "अम्मां",
+      "am-maan",
+      "family",
+      "aम्मां"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 8,
+    "kangri": "भाई",
+    "hindi": "भैया",
+    "english": "Brother",
+    "pronunciation": "bhaa-ee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Male sibling",
+    "synonyms": [
+      "भैया"
+    ],
+    "keywords": [
+      "brother",
+      "भैया",
+      "भाई",
+      "bhaa-ee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 9,
+    "kangri": "भैण",
+    "hindi": "बहन",
+    "english": "Sister",
+    "pronunciation": "bhaen",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Female sibling",
+    "synonyms": [
+      "बहन"
+    ],
+    "keywords": [
+      "sister",
+      "बहन",
+      "भैण",
+      "bhaen",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 10,
+    "kangri": "दादू",
+    "hindi": "दादाजी",
+    "english": "Paternal Grandfather",
+    "pronunciation": "daa-doo",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Paternal grandfather",
+    "synonyms": [
+      "दादाजी"
+    ],
+    "keywords": [
+      "paternal grandfather",
+      "दादाजी",
+      "दादू",
+      "daa-doo",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 11,
+    "kangri": "दादो",
+    "hindi": "दादीजी",
+    "english": "Paternal Grandmother",
+    "pronunciation": "daa-do",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Paternal grandmother",
+    "synonyms": [
+      "दादीजी"
+    ],
+    "keywords": [
+      "paternal grandmother",
+      "दादीजी",
+      "दादो",
+      "daa-do",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 12,
+    "kangri": "नानू",
+    "hindi": "नानाजी",
+    "english": "Maternal Grandfather",
+    "pronunciation": "naa-noo",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Maternal grandfather",
+    "synonyms": [
+      "नानाजी"
+    ],
+    "keywords": [
+      "maternal grandfather",
+      "नानाजी",
+      "नानू",
+      "naa-noo",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 13,
+    "kangri": "नानी",
+    "hindi": "नानीजी",
+    "english": "Maternal Grandmother",
+    "pronunciation": "naa-nee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Maternal grandmother",
+    "synonyms": [
+      "नानीजी"
+    ],
+    "keywords": [
+      "maternal grandmother",
+      "नानीजी",
+      "नानी",
+      "naa-nee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 14,
+    "kangri": "काका",
+    "hindi": "चाचा",
+    "english": "Paternal Uncle",
+    "pronunciation": "kaa-kaa",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Paternal uncle",
+    "synonyms": [
+      "चाचा"
+    ],
+    "keywords": [
+      "paternal uncle",
+      "चाचा",
+      "काका",
+      "kaa-kaa",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 15,
+    "kangri": "काकी",
+    "hindi": "चाची",
+    "english": "Paternal Aunt",
+    "pronunciation": "kaa-kee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Paternal aunt",
+    "synonyms": [
+      "चाची"
+    ],
+    "keywords": [
+      "paternal aunt",
+      "चाची",
+      "काकी",
+      "kaa-kee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 16,
+    "kangri": "मामा",
+    "hindi": "मामाजी",
+    "english": "Maternal Uncle",
+    "pronunciation": "maa-maa",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Maternal uncle",
+    "synonyms": [
+      "मामाजी"
+    ],
+    "keywords": [
+      "maternal uncle",
+      "मामाजी",
+      "मामा",
+      "maa-maa",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 17,
+    "kangri": "मामी",
+    "hindi": "मामीजी",
+    "english": "Maternal Aunt",
+    "pronunciation": "maa-mee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Maternal aunt",
+    "synonyms": [
+      "मामीजी"
+    ],
+    "keywords": [
+      "maternal aunt",
+      "मामीजी",
+      "मामी",
+      "maa-mee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 18,
+    "kangri": "बुआ",
+    "hindi": "बुआ",
+    "english": "Father's Sister",
+    "pronunciation": "bu-aa",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Paternal aunt",
+    "synonyms": [
+      "बुआ"
+    ],
+    "keywords": [
+      "father's sister",
+      "बुआ",
+      "bu-aa",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 19,
+    "kangri": "मासी",
+    "hindi": "मौसी",
+    "english": "Mother's Sister",
+    "pronunciation": "maa-see",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Maternal aunt",
+    "synonyms": [
+      "मौसी"
+    ],
+    "keywords": [
+      "mother's sister",
+      "मौसी",
+      "मासी",
+      "maa-see",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 20,
+    "kangri": "जवाई",
+    "hindi": "दामाद",
+    "english": "Son-in-law",
+    "pronunciation": "ja-waa-ee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Son-in-law",
+    "synonyms": [
+      "दामाद"
+    ],
+    "keywords": [
+      "son-in-law",
+      "दामाद",
+      "जवाई",
+      "ja-waa-ee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 21,
+    "kangri": "लाड़ा",
+    "hindi": "दूल्हा / पति",
+    "english": "Groom / Husband",
+    "pronunciation": "laa-daa",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Groom or husband",
+    "synonyms": [
+      "दूल्हा / पति"
+    ],
+    "keywords": [
+      "groom / husband",
+      "दूल्हा / पति",
+      "लाड़ा",
+      "laa-daa",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 22,
+    "kangri": "लाड़ी",
+    "hindi": "दुल्हन / पत्नी",
+    "english": "Bride / Wife",
+    "pronunciation": "laa-dee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Bride or wife",
+    "synonyms": [
+      "दुल्हन / पत्नी"
+    ],
+    "keywords": [
+      "bride / wife",
+      "दुल्हन / पत्नी",
+      "लाड़ी",
+      "laa-dee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 23,
+    "kangri": "नुआं",
+    "hindi": "बहु",
+    "english": "Daughter-in-law",
+    "pronunciation": "nu-aan",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Daughter-in-law",
+    "synonyms": [
+      "बहु"
+    ],
+    "keywords": [
+      "daughter-in-law",
+      "बहु",
+      "नुआं",
+      "nu-aan",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 24,
+    "kangri": "मातर",
+    "hindi": "बेटा",
+    "english": "Son",
+    "pronunciation": "maa-tar",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Son or male child",
+    "synonyms": [
+      "बेटा"
+    ],
+    "keywords": [
+      "son",
+      "बेटा",
+      "मातर",
+      "maa-tar",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 25,
+    "kangri": "धीअ",
+    "hindi": "बेटी",
+    "english": "Daughter",
+    "pronunciation": "dhee-a",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Daughter or female child",
+    "synonyms": [
+      "बेटी"
+    ],
+    "keywords": [
+      "daughter",
+      "बेटी",
+      "धीअ",
+      "dhee-a",
+      "family",
+      "धीa"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 26,
+    "kangri": "बालक",
+    "hindi": "बच्चा",
+    "english": "Child",
+    "pronunciation": "baa-lak",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Child or infant",
+    "synonyms": [
+      "बच्चा"
+    ],
+    "keywords": [
+      "child",
+      "बच्चा",
+      "बालक",
+      "baa-lak",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 27,
+    "kangri": "संगी",
+    "hindi": "मित्र / दोस्त",
+    "english": "Friend / Companion",
+    "pronunciation": "sang-ee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Friend or close associate",
+    "synonyms": [
+      "मित्र / दोस्त"
+    ],
+    "keywords": [
+      "friend / companion",
+      "मित्र / दोस्त",
+      "संगी",
+      "sang-ee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 28,
+    "kangri": "धान",
+    "hindi": "चावल (कच्चा)",
+    "english": "Paddy / Rice grain",
+    "pronunciation": "dhaan",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Raw unhusked rice",
+    "synonyms": [
+      "चावल (कच्चा)"
+    ],
+    "keywords": [
+      "paddy / rice grain",
+      "चावल (कच्चा)",
+      "धान",
+      "dhaan",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 29,
+    "kangri": "भात",
+    "hindi": "पका हुआ चावल",
+    "english": "Cooked Rice",
+    "pronunciation": "bhaat",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Steamed cooked rice",
+    "synonyms": [
+      "पका हुआ चावल"
+    ],
+    "keywords": [
+      "cooked rice",
+      "पका हुआ चावल",
+      "भात",
+      "bhaat",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 30,
+    "kangri": "मांछी",
+    "hindi": "मछली",
+    "english": "Fish",
+    "pronunciation": "maanchh-ee",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Fish food item",
+    "synonyms": [
+      "मछली"
+    ],
+    "keywords": [
+      "fish",
+      "मछली",
+      "मांछी",
+      "maanchh-ee",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 31,
+    "kangri": "घृत",
+    "hindi": "घी",
+    "english": "Clarified Butter (Ghee)",
+    "pronunciation": "ghrit",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Pure clarified butter",
+    "synonyms": [
+      "घी"
+    ],
+    "keywords": [
+      "clarified butter (ghee)",
+      "घी",
+      "घृत",
+      "ghrit",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 32,
+    "kangri": "छाह",
+    "hindi": "छाछ / मट्ठा",
+    "english": "Buttermilk",
+    "pronunciation": "chhaah",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Traditional buttermilk drink",
+    "synonyms": [
+      "छाछ / मट्ठा"
+    ],
+    "keywords": [
+      "buttermilk",
+      "छाछ / मट्ठा",
+      "छाह",
+      "chhaah",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 33,
+    "kangri": "मक्की",
+    "hindi": "मक्का",
+    "english": "Maize / Corn",
+    "pronunciation": "mak-kee",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Corn or maize grain",
+    "synonyms": [
+      "मक्का"
+    ],
+    "keywords": [
+      "maize / corn",
+      "मक्का",
+      "मक्की",
+      "mak-kee",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 34,
+    "kangri": "कनक",
+    "hindi": "गेहूं",
+    "english": "Wheat",
+    "pronunciation": "ka-nak",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Wheat grain",
+    "synonyms": [
+      "गेहूं"
+    ],
+    "keywords": [
+      "wheat",
+      "गेहूं",
+      "कनक",
+      "ka-nak",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 35,
+    "kangri": "दलीला",
+    "hindi": "दलिया",
+    "english": "Porridge",
+    "pronunciation": "da-lee-laa",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Cracked wheat porridge",
+    "synonyms": [
+      "दलिया"
+    ],
+    "keywords": [
+      "porridge",
+      "दलिया",
+      "दलीला",
+      "da-lee-laa",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 36,
+    "kangri": "चटनी",
+    "hindi": "चटनी",
+    "english": "Chutney / Sauce",
+    "pronunciation": "chat-nee",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Spiced condiment",
+    "synonyms": [
+      "चटनी"
+    ],
+    "keywords": [
+      "chutney / sauce",
+      "चटनी",
+      "chat-nee",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 37,
+    "kangri": "सेऊ",
+    "hindi": "सेब",
+    "english": "Apple",
+    "pronunciation": "se-oo",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Himalayan fresh apple",
+    "synonyms": [
+      "सेब"
+    ],
+    "keywords": [
+      "apple",
+      "सेब",
+      "सेऊ",
+      "se-oo",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 38,
+    "kangri": "अम्ब",
+    "hindi": "आम",
+    "english": "Mango",
+    "pronunciation": "amb",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Mango fruit",
+    "synonyms": [
+      "आम"
+    ],
+    "keywords": [
+      "mango",
+      "आम",
+      "अम्ब",
+      "amb",
+      "food",
+      "aम्ब"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 39,
+    "kangri": "दाड़म",
+    "hindi": "अनार",
+    "english": "Pomegranate",
+    "pronunciation": "daa-dam",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Pomegranate fruit",
+    "synonyms": [
+      "अनार"
+    ],
+    "keywords": [
+      "pomegranate",
+      "अनार",
+      "दाड़म",
+      "daa-dam",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 40,
+    "kangri": "पिंडालू",
+    "hindi": "अरबी",
+    "english": "Taro Root",
+    "pronunciation": "pin-daa-loo",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Taro root vegetable",
+    "synonyms": [
+      "अरबी"
+    ],
+    "keywords": [
+      "taro root",
+      "अरबी",
+      "पिंडालू",
+      "pin-daa-loo",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 41,
+    "kangri": "कचालू",
+    "hindi": "कचालू",
+    "english": "Yam / Colocasia tuber",
+    "pronunciation": "ka-chaa-loo",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Root tuber vegetable",
+    "synonyms": [
+      "कचालू"
+    ],
+    "keywords": [
+      "yam / colocasia tuber",
+      "कचालू",
+      "ka-chaa-loo",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 42,
+    "kangri": "गुच्ची",
+    "hindi": "गुच्छी (मशरूम)",
+    "english": "Morel Mushroom",
+    "pronunciation": "guch-chee",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Wild Himalayan morel mushroom",
+    "synonyms": [
+      "गुच्छी (मशरूम)"
+    ],
+    "keywords": [
+      "morel mushroom",
+      "गुच्छी (मशरूम)",
+      "गुच्ची",
+      "guch-chee",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 43,
+    "kangri": "मदरा",
+    "hindi": "मदरा (व्यंजन)",
+    "english": "Madra (Chickpea dish)",
+    "pronunciation": "mad-raa",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Traditional Kangra yogurt curry",
+    "synonyms": [
+      "मदरा (व्यंजन)"
+    ],
+    "keywords": [
+      "madra (chickpea dish)",
+      "मदरा (व्यंजन)",
+      "मदरा",
+      "mad-raa",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 44,
+    "kangri": "पलदा",
+    "hindi": "पलदा (कढ़ी)",
+    "english": "Palda (Yogurt gravy)",
+    "pronunciation": "pal-daa",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Traditional spiced yogurt dish",
+    "synonyms": [
+      "पलदा (कढ़ी)"
+    ],
+    "keywords": [
+      "palda (yogurt gravy)",
+      "पलदा (कढ़ी)",
+      "पलदा",
+      "pal-daa",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 45,
+    "kangri": "बबरू",
+    "hindi": "बबरू (पूड़ी)",
+    "english": "Babru (Deep-fried bread)",
+    "pronunciation": "bab-roo",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Festive sweet or savory fried bread",
+    "synonyms": [
+      "बबरू (पूड़ी)"
+    ],
+    "keywords": [
+      "babru (deep-fried bread)",
+      "बबरू (पूड़ी)",
+      "बबरू",
+      "bab-roo",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 46,
+    "kangri": "भल्ले",
+    "hindi": "भल्ला (बड़ा)",
+    "english": "Bhalla (Lentil fritter)",
+    "pronunciation": "bhal-le",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Fried lentil fritter in yogurt",
+    "synonyms": [
+      "भल्ला (बड़ा)"
+    ],
+    "keywords": [
+      "bhalla (lentil fritter)",
+      "भल्ला (बड़ा)",
+      "भल्ले",
+      "bhal-le",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 47,
+    "kangri": "धाम",
+    "hindi": "पारंपरिक दावत",
+    "english": "Dham (Traditional Feast)",
+    "pronunciation": "dhaam",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Traditional Kangri ceremonial feast",
+    "synonyms": [
+      "पारंपरिक दावत"
+    ],
+    "keywords": [
+      "dham (traditional feast)",
+      "पारंपरिक दावत",
+      "धाम",
+      "dhaam",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 48,
+    "kangri": "सिड्डू",
+    "hindi": "सिड्डू",
+    "english": "Siddu (Steamed wheat bun)",
+    "pronunciation": "sid-doo",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Traditional stuffed steamed bread",
+    "synonyms": [
+      "सिड्डू"
+    ],
+    "keywords": [
+      "siddu (steamed wheat bun)",
+      "सिड्डू",
+      "sid-doo",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 49,
+    "kangri": "खीर",
+    "hindi": "खीर",
+    "english": "Kheer (Rice Pudding)",
+    "pronunciation": "kheer",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Sweet milk and rice pudding",
+    "synonyms": [
+      "खीर"
+    ],
+    "keywords": [
+      "kheer (rice pudding)",
+      "खीर",
+      "kheer",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 50,
+    "kangri": "मिठा",
+    "hindi": "मीठा चावल",
+    "english": "Sweet Rice",
+    "pronunciation": "mith-aa",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Festive sweetened yellow rice",
+    "synonyms": [
+      "मीठा चावल"
+    ],
+    "keywords": [
+      "sweet rice",
+      "मीठा चावल",
+      "मिठा",
+      "mith-aa",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 51,
+    "kangri": "सब्जी",
+    "hindi": "सब्जी",
+    "english": "Vegetable",
+    "pronunciation": "sab-zee",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Cooked vegetable dish",
+    "synonyms": [
+      "सब्जी"
+    ],
+    "keywords": [
+      "vegetable",
+      "सब्जी",
+      "sab-zee",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 52,
+    "kangri": "रोटी",
+    "hindi": "रोटी",
+    "english": "Bread / Chapati",
+    "pronunciation": "ro-tee",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Unleavened flatbread",
+    "synonyms": [
+      "रोटी"
+    ],
+    "keywords": [
+      "bread / chapati",
+      "रोटी",
+      "ro-tee",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 53,
+    "kangri": "दूध",
+    "hindi": "दूध",
+    "english": "Milk",
+    "pronunciation": "doodh",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Fresh cow or buffalo milk",
+    "synonyms": [
+      "दूध"
+    ],
+    "keywords": [
+      "milk",
+      "दूध",
+      "doodh",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 54,
+    "kangri": "दही",
+    "hindi": "दही",
+    "english": "Yogurt / Curd",
+    "pronunciation": "da-hee",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Fermented milk curd",
+    "synonyms": [
+      "दही"
+    ],
+    "keywords": [
+      "yogurt / curd",
+      "दही",
+      "da-hee",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 55,
+    "kangri": "मक्खन",
+    "hindi": "मक्खन",
+    "english": "Butter",
+    "pronunciation": "mak-khan",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Fresh churned butter",
+    "synonyms": [
+      "मक्खन"
+    ],
+    "keywords": [
+      "butter",
+      "मक्खन",
+      "mak-khan",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 56,
+    "kangri": "बाघर",
+    "hindi": "बाघ / शेर",
+    "english": "Tiger / Leopard",
+    "pronunciation": "baa-ghar",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Wild leopard or tiger",
+    "synonyms": [
+      "बाघ / शेर"
+    ],
+    "keywords": [
+      "tiger / leopard",
+      "बाघ / शेर",
+      "बाघर",
+      "baa-ghar",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 57,
+    "kangri": "मिंजोर",
+    "hindi": "बिल्ली",
+    "english": "Cat",
+    "pronunciation": "min-jo-r",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Feline domestic cat",
+    "synonyms": [
+      "बिल्ली"
+    ],
+    "keywords": [
+      "cat",
+      "बिल्ली",
+      "मिंजोर",
+      "min-jo-r",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 58,
+    "kangri": "बिलाड़ा",
+    "hindi": "बिल्ला",
+    "english": "Male Cat",
+    "pronunciation": "bi-laa-daa",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Male cat",
+    "synonyms": [
+      "बिल्ला"
+    ],
+    "keywords": [
+      "male cat",
+      "बिल्ला",
+      "बिलाड़ा",
+      "bi-laa-daa",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 59,
+    "kangri": "कुत्ता",
+    "hindi": "कुत्ता",
+    "english": "Dog",
+    "pronunciation": "kut-taa",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Domestic dog",
+    "synonyms": [
+      "कुत्ता"
+    ],
+    "keywords": [
+      "dog",
+      "कुत्ता",
+      "kut-taa",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 60,
+    "kangri": "खोता",
+    "hindi": "गधा",
+    "english": "Donkey",
+    "pronunciation": "kho-taa",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Pack donkey",
+    "synonyms": [
+      "गधा"
+    ],
+    "keywords": [
+      "donkey",
+      "गधा",
+      "खोता",
+      "kho-taa",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 61,
+    "kangri": "डंगर",
+    "hindi": "मवेशी / पशु",
+    "english": "Cattle / Livestock",
+    "pronunciation": "dang-ar",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Farm livestock",
+    "synonyms": [
+      "मवेशी / पशु"
+    ],
+    "keywords": [
+      "cattle / livestock",
+      "मवेशी / पशु",
+      "डंगर",
+      "dang-ar",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 62,
+    "kangri": "बलद",
+    "hindi": "बैल",
+    "english": "Bullock / Ox",
+    "pronunciation": "ba-lad",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Draft ox for plowing",
+    "synonyms": [
+      "बैल"
+    ],
+    "keywords": [
+      "bullock / ox",
+      "बैल",
+      "बलद",
+      "ba-lad",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 63,
+    "kangri": "गौअ",
+    "hindi": "गाय",
+    "english": "Cow",
+    "pronunciation": "go-a",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Domestic milk cow",
+    "synonyms": [
+      "गाय"
+    ],
+    "keywords": [
+      "cow",
+      "गाय",
+      "गौअ",
+      "go-a",
+      "animals",
+      "गौa"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 64,
+    "kangri": "बछड़ा",
+    "hindi": "बछड़ा",
+    "english": "Calf",
+    "pronunciation": "bachh-daa",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Young cow calf",
+    "synonyms": [
+      "बछड़ा"
+    ],
+    "keywords": [
+      "calf",
+      "बछड़ा",
+      "bachh-daa",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 65,
+    "kangri": "छलीड़ा",
+    "hindi": "मेमना",
+    "english": "Lamb",
+    "pronunciation": "chha-lee-daa",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Young sheep lamb",
+    "synonyms": [
+      "मेमना"
+    ],
+    "keywords": [
+      "lamb",
+      "मेमना",
+      "छलीड़ा",
+      "chha-lee-daa",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 66,
+    "kangri": "बकरी",
+    "hindi": "बकरी",
+    "english": "Goat",
+    "pronunciation": "bak-ree",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Domestic goat",
+    "synonyms": [
+      "बकरी"
+    ],
+    "keywords": [
+      "goat",
+      "बकरी",
+      "bak-ree",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 67,
+    "kangri": "भेड्ड",
+    "hindi": "भेड़",
+    "english": "Sheep",
+    "pronunciation": "bhedd",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Wool sheep",
+    "synonyms": [
+      "भेड़"
+    ],
+    "keywords": [
+      "sheep",
+      "भेड़",
+      "भेड्ड",
+      "bhedd",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 68,
+    "kangri": "सूअर",
+    "hindi": "सूअर",
+    "english": "Pig",
+    "pronunciation": "soo-ar",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Swine / pig",
+    "synonyms": [
+      "सूअर"
+    ],
+    "keywords": [
+      "pig",
+      "सूअर",
+      "soo-ar",
+      "animals",
+      "सूaर"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 69,
+    "kangri": "घोड़ा",
+    "hindi": "घोड़ा",
+    "english": "Horse",
+    "pronunciation": "gho-daa",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Domestic horse",
+    "synonyms": [
+      "घोड़ा"
+    ],
+    "keywords": [
+      "horse",
+      "घोड़ा",
+      "gho-daa",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 70,
+    "kangri": "खरगोश",
+    "hindi": "खरगोश",
+    "english": "Rabbit",
+    "pronunciation": "khar-gosh",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Small wild rabbit",
+    "synonyms": [
+      "खरगोश"
+    ],
+    "keywords": [
+      "rabbit",
+      "खरगोश",
+      "khar-gosh",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 71,
+    "kangri": "भालू",
+    "hindi": "रीछ / भालू",
+    "english": "Himalayan Bear",
+    "pronunciation": "bhaa-loo",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Black mountain bear",
+    "synonyms": [
+      "रीछ / भालू"
+    ],
+    "keywords": [
+      "himalayan bear",
+      "रीछ / भालू",
+      "भालू",
+      "bhaa-loo",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 72,
+    "kangri": "हिरण",
+    "hindi": "हिरण",
+    "english": "Deer",
+    "pronunciation": "hi-ran",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Forest mountain deer",
+    "synonyms": [
+      "हिरण"
+    ],
+    "keywords": [
+      "deer",
+      "हिरण",
+      "hi-ran",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 73,
+    "kangri": "बंदर",
+    "hindi": "बंदर",
+    "english": "Monkey",
+    "pronunciation": "ban-dar",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Wild monkey",
+    "synonyms": [
+      "बंदर"
+    ],
+    "keywords": [
+      "monkey",
+      "बंदर",
+      "ban-dar",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 74,
+    "kangri": "नेवला",
+    "hindi": "नेवला",
+    "english": "Mongoose",
+    "pronunciation": "nev-laa",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Small carnivore mongoose",
+    "synonyms": [
+      "नेवला"
+    ],
+    "keywords": [
+      "mongoose",
+      "नेवला",
+      "nev-laa",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 75,
+    "kangri": "सांप",
+    "hindi": "सांप",
+    "english": "Snake",
+    "pronunciation": "saanp",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Reptile serpent",
+    "synonyms": [
+      "सांप"
+    ],
+    "keywords": [
+      "snake",
+      "सांप",
+      "saanp",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 76,
+    "kangri": "चिड़िया",
+    "hindi": "चिड़िया",
+    "english": "Sparrow / Bird",
+    "pronunciation": "chid-i-yaa",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Small house sparrow",
+    "synonyms": [
+      "चिड़िया"
+    ],
+    "keywords": [
+      "sparrow / bird",
+      "चिड़िया",
+      "chid-i-yaa",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 77,
+    "kangri": "जनाउर",
+    "hindi": "पक्षी",
+    "english": "Bird",
+    "pronunciation": "jan-aa-ur",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "General term for bird",
+    "synonyms": [
+      "पक्षी"
+    ],
+    "keywords": [
+      "bird",
+      "पक्षी",
+      "जनाउर",
+      "jan-aa-ur",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 78,
+    "kangri": "काआ",
+    "hindi": "कौआ",
+    "english": "Crow",
+    "pronunciation": "kaa-aa",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Black crow",
+    "synonyms": [
+      "कौआ"
+    ],
+    "keywords": [
+      "crow",
+      "कौआ",
+      "काआ",
+      "kaa-aa",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 79,
+    "kangri": "चेल्ला",
+    "hindi": "चील",
+    "english": "Eagle / Kite",
+    "pronunciation": "chel-laa",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Mountain raptor eagle",
+    "synonyms": [
+      "चील"
+    ],
+    "keywords": [
+      "eagle / kite",
+      "चील",
+      "चेल्ला",
+      "chel-laa",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 80,
+    "kangri": "तीतर",
+    "hindi": "तीतर",
+    "english": "Partridge",
+    "pronunciation": "tee-tar",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Himalayan partridge bird",
+    "synonyms": [
+      "तीतर"
+    ],
+    "keywords": [
+      "partridge",
+      "तीतर",
+      "tee-tar",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 81,
+    "kangri": "कूकड़",
+    "hindi": "मुर्गा",
+    "english": "Rooster",
+    "pronunciation": "koo-kad",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Male domestic fowl",
+    "synonyms": [
+      "मुर्गा"
+    ],
+    "keywords": [
+      "rooster",
+      "मुर्गा",
+      "कूकड़",
+      "koo-kad",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 82,
+    "kangri": "कुकड़ी",
+    "hindi": "मुर्गी",
+    "english": "Hen",
+    "pronunciation": "kuk-dee",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Female domestic hen",
+    "synonyms": [
+      "मुर्गी"
+    ],
+    "keywords": [
+      "hen",
+      "मुर्गी",
+      "कुकड़ी",
+      "kuk-dee",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 83,
+    "kangri": "मोर",
+    "hindi": "मोर",
+    "english": "Peacock",
+    "pronunciation": "mor",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "National peacock bird",
+    "synonyms": [
+      "मोर"
+    ],
+    "keywords": [
+      "peacock",
+      "मोर",
+      "mor",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 84,
+    "kangri": "तोता",
+    "hindi": "तोता",
+    "english": "Parrot",
+    "pronunciation": "to-taa",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Green tropical parrot",
+    "synonyms": [
+      "तोता"
+    ],
+    "keywords": [
+      "parrot",
+      "तोता",
+      "to-taa",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 85,
+    "kangri": "बत्तख",
+    "hindi": "बत्तख",
+    "english": "Duck",
+    "pronunciation": "bat-takh",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Water waterfowl duck",
+    "synonyms": [
+      "बत्तख"
+    ],
+    "keywords": [
+      "duck",
+      "बत्तख",
+      "bat-takh",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 86,
+    "kangri": "बाज",
+    "hindi": "बाज़",
+    "english": "Falcon / Hawk",
+    "pronunciation": "baaj",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Hunting hawk falcon",
+    "synonyms": [
+      "बाज़"
+    ],
+    "keywords": [
+      "falcon / hawk",
+      "बाज़",
+      "बाज",
+      "baaj",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 87,
+    "kangri": "उल्लू",
+    "hindi": "उल्लू",
+    "english": "Owl",
+    "pronunciation": "ul-loo",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Nocturnal owl bird",
+    "synonyms": [
+      "उल्लू"
+    ],
+    "keywords": [
+      "owl",
+      "उल्लू",
+      "ul-loo",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 88,
+    "kangri": "कबूतर",
+    "hindi": "कबूतर",
+    "english": "Pigeon / Dove",
+    "pronunciation": "ka-boo-tar",
+    "part_of_speech": "noun",
+    "category": "Birds",
+    "description": "Domestic rock pigeon",
+    "synonyms": [
+      "कबूतर"
+    ],
+    "keywords": [
+      "pigeon / dove",
+      "कबूतर",
+      "ka-boo-tar",
+      "birds"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 89,
+    "kangri": "धाड़",
+    "hindi": "पहाड़",
+    "english": "Mountain / Hill",
+    "pronunciation": "dhaa-d",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "High mountain ridge",
+    "synonyms": [
+      "पहाड़"
+    ],
+    "keywords": [
+      "mountain / hill",
+      "पहाड़",
+      "धाड़",
+      "dhaa-d",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 90,
+    "kangri": "नदी",
+    "hindi": "नदी",
+    "english": "River",
+    "pronunciation": "na-dee",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Flowing fresh river",
+    "synonyms": [
+      "नदी"
+    ],
+    "keywords": [
+      "river",
+      "नदी",
+      "na-dee",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 91,
+    "kangri": "खड्ड",
+    "hindi": "नाला / खड्ड",
+    "english": "Stream / Rivulet",
+    "pronunciation": "khadd",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Mountain stream or stream bed",
+    "synonyms": [
+      "नाला / खड्ड"
+    ],
+    "keywords": [
+      "stream / rivulet",
+      "नाला / खड्ड",
+      "खड्ड",
+      "khadd",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 92,
+    "kangri": "चील",
+    "hindi": "देवदार / चीड़",
+    "english": "Pine Tree",
+    "pronunciation": "cheel",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Evergreen Himalayan pine tree",
+    "synonyms": [
+      "देवदार / चीड़"
+    ],
+    "keywords": [
+      "pine tree",
+      "देवदार / चीड़",
+      "चील",
+      "cheel",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 93,
+    "kangri": "दियोदर",
+    "hindi": "देवदार",
+    "english": "Deodar Cedar",
+    "pronunciation": "di-yo-dar",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Sacred Himalayan cedar tree",
+    "synonyms": [
+      "देवदार"
+    ],
+    "keywords": [
+      "deodar cedar",
+      "देवदार",
+      "दियोदर",
+      "di-yo-dar",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 94,
+    "kangri": "पत्थर",
+    "hindi": "पत्थर",
+    "english": "Stone / Rock",
+    "pronunciation": "pat-thar",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Rock or stone boulder",
+    "synonyms": [
+      "पत्थर"
+    ],
+    "keywords": [
+      "stone / rock",
+      "पत्थर",
+      "pat-thar",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 95,
+    "kangri": "बत्तूर",
+    "hindi": "चट्टान",
+    "english": "Cliff / Boulder",
+    "pronunciation": "bat-toor",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Large stone cliff",
+    "synonyms": [
+      "चट्टान"
+    ],
+    "keywords": [
+      "cliff / boulder",
+      "चट्टान",
+      "बत्तूर",
+      "bat-toor",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 96,
+    "kangri": "माटी",
+    "hindi": "मिट्टी",
+    "english": "Soil / Earth",
+    "pronunciation": "maa-tee",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Soil or fertile earth",
+    "synonyms": [
+      "मिट्टी"
+    ],
+    "keywords": [
+      "soil / earth",
+      "मिट्टी",
+      "माटी",
+      "maa-tee",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 97,
+    "kangri": "हवा",
+    "hindi": "हवा / पवन",
+    "english": "Wind / Air",
+    "pronunciation": "ha-waa",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Breeze or atmospheric wind",
+    "synonyms": [
+      "हवा / पवन"
+    ],
+    "keywords": [
+      "wind / air",
+      "हवा / पवन",
+      "हवा",
+      "ha-waa",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 98,
+    "kangri": "धूप",
+    "hindi": "धूप",
+    "english": "Sunlight",
+    "pronunciation": "dhoop",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Bright warm solar rays",
+    "synonyms": [
+      "धूप"
+    ],
+    "keywords": [
+      "sunlight",
+      "धूप",
+      "dhoop",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 99,
+    "kangri": "पाला",
+    "hindi": "कोहरा / बर्फबारी",
+    "english": "Frost / Snow",
+    "pronunciation": "paa-laa",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Winter frost or snow crystals",
+    "synonyms": [
+      "कोहरा / बर्फबारी"
+    ],
+    "keywords": [
+      "frost / snow",
+      "कोहरा / बर्फबारी",
+      "पाला",
+      "paa-laa",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 100,
+    "kangri": "छायें",
+    "hindi": "छाया",
+    "english": "Shade / Shadow",
+    "pronunciation": "chhaa-yen",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Shade under tree canopy",
+    "synonyms": [
+      "छाया"
+    ],
+    "keywords": [
+      "shade / shadow",
+      "छाया",
+      "छायें",
+      "chhaa-yen",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 101,
+    "kangri": "जंगल",
+    "hindi": "जंगल / वन",
+    "english": "Forest",
+    "pronunciation": "jan-gal",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Mountain forest woodlands",
+    "synonyms": [
+      "जंगल / वन"
+    ],
+    "keywords": [
+      "forest",
+      "जंगल / वन",
+      "जंगल",
+      "jan-gal",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 102,
+    "kangri": "धार",
+    "hindi": "पहाड़ी चोटी",
+    "english": "Mountain Crest",
+    "pronunciation": "dhaar",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Upper crest of ridge",
+    "synonyms": [
+      "पहाड़ी चोटी"
+    ],
+    "keywords": [
+      "mountain crest",
+      "पहाड़ी चोटी",
+      "धार",
+      "dhaar",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 103,
+    "kangri": "टांकरी",
+    "hindi": "टांकरी लिपि",
+    "english": "Takri Script",
+    "pronunciation": "taan-kree",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Traditional Pahari writing script",
+    "synonyms": [
+      "टांकरी लिपि"
+    ],
+    "keywords": [
+      "takri script",
+      "टांकरी लिपि",
+      "टांकरी",
+      "taan-kree",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 104,
+    "kangri": "बरखा",
+    "hindi": "वर्ष / बारिश",
+    "english": "Rain / Rainfall",
+    "pronunciation": "bar-khaa",
+    "part_of_speech": "noun",
+    "category": "Weather",
+    "description": "Monsoon precipitation",
+    "synonyms": [
+      "वर्ष / बारिश"
+    ],
+    "keywords": [
+      "rain / rainfall",
+      "वर्ष / बारिश",
+      "बरखा",
+      "bar-khaa",
+      "weather"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 105,
+    "kangri": "ठंड",
+    "hindi": "सर्दी",
+    "english": "Cold weather",
+    "pronunciation": "thand",
+    "part_of_speech": "noun",
+    "category": "Weather",
+    "description": "Low winter temperature",
+    "synonyms": [
+      "सर्दी"
+    ],
+    "keywords": [
+      "cold weather",
+      "सर्दी",
+      "ठंड",
+      "thand",
+      "weather"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 106,
+    "kangri": "धुंध",
+    "hindi": "कोहरा",
+    "english": "Fog / Mist",
+    "pronunciation": "dhundh",
+    "part_of_speech": "noun",
+    "category": "Weather",
+    "description": "Dense mountain mist",
+    "synonyms": [
+      "कोहरा"
+    ],
+    "keywords": [
+      "fog / mist",
+      "कोहरा",
+      "धुंध",
+      "dhundh",
+      "weather"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 107,
+    "kangri": "घाम",
+    "hindi": "तेज धूप",
+    "english": "Hot Sunshine",
+    "pronunciation": "ghaam",
+    "part_of_speech": "noun",
+    "category": "Weather",
+    "description": "Intense direct sunlight",
+    "synonyms": [
+      "तेज धूप"
+    ],
+    "keywords": [
+      "hot sunshine",
+      "तेज धूप",
+      "घाम",
+      "ghaam",
+      "weather"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 108,
+    "kangri": "तुषार",
+    "hindi": "पाला",
+    "english": "Frost",
+    "pronunciation": "tu-shaar",
+    "part_of_speech": "noun",
+    "category": "Weather",
+    "description": "Cold winter ground frost",
+    "synonyms": [
+      "पाला"
+    ],
+    "keywords": [
+      "frost",
+      "पाला",
+      "तुषार",
+      "tu-shaar",
+      "weather"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 109,
+    "kangri": "बिज्जु",
+    "hindi": "बिजली (आकाशीय)",
+    "english": "Lightning",
+    "pronunciation": "bij-ju",
+    "part_of_speech": "noun",
+    "category": "Weather",
+    "description": "Atmospheric electrical flash",
+    "synonyms": [
+      "बिजली (आकाशीय)"
+    ],
+    "keywords": [
+      "lightning",
+      "बिजली (आकाशीय)",
+      "बिज्जु",
+      "bij-ju",
+      "weather"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 110,
+    "kangri": "हनेरी",
+    "hindi": "आंधी",
+    "english": "Storm / Gale",
+    "pronunciation": "ha-nee-ree",
+    "part_of_speech": "noun",
+    "category": "Weather",
+    "description": "High wind storm",
+    "synonyms": [
+      "आंधी"
+    ],
+    "keywords": [
+      "storm / gale",
+      "आंधी",
+      "हनेरी",
+      "ha-nee-ree",
+      "weather"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 111,
+    "kangri": "बदरा",
+    "hindi": "बादल",
+    "english": "Cloud",
+    "pronunciation": "bad-raa",
+    "part_of_speech": "noun",
+    "category": "Weather",
+    "description": "Rain cloud formation",
+    "synonyms": [
+      "बादल"
+    ],
+    "keywords": [
+      "cloud",
+      "बादल",
+      "बदरा",
+      "bad-raa",
+      "weather"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 112,
+    "kangri": "खेती",
+    "hindi": "कृषि / खेती",
+    "english": "Farming",
+    "pronunciation": "khe-tee",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Cultivation of land",
+    "synonyms": [
+      "कृषि / खेती"
+    ],
+    "keywords": [
+      "farming",
+      "कृषि / खेती",
+      "खेती",
+      "khe-tee",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 113,
+    "kangri": "हल",
+    "hindi": "हल",
+    "english": "Plow",
+    "pronunciation": "hal",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Traditional wooden land plow",
+    "synonyms": [
+      "हल"
+    ],
+    "keywords": [
+      "plow",
+      "हल",
+      "hal",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 114,
+    "kangri": "बीउ",
+    "hindi": "बीज",
+    "english": "Seed",
+    "pronunciation": "bee-u",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Crop sowing seeds",
+    "synonyms": [
+      "बीज"
+    ],
+    "keywords": [
+      "seed",
+      "बीज",
+      "बीउ",
+      "bee-u",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 115,
+    "kangri": "फसल",
+    "hindi": "फसल",
+    "english": "Crop / Harvest",
+    "pronunciation": "fa-sal",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Agricultural produce",
+    "synonyms": [
+      "फसल"
+    ],
+    "keywords": [
+      "crop / harvest",
+      "फसल",
+      "fa-sal",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 116,
+    "kangri": "बाड़ी",
+    "hindi": "बगीचा / खेत",
+    "english": "Orchard / Garden",
+    "pronunciation": "baa-dee",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Fruit orchard garden",
+    "synonyms": [
+      "बगीचा / खेत"
+    ],
+    "keywords": [
+      "orchard / garden",
+      "बगीचा / खेत",
+      "बाड़ी",
+      "baa-dee",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 117,
+    "kangri": "रोपाई",
+    "hindi": "धान रोपाई",
+    "english": "Paddy Plantation",
+    "pronunciation": "ro-paa-ee",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Sowing rice seedlings in water",
+    "synonyms": [
+      "धान रोपाई"
+    ],
+    "keywords": [
+      "paddy plantation",
+      "धान रोपाई",
+      "रोपाई",
+      "ro-paa-ee",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 118,
+    "kangri": "कटाई",
+    "hindi": "फसल कटाई",
+    "english": "Harvesting",
+    "pronunciation": "ka-taa-ee",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Reaping mature crops",
+    "synonyms": [
+      "फसल कटाई"
+    ],
+    "keywords": [
+      "harvesting",
+      "फसल कटाई",
+      "कटाई",
+      "ka-taa-ee",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 119,
+    "kangri": "गाहणी",
+    "hindi": "गहाई",
+    "english": "Threshing",
+    "pronunciation": "gaa-ha-nee",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Separating grain from stalks",
+    "synonyms": [
+      "गहाई"
+    ],
+    "keywords": [
+      "threshing",
+      "गहाई",
+      "गाहणी",
+      "gaa-ha-nee",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 120,
+    "kangri": "बाहणी",
+    "hindi": "जुताई",
+    "english": "Plowing / Tilling",
+    "pronunciation": "baa-ha-nee",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Tilling soil before planting",
+    "synonyms": [
+      "जुताई"
+    ],
+    "keywords": [
+      "plowing / tilling",
+      "जुताई",
+      "बाहणी",
+      "baa-ha-nee",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 121,
+    "kangri": "खाद",
+    "hindi": "उर्वरक / खाद",
+    "english": "Fertilizer / Compost",
+    "pronunciation": "khaad",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Organic or mineral plant nutrient",
+    "synonyms": [
+      "उर्वरक / खाद"
+    ],
+    "keywords": [
+      "fertilizer / compost",
+      "उर्वरक / खाद",
+      "खाद",
+      "khaad",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 122,
+    "kangri": "नाल",
+    "hindi": "नहर / कुहल",
+    "english": "Irrigation Channel",
+    "pronunciation": "naal",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Traditional mountain stream channel",
+    "synonyms": [
+      "नहर / कुहल"
+    ],
+    "keywords": [
+      "irrigation channel",
+      "नहर / कुहल",
+      "नाल",
+      "naal",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 123,
+    "kangri": "बीमारी",
+    "hindi": "बीमारी",
+    "english": "Illness / Disease",
+    "pronunciation": "bee-maa-ree",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Health sickness condition",
+    "synonyms": [
+      "बीमारी"
+    ],
+    "keywords": [
+      "illness / disease",
+      "बीमारी",
+      "bee-maa-ree",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 124,
+    "kangri": "दवाई",
+    "hindi": "औषधि / दवा",
+    "english": "Medicine",
+    "pronunciation": "da-waa-ee",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Pharmaceutical remedy",
+    "synonyms": [
+      "औषधि / दवा"
+    ],
+    "keywords": [
+      "medicine",
+      "औषधि / दवा",
+      "दवाई",
+      "da-waa-ee",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 125,
+    "kangri": "हस्पताल",
+    "hindi": "अस्पताल",
+    "english": "Hospital",
+    "pronunciation": "has-pa-taal",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Medical treatment center",
+    "synonyms": [
+      "अस्पताल"
+    ],
+    "keywords": [
+      "hospital",
+      "अस्पताल",
+      "हस्पताल",
+      "has-pa-taal",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 126,
+    "kangri": "पट्टा",
+    "hindi": "पट्टी",
+    "english": "Bandage",
+    "pronunciation": "pat-taa",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Wound dressing bandage",
+    "synonyms": [
+      "पट्टी"
+    ],
+    "keywords": [
+      "bandage",
+      "पट्टी",
+      "पट्टा",
+      "pat-taa",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 127,
+    "kangri": "जखम",
+    "hindi": "घाव / चोट",
+    "english": "Wound / Injury",
+    "pronunciation": "jak-ham",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Physical injury mark",
+    "synonyms": [
+      "घाव / चोट"
+    ],
+    "keywords": [
+      "wound / injury",
+      "घाव / चोट",
+      "जखम",
+      "jak-ham",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 128,
+    "kangri": "बुखार",
+    "hindi": "ज्वर / बुखार",
+    "english": "Fever",
+    "pronunciation": "bu-khaar",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Elevated body temperature",
+    "synonyms": [
+      "ज्वर / बुखार"
+    ],
+    "keywords": [
+      "fever",
+      "ज्वर / बुखार",
+      "बुखार",
+      "bu-khaar",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 129,
+    "kangri": "सिरपीड़ा",
+    "hindi": "सिरदर्द",
+    "english": "Headache",
+    "pronunciation": "sir-pee-daa",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Cranial pain condition",
+    "synonyms": [
+      "सिरदर्द"
+    ],
+    "keywords": [
+      "headache",
+      "सिरदर्द",
+      "सिरपीड़ा",
+      "sir-pee-daa",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 130,
+    "kangri": "पेटपीड़ा",
+    "hindi": "पेट दर्द",
+    "english": "Stomachache",
+    "pronunciation": "pet-pee-daa",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Abdominal pain symptom",
+    "synonyms": [
+      "पेट दर्द"
+    ],
+    "keywords": [
+      "stomachache",
+      "पेट दर्द",
+      "पेटपीड़ा",
+      "pet-pee-daa",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 131,
+    "kangri": "वैद्य",
+    "hindi": "पारंपरिक चिकित्सक",
+    "english": "Ayurvedic Practitioner",
+    "pronunciation": "vaid-ya",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Traditional herbal healer",
+    "synonyms": [
+      "पारंपरिक चिकित्सक"
+    ],
+    "keywords": [
+      "ayurvedic practitioner",
+      "पारंपरिक चिकित्सक",
+      "वैद्य",
+      "vaid-ya",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 132,
+    "kangri": "जड़ी-बूटियां",
+    "hindi": "औषधीय पौधे",
+    "english": "Herbal Plants",
+    "pronunciation": "ja-dee-boo-ti-yaan",
+    "part_of_speech": "noun",
+    "category": "Healthcare",
+    "description": "Medicinal mountain herbs",
+    "synonyms": [
+      "औषधीय पौधे"
+    ],
+    "keywords": [
+      "herbal plants",
+      "औषधीय पौधे",
+      "जड़ी-बूटियां",
+      "ja-dee-boo-ti-yaan",
+      "healthcare"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 133,
+    "kangri": "स्कूल",
+    "hindi": "विद्यालय",
+    "english": "School",
+    "pronunciation": "skool",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Primary learning institution",
+    "synonyms": [
+      "विद्यालय"
+    ],
+    "keywords": [
+      "school",
+      "विद्यालय",
+      "स्कूल",
+      "skool",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 134,
+    "kangri": "किताब",
+    "hindi": "पुस्तिका / ग्रंथ",
+    "english": "Book",
+    "pronunciation": "ki-taab",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Printed reading book",
+    "synonyms": [
+      "पुस्तिका / ग्रंथ"
+    ],
+    "keywords": [
+      "book",
+      "पुस्तिका / ग्रंथ",
+      "किताब",
+      "ki-taab",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 135,
+    "kangri": "कलम",
+    "hindi": "लेखी / पेन",
+    "english": "Pen / Pencil",
+    "pronunciation": "ka-lam",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Writing instrument",
+    "synonyms": [
+      "लेखी / पेन"
+    ],
+    "keywords": [
+      "pen / pencil",
+      "लेखी / पेन",
+      "कलम",
+      "ka-lam",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 136,
+    "kangri": "पढ़ाई",
+    "hindi": "शिक्षा",
+    "english": "Study / Education",
+    "pronunciation": "padh-aa-ee",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Learning academic work",
+    "synonyms": [
+      "शिक्षा"
+    ],
+    "keywords": [
+      "study / education",
+      "शिक्षा",
+      "पढ़ाई",
+      "padh-aa-ee",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 137,
+    "kangri": "गुरु",
+    "hindi": "शिक्षक / अध्यापक",
+    "english": "Teacher / Mentor",
+    "pronunciation": "gu-ru",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Instructor or mentor",
+    "synonyms": [
+      "शिक्षक / अध्यापक"
+    ],
+    "keywords": [
+      "teacher / mentor",
+      "शिक्षक / अध्यापक",
+      "गुरु",
+      "gu-ru",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 138,
+    "kangri": "चेला",
+    "hindi": "छात्र / शिष्य",
+    "english": "Student / Pupil",
+    "pronunciation": "che-laa",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Enrolled learner pupil",
+    "synonyms": [
+      "छात्र / शिष्य"
+    ],
+    "keywords": [
+      "student / pupil",
+      "छात्र / शिष्य",
+      "चेला",
+      "che-laa",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 139,
+    "kangri": "सवाल",
+    "hindi": "प्रश्न",
+    "english": "Question",
+    "pronunciation": "sa-waal",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Query or inquiry",
+    "synonyms": [
+      "प्रश्न"
+    ],
+    "keywords": [
+      "question",
+      "प्रश्न",
+      "सवाल",
+      "sa-waal",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 140,
+    "kangri": "जवाब",
+    "hindi": "उत्तर",
+    "english": "Answer / Solution",
+    "pronunciation": "ja-waab",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Response to query",
+    "synonyms": [
+      "उत्तर"
+    ],
+    "keywords": [
+      "answer / solution",
+      "उत्तर",
+      "जवाब",
+      "ja-waab",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 141,
+    "kangri": "कागज़",
+    "hindi": "कागज",
+    "english": "Paper",
+    "pronunciation": "kaa-gaz",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Writing paper sheet",
+    "synonyms": [
+      "कागज"
+    ],
+    "keywords": [
+      "paper",
+      "कागज",
+      "कागज़",
+      "kaa-gaz",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 142,
+    "kangri": "आखर",
+    "hindi": "अक्षर",
+    "english": "Letter / Alphabet",
+    "pronunciation": "aa-khar",
+    "part_of_speech": "noun",
+    "category": "Education",
+    "description": "Alphabetical character symbol",
+    "synonyms": [
+      "अक्षर"
+    ],
+    "keywords": [
+      "letter / alphabet",
+      "अक्षर",
+      "आखर",
+      "aa-khar",
+      "education"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 143,
+    "kangri": "पंचायत",
+    "hindi": "ग्राम पंचायत",
+    "english": "Village Council",
+    "pronunciation": "pan-chaa-yat",
+    "part_of_speech": "noun",
+    "category": "Government",
+    "description": "Local village self-government",
+    "synonyms": [
+      "ग्राम पंचायत"
+    ],
+    "keywords": [
+      "village council",
+      "ग्राम पंचायत",
+      "पंचायत",
+      "pan-chaa-yat",
+      "government"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 144,
+    "kangri": "प्रधान",
+    "hindi": "पंचायत अध्यक्ष",
+    "english": "Village Head / Sarpanch",
+    "pronunciation": "prad-haan",
+    "part_of_speech": "noun",
+    "category": "Government",
+    "description": "Elected village president",
+    "synonyms": [
+      "पंचायत अध्यक्ष"
+    ],
+    "keywords": [
+      "village head / sarpanch",
+      "पंचायत अध्यक्ष",
+      "प्रधान",
+      "prad-haan",
+      "government"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 145,
+    "kangri": "पटवारी",
+    "hindi": "राजस्व अधिकारी",
+    "english": "Revenue Collector",
+    "pronunciation": "pat-waa-ree",
+    "part_of_speech": "noun",
+    "category": "Government",
+    "description": "Village land record keeper",
+    "synonyms": [
+      "राजस्व अधिकारी"
+    ],
+    "keywords": [
+      "revenue collector",
+      "राजस्व अधिकारी",
+      "पटवारी",
+      "pat-waa-ree",
+      "government"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 146,
+    "kangri": "कचहरी",
+    "hindi": "न्यायालय",
+    "english": "Court / Office",
+    "pronunciation": "ka-chheh-ree",
+    "part_of_speech": "noun",
+    "category": "Government",
+    "description": "Judicial court office",
+    "synonyms": [
+      "न्यायालय"
+    ],
+    "keywords": [
+      "court / office",
+      "न्यायालय",
+      "कचहरी",
+      "ka-chheh-ree",
+      "government"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 147,
+    "kangri": "बाबू",
+    "hindi": "क्लर्क / बाबू",
+    "english": "Clerk / Officer",
+    "pronunciation": "baa-boo",
+    "part_of_speech": "noun",
+    "category": "Government",
+    "description": "Administrative desk clerk",
+    "synonyms": [
+      "क्लर्क / बाबू"
+    ],
+    "keywords": [
+      "clerk / officer",
+      "क्लर्क / बाबू",
+      "बाबू",
+      "baa-boo",
+      "government"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 148,
+    "kangri": "कानून",
+    "hindi": "नियम / विधान",
+    "english": "Law / Regulation",
+    "pronunciation": "kaa-noon",
+    "part_of_speech": "noun",
+    "category": "Government",
+    "description": "Official legal regulation",
+    "synonyms": [
+      "नियम / विधान"
+    ],
+    "keywords": [
+      "law / regulation",
+      "नियम / विधान",
+      "कानून",
+      "kaa-noon",
+      "government"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 149,
+    "kangri": "हुकम",
+    "hindi": "आदेश",
+    "english": "Official Order",
+    "pronunciation": "hu-kam",
+    "part_of_speech": "noun",
+    "category": "Government",
+    "description": "Executive directive",
+    "synonyms": [
+      "आदेश"
+    ],
+    "keywords": [
+      "official order",
+      "आदेश",
+      "हुकम",
+      "hu-kam",
+      "government"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 150,
+    "kangri": "अफसर",
+    "hindi": "अधिकारी",
+    "english": "Officer",
+    "pronunciation": "af-sar",
+    "part_of_speech": "noun",
+    "category": "Government",
+    "description": "Government official administrator",
+    "synonyms": [
+      "अधिकारी"
+    ],
+    "keywords": [
+      "officer",
+      "अधिकारी",
+      "अफसर",
+      "af-sar",
+      "government",
+      "aफसर"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 151,
+    "kangri": "थाना",
+    "hindi": "पुलिस थाना",
+    "english": "Police Station",
+    "pronunciation": "thaa-naa",
+    "part_of_speech": "noun",
+    "category": "Government",
+    "description": "Local law enforcement post",
+    "synonyms": [
+      "पुलिस थाना"
+    ],
+    "keywords": [
+      "police station",
+      "पुलिस थाना",
+      "थाना",
+      "thaa-naa",
+      "government"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 152,
+    "kangri": "बस",
+    "hindi": "बस",
+    "english": "Bus",
+    "pronunciation": "bas",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Public passenger bus",
+    "synonyms": [
+      "बस"
+    ],
+    "keywords": [
+      "bus",
+      "बस",
+      "bas",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 153,
+    "kangri": "गड्डी",
+    "hindi": "गाड़ी / वाहन",
+    "english": "Vehicle / Car",
+    "pronunciation": "gadd-ee",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Motor car or vehicle",
+    "synonyms": [
+      "गाड़ी / वाहन"
+    ],
+    "keywords": [
+      "vehicle / car",
+      "गाड़ी / वाहन",
+      "गड्डी",
+      "gadd-ee",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 154,
+    "kangri": "रास्ता",
+    "hindi": "मार्ग / पथ",
+    "english": "Path / Route",
+    "pronunciation": "raas-taa",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Walking path or trail",
+    "synonyms": [
+      "मार्ग / पथ"
+    ],
+    "keywords": [
+      "path / route",
+      "मार्ग / पथ",
+      "रास्ता",
+      "raas-taa",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 155,
+    "kangri": "सड़क",
+    "hindi": "राजमार्ग",
+    "english": "Road / Highway",
+    "pronunciation": "sa-dak",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Paved vehicular road",
+    "synonyms": [
+      "राजमार्ग"
+    ],
+    "keywords": [
+      "road / highway",
+      "राजमार्ग",
+      "सड़क",
+      "sa-dak",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 156,
+    "kangri": "भाड़ा",
+    "hindi": "किराया",
+    "english": "Fare / Freight",
+    "pronunciation": "bhaa-daa",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Transport ticket cost",
+    "synonyms": [
+      "किराया"
+    ],
+    "keywords": [
+      "fare / freight",
+      "किराया",
+      "भाड़ा",
+      "bhaa-daa",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 157,
+    "kangri": "मुसाफिर",
+    "hindi": "यात्री",
+    "english": "Passenger / Traveler",
+    "pronunciation": "mu-saa-fir",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Person traveling",
+    "synonyms": [
+      "यात्री"
+    ],
+    "keywords": [
+      "passenger / traveler",
+      "यात्री",
+      "मुसाफिर",
+      "mu-saa-fir",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 158,
+    "kangri": "पिंड",
+    "hindi": "गांव",
+    "english": "Village",
+    "pronunciation": "pind",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Rural settlement locality",
+    "synonyms": [
+      "गांव"
+    ],
+    "keywords": [
+      "village",
+      "गांव",
+      "पिंड",
+      "pind",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 159,
+    "kangri": "शहर",
+    "hindi": "नगर",
+    "english": "City / Town",
+    "pronunciation": "sha-har",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Urban township district",
+    "synonyms": [
+      "नगर"
+    ],
+    "keywords": [
+      "city / town",
+      "नगर",
+      "शहर",
+      "sha-har",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 160,
+    "kangri": "सफर",
+    "hindi": "यात्रा",
+    "english": "Journey",
+    "pronunciation": "sa-far",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Travel expedition",
+    "synonyms": [
+      "यात्रा"
+    ],
+    "keywords": [
+      "journey",
+      "यात्रा",
+      "सफर",
+      "sa-far",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 161,
+    "kangri": "मोड़",
+    "hindi": "घुमाव",
+    "english": "Curve / Bend",
+    "pronunciation": "mod",
+    "part_of_speech": "noun",
+    "category": "Travel",
+    "description": "Sharp mountain road turn",
+    "synonyms": [
+      "घुमाव"
+    ],
+    "keywords": [
+      "curve / bend",
+      "घुमाव",
+      "मोड़",
+      "mod",
+      "travel"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 162,
+    "kangri": "हाट",
+    "hindi": "बाजार",
+    "english": "Market",
+    "pronunciation": "haat",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Traditional open-air marketplace",
+    "synonyms": [
+      "बाजार"
+    ],
+    "keywords": [
+      "market",
+      "बाजार",
+      "हाट",
+      "haat",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 163,
+    "kangri": "दुकान",
+    "hindi": "दुकान",
+    "english": "Shop / Store",
+    "pronunciation": "du-kaan",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Retail commercial shop",
+    "synonyms": [
+      "दुकान"
+    ],
+    "keywords": [
+      "shop / store",
+      "दुकान",
+      "du-kaan",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 164,
+    "kangri": "पेहे",
+    "hindi": "पैसे / धन",
+    "english": "Money / Currency",
+    "pronunciation": "pe-he",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Financial tender cash",
+    "synonyms": [
+      "पैसे / धन"
+    ],
+    "keywords": [
+      "money / currency",
+      "पैसे / धन",
+      "पेहे",
+      "pe-he",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 165,
+    "kangri": "मोल",
+    "hindi": "मूल्य / दाम",
+    "english": "Price / Rate",
+    "pronunciation": "mol",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Cost valuation",
+    "synonyms": [
+      "मूल्य / दाम"
+    ],
+    "keywords": [
+      "price / rate",
+      "मूल्य / दाम",
+      "मोल",
+      "mol",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 166,
+    "kangri": "सौदा",
+    "hindi": "सामान / व्यापार",
+    "english": "Goods / Deal",
+    "pronunciation": "sau-daa",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Purchased goods item",
+    "synonyms": [
+      "सामान / व्यापार"
+    ],
+    "keywords": [
+      "goods / deal",
+      "सामान / व्यापार",
+      "सौदा",
+      "sau-daa",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 167,
+    "kangri": "गाहक",
+    "hindi": "ग्राहक",
+    "english": "Customer",
+    "pronunciation": "gaa-hak",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Purchasing client buyer",
+    "synonyms": [
+      "ग्राहक"
+    ],
+    "keywords": [
+      "customer",
+      "ग्राहक",
+      "गाहक",
+      "gaa-hak",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 168,
+    "kangri": "उधार",
+    "hindi": "ऋण / बाकी",
+    "english": "Credit",
+    "pronunciation": "ud-haar",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Deferred payment balance",
+    "synonyms": [
+      "ऋण / बाकी"
+    ],
+    "keywords": [
+      "credit",
+      "ऋण / बाकी",
+      "उधार",
+      "ud-haar",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 169,
+    "kangri": "तौल",
+    "hindi": "वजन",
+    "english": "Weight / Measurement",
+    "pronunciation": "taul",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Scale mass measurement",
+    "synonyms": [
+      "वजन"
+    ],
+    "keywords": [
+      "weight / measurement",
+      "वजन",
+      "तौल",
+      "taul",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 170,
+    "kangri": "कपड़ा",
+    "hindi": "वस्त्र / परिधान",
+    "english": "Cloth / Garment",
+    "pronunciation": "kap-daa",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Woven fabric clothing",
+    "synonyms": [
+      "वस्त्र / परिधान"
+    ],
+    "keywords": [
+      "cloth / garment",
+      "वस्त्र / परिधान",
+      "कपड़ा",
+      "kap-daa",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 171,
+    "kangri": "चीज़",
+    "hindi": "वस्तु",
+    "english": "Item / Thing",
+    "pronunciation": "cheez",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Physical object or article",
+    "synonyms": [
+      "वस्तु"
+    ],
+    "keywords": [
+      "item / thing",
+      "वस्तु",
+      "चीज़",
+      "cheez",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 172,
+    "kangri": "सिर",
+    "hindi": "सिर",
+    "english": "Head",
+    "pronunciation": "sir",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Upper cranial body part",
+    "synonyms": [
+      "सिर"
+    ],
+    "keywords": [
+      "head",
+      "सिर",
+      "sir",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 173,
+    "kangri": "आख",
+    "hindi": "आंख",
+    "english": "Eye",
+    "pronunciation": "aakh",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Visual organ eye",
+    "synonyms": [
+      "आंख"
+    ],
+    "keywords": [
+      "eye",
+      "आंख",
+      "आख",
+      "aakh",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 174,
+    "kangri": "नाक",
+    "hindi": "नाक",
+    "english": "Nose",
+    "pronunciation": "naak",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Olfactory organ nose",
+    "synonyms": [
+      "नाक"
+    ],
+    "keywords": [
+      "nose",
+      "नाक",
+      "naak",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 175,
+    "kangri": "कान",
+    "hindi": "कान",
+    "english": "Ear",
+    "pronunciation": "kaan",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Hearing organ ear",
+    "synonyms": [
+      "कान"
+    ],
+    "keywords": [
+      "ear",
+      "कान",
+      "kaan",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 176,
+    "kangri": "दंद",
+    "hindi": "दांत",
+    "english": "Tooth",
+    "pronunciation": "dand",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Mastication tooth",
+    "synonyms": [
+      "दांत"
+    ],
+    "keywords": [
+      "tooth",
+      "दांत",
+      "दंद",
+      "dand",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 177,
+    "kangri": "जीभ",
+    "hindi": "जीभ",
+    "english": "Tongue",
+    "pronunciation": "jeebh",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Gustatory organ tongue",
+    "synonyms": [
+      "जीभ"
+    ],
+    "keywords": [
+      "tongue",
+      "जीभ",
+      "jeebh",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 178,
+    "kangri": "मुंड",
+    "hindi": "चेहरा / खोपड़ी",
+    "english": "Face / Head",
+    "pronunciation": "mund",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Facial structure",
+    "synonyms": [
+      "चेहरा / खोपड़ी"
+    ],
+    "keywords": [
+      "face / head",
+      "चेहरा / खोपड़ी",
+      "मुंड",
+      "mund",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 179,
+    "kangri": "हाथ",
+    "hindi": "हाथ",
+    "english": "Hand / Arm",
+    "pronunciation": "haath",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Upper limb hand",
+    "synonyms": [
+      "हाथ"
+    ],
+    "keywords": [
+      "hand / arm",
+      "हाथ",
+      "haath",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 180,
+    "kangri": "पैर",
+    "hindi": "पांव",
+    "english": "Foot / Leg",
+    "pronunciation": "pair",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Lower extremity foot",
+    "synonyms": [
+      "पांव"
+    ],
+    "keywords": [
+      "foot / leg",
+      "पांव",
+      "पैर",
+      "pair",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 181,
+    "kangri": "पेट",
+    "hindi": "उदर",
+    "english": "Stomach / Abdomen",
+    "pronunciation": "pet",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Digestive organ cavity",
+    "synonyms": [
+      "उदर"
+    ],
+    "keywords": [
+      "stomach / abdomen",
+      "उदर",
+      "पेट",
+      "pet",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 182,
+    "kangri": "पीठ",
+    "hindi": "पीठ",
+    "english": "Back",
+    "pronunciation": "peeth",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Dorsal body area",
+    "synonyms": [
+      "पीठ"
+    ],
+    "keywords": [
+      "back",
+      "पीठ",
+      "peeth",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 183,
+    "kangri": "लत्त",
+    "hindi": "टांग",
+    "english": "Leg",
+    "pronunciation": "latt",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Walking leg limb",
+    "synonyms": [
+      "टांग"
+    ],
+    "keywords": [
+      "leg",
+      "टांग",
+      "लत्त",
+      "latt",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 184,
+    "kangri": "उंगली",
+    "hindi": "उंगली",
+    "english": "Finger",
+    "pronunciation": "ung-lee",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Digital hand digit",
+    "synonyms": [
+      "उंगली"
+    ],
+    "keywords": [
+      "finger",
+      "उंगली",
+      "ung-lee",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 185,
+    "kangri": "छाती",
+    "hindi": "सीना",
+    "english": "Chest",
+    "pronunciation": "chhaa-tee",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Thoracic chest area",
+    "synonyms": [
+      "सीना"
+    ],
+    "keywords": [
+      "chest",
+      "सीना",
+      "छाती",
+      "chhaa-tee",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 186,
+    "kangri": "गला",
+    "hindi": "कंठ",
+    "english": "Throat / Neck",
+    "pronunciation": "ga-laa",
+    "part_of_speech": "noun",
+    "category": "Body Parts",
+    "description": "Vocal throat neck",
+    "synonyms": [
+      "कंठ"
+    ],
+    "keywords": [
+      "throat / neck",
+      "कंठ",
+      "गला",
+      "ga-laa",
+      "body parts"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 187,
+    "kangri": "थरिया",
+    "hindi": "थाली",
+    "english": "Plate / Platter",
+    "pronunciation": "tha-ri-yaa",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Dining metal plate",
+    "synonyms": [
+      "थाली"
+    ],
+    "keywords": [
+      "plate / platter",
+      "थाली",
+      "थरिया",
+      "tha-ri-yaa",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 188,
+    "kangri": "बाल्टी",
+    "hindi": "बाल्टी",
+    "english": "Bucket",
+    "pronunciation": "baal-tee",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Water carrying container",
+    "synonyms": [
+      "बाल्टी"
+    ],
+    "keywords": [
+      "bucket",
+      "बाल्टी",
+      "baal-tee",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 189,
+    "kangri": "गिलासी",
+    "hindi": "गिलास",
+    "english": "Glass / Tumbler",
+    "pronunciation": "gi-laa-see",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Drinking tumbler vessel",
+    "synonyms": [
+      "गिलास"
+    ],
+    "keywords": [
+      "glass / tumbler",
+      "गिलास",
+      "गिलासी",
+      "gi-laa-see",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 190,
+    "kangri": "कौली",
+    "hindi": "कटोरी",
+    "english": "Bowl",
+    "pronunciation": "kau-lee",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Small curry bowl",
+    "synonyms": [
+      "कटोरी"
+    ],
+    "keywords": [
+      "bowl",
+      "कटोरी",
+      "कौली",
+      "kau-lee",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 191,
+    "kangri": "पतीला",
+    "hindi": "भगोना",
+    "english": "Cooking Pot",
+    "pronunciation": "pa-tee-laa",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Deep metallic cooking pot",
+    "synonyms": [
+      "भगोना"
+    ],
+    "keywords": [
+      "cooking pot",
+      "भगोना",
+      "पतीला",
+      "pa-tee-laa",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 192,
+    "kangri": "चुल्हा",
+    "hindi": "चूल्हा",
+    "english": "Stove / Hearth",
+    "pronunciation": "chul-haa",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Traditional clay cooking stove",
+    "synonyms": [
+      "चूल्हा"
+    ],
+    "keywords": [
+      "stove / hearth",
+      "चूल्हा",
+      "चुल्हा",
+      "chul-haa",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 193,
+    "kangri": "दीवा",
+    "hindi": "दीपक",
+    "english": "Oil Lamp",
+    "pronunciation": "dee-waa",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Earthen clay lighting wick",
+    "synonyms": [
+      "दीपक"
+    ],
+    "keywords": [
+      "oil lamp",
+      "दीपक",
+      "दीवा",
+      "dee-waa",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 194,
+    "kangri": "खाट",
+    "hindi": "चारपाई",
+    "english": "Cot / Bed",
+    "pronunciation": "khaa-t",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Woven string bedframe",
+    "synonyms": [
+      "चारपाई"
+    ],
+    "keywords": [
+      "cot / bed",
+      "चारपाई",
+      "खाट",
+      "khaa-t",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 195,
+    "kangri": "मंजी",
+    "hindi": "छोटी चारपाई",
+    "english": "Small Stool / Cot",
+    "pronunciation": "man-jee",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Wooden seated stool frame",
+    "synonyms": [
+      "छोटी चारपाई"
+    ],
+    "keywords": [
+      "small stool / cot",
+      "छोटी चारपाई",
+      "मंजी",
+      "man-jee",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 196,
+    "kangri": "कमरा",
+    "hindi": "कक्ष",
+    "english": "Room",
+    "pronunciation": "kam-raa",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Enclosed living room",
+    "synonyms": [
+      "कक्ष"
+    ],
+    "keywords": [
+      "room",
+      "कक्ष",
+      "कमरा",
+      "kam-raa",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 197,
+    "kangri": "दरबाजा",
+    "hindi": "द्वार / किवाड़",
+    "english": "Door",
+    "pronunciation": "dar-baa-jaa",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Entryway door panel",
+    "synonyms": [
+      "द्वार / किवाड़"
+    ],
+    "keywords": [
+      "door",
+      "द्वार / किवाड़",
+      "दरबाजा",
+      "dar-baa-jaa",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 198,
+    "kangri": "ताला",
+    "hindi": "ताला",
+    "english": "Lock",
+    "pronunciation": "taa-laa",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Security key lock",
+    "synonyms": [
+      "ताला"
+    ],
+    "keywords": [
+      "lock",
+      "ताला",
+      "taa-laa",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 199,
+    "kangri": "चाबी",
+    "hindi": "कुंजी",
+    "english": "Key",
+    "pronunciation": "chaa-bee",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Metal opening key",
+    "synonyms": [
+      "कुंजी"
+    ],
+    "keywords": [
+      "key",
+      "कुंजी",
+      "चाबी",
+      "chaa-bee",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 200,
+    "kangri": "बुहारनी",
+    "hindi": "झाड़ू",
+    "english": "Broom",
+    "pronunciation": "bu-haar-nee",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Cleaning straw broom",
+    "synonyms": [
+      "झाड़ू"
+    ],
+    "keywords": [
+      "broom",
+      "झाड़ू",
+      "बुहारनी",
+      "bu-haar-nee",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 201,
+    "kangri": "रस्सी",
+    "hindi": "डोरी",
+    "english": "Rope",
+    "pronunciation": "ras-see",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Twisted fiber rope",
+    "synonyms": [
+      "डोरी"
+    ],
+    "keywords": [
+      "rope",
+      "डोरी",
+      "रस्सी",
+      "ras-see",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 202,
+    "kangri": "लाला",
+    "hindi": "लाल",
+    "english": "Red",
+    "pronunciation": "laa-laa",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Vibrant crimson red color",
+    "synonyms": [
+      "लाल"
+    ],
+    "keywords": [
+      "red",
+      "लाल",
+      "लाला",
+      "laa-laa",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 203,
+    "kangri": "पीला",
+    "hindi": "पीला",
+    "english": "Yellow",
+    "pronunciation": "pee-laa",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Bright golden yellow color",
+    "synonyms": [
+      "पीला"
+    ],
+    "keywords": [
+      "yellow",
+      "पीला",
+      "pee-laa",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 204,
+    "kangri": "नीला",
+    "hindi": "नीला",
+    "english": "Blue",
+    "pronunciation": "nee-laa",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Deep sky blue color",
+    "synonyms": [
+      "नीला"
+    ],
+    "keywords": [
+      "blue",
+      "नीला",
+      "nee-laa",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 205,
+    "kangri": "काला",
+    "hindi": "काला",
+    "english": "Black",
+    "pronunciation": "kaa-laa",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Dark coal black color",
+    "synonyms": [
+      "काला"
+    ],
+    "keywords": [
+      "black",
+      "काला",
+      "kaa-laa",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 206,
+    "kangri": "चिट्टा",
+    "hindi": "सफेद",
+    "english": "White",
+    "pronunciation": "chit-taa",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Pure snow white color",
+    "synonyms": [
+      "सफेद"
+    ],
+    "keywords": [
+      "white",
+      "सफेद",
+      "चिट्टा",
+      "chit-taa",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 207,
+    "kangri": "हरा",
+    "hindi": "हरा",
+    "english": "Green",
+    "pronunciation": "ha-raa",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Lush plant green color",
+    "synonyms": [
+      "हरा"
+    ],
+    "keywords": [
+      "green",
+      "हरा",
+      "ha-raa",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 208,
+    "kangri": "भूरा",
+    "hindi": "भूरा",
+    "english": "Brown",
+    "pronunciation": "bhoo-raa",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Earthen soil brown color",
+    "synonyms": [
+      "भूरा"
+    ],
+    "keywords": [
+      "brown",
+      "भूरा",
+      "bhoo-raa",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 209,
+    "kangri": "संतरी",
+    "hindi": "नारंगी",
+    "english": "Orange",
+    "pronunciation": "san-ta-ree",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Orange fruit color",
+    "synonyms": [
+      "नारंगी"
+    ],
+    "keywords": [
+      "orange",
+      "नारंगी",
+      "संतरी",
+      "san-ta-ree",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 210,
+    "kangri": "गुलाबी",
+    "hindi": "गुलाबी",
+    "english": "Pink",
+    "pronunciation": "gu-laa-bee",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Rose petal pink color",
+    "synonyms": [
+      "गुलाबी"
+    ],
+    "keywords": [
+      "pink",
+      "गुलाबी",
+      "gu-laa-bee",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 211,
+    "kangri": "स्लेटी",
+    "hindi": "धूसर",
+    "english": "Grey",
+    "pronunciation": "sle-tee",
+    "part_of_speech": "adjective",
+    "category": "Colors",
+    "description": "Stone slate grey color",
+    "synonyms": [
+      "धूसर"
+    ],
+    "keywords": [
+      "grey",
+      "धूसर",
+      "स्लेटी",
+      "sle-tee",
+      "colors"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 212,
+    "kangri": "इक",
+    "hindi": "एक",
+    "english": "One",
+    "pronunciation": "ik",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 1",
+    "synonyms": [
+      "एक"
+    ],
+    "keywords": [
+      "one",
+      "एक",
+      "इक",
+      "ik",
+      "numbers",
+      "iक"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 213,
+    "kangri": "दो",
+    "hindi": "दो",
+    "english": "Two",
+    "pronunciation": "do",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 2",
+    "synonyms": [
+      "दो"
+    ],
+    "keywords": [
+      "two",
+      "दो",
+      "do",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 214,
+    "kangri": "त्रै",
+    "hindi": "तीन",
+    "english": "Three",
+    "pronunciation": "trai",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 3",
+    "synonyms": [
+      "तीन"
+    ],
+    "keywords": [
+      "three",
+      "तीन",
+      "त्रै",
+      "trai",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 215,
+    "kangri": "चार",
+    "hindi": "चार",
+    "english": "Four",
+    "pronunciation": "chaar",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 4",
+    "synonyms": [
+      "चार"
+    ],
+    "keywords": [
+      "four",
+      "चार",
+      "chaar",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 216,
+    "kangri": "पंज",
+    "hindi": "पांच",
+    "english": "Five",
+    "pronunciation": "panj",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 5",
+    "synonyms": [
+      "पांच"
+    ],
+    "keywords": [
+      "five",
+      "पांच",
+      "पंज",
+      "panj",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 217,
+    "kangri": "छह",
+    "hindi": "छह",
+    "english": "Six",
+    "pronunciation": "chheh",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 6",
+    "synonyms": [
+      "छह"
+    ],
+    "keywords": [
+      "six",
+      "छह",
+      "chheh",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 218,
+    "kangri": "सत्त",
+    "hindi": "सात",
+    "english": "Seven",
+    "pronunciation": "satt",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 7",
+    "synonyms": [
+      "सात"
+    ],
+    "keywords": [
+      "seven",
+      "सात",
+      "सत्त",
+      "satt",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 219,
+    "kangri": "अठ",
+    "hindi": "आठ",
+    "english": "Eight",
+    "pronunciation": "ath",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 8",
+    "synonyms": [
+      "आठ"
+    ],
+    "keywords": [
+      "eight",
+      "आठ",
+      "अठ",
+      "ath",
+      "numbers",
+      "aठ"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 220,
+    "kangri": "नौ",
+    "hindi": "नौ",
+    "english": "Nine",
+    "pronunciation": "nau",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 9",
+    "synonyms": [
+      "नौ"
+    ],
+    "keywords": [
+      "nine",
+      "नौ",
+      "nau",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 221,
+    "kangri": "दस",
+    "hindi": "दस",
+    "english": "Ten",
+    "pronunciation": "das",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 10",
+    "synonyms": [
+      "दस"
+    ],
+    "keywords": [
+      "ten",
+      "दस",
+      "das",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 222,
+    "kangri": "यारा",
+    "hindi": "ग्यारह",
+    "english": "Eleven",
+    "pronunciation": "yaa-raa",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 11",
+    "synonyms": [
+      "ग्यारह"
+    ],
+    "keywords": [
+      "eleven",
+      "ग्यारह",
+      "यारा",
+      "yaa-raa",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 223,
+    "kangri": "बारा",
+    "hindi": "बारह",
+    "english": "Twelve",
+    "pronunciation": "baa-raa",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 12",
+    "synonyms": [
+      "बारह"
+    ],
+    "keywords": [
+      "twelve",
+      "बारह",
+      "बारा",
+      "baa-raa",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 224,
+    "kangri": "तेरा",
+    "hindi": "तेरह",
+    "english": "Thirteen",
+    "pronunciation": "te-raa",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 13",
+    "synonyms": [
+      "तेरह"
+    ],
+    "keywords": [
+      "thirteen",
+      "तेरह",
+      "तेरा",
+      "te-raa",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 225,
+    "kangri": "चौदा",
+    "hindi": "चौदह",
+    "english": "Fourteen",
+    "pronunciation": "chau-daa",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 14",
+    "synonyms": [
+      "चौदह"
+    ],
+    "keywords": [
+      "fourteen",
+      "चौदह",
+      "चौदा",
+      "chau-daa",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 226,
+    "kangri": "पंद्रह",
+    "hindi": "पंद्रह",
+    "english": "Fifteen",
+    "pronunciation": "pan-drah",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 15",
+    "synonyms": [
+      "पंद्रह"
+    ],
+    "keywords": [
+      "fifteen",
+      "पंद्रह",
+      "pan-drah",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 227,
+    "kangri": "सोला",
+    "hindi": "सोलह",
+    "english": "Sixteen",
+    "pronunciation": "so-laa",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 16",
+    "synonyms": [
+      "सोलह"
+    ],
+    "keywords": [
+      "sixteen",
+      "सोलह",
+      "सोला",
+      "so-laa",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 228,
+    "kangri": "सतरा",
+    "hindi": "सत्रह",
+    "english": "Seventeen",
+    "pronunciation": "sat-raa",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 17",
+    "synonyms": [
+      "सत्रह"
+    ],
+    "keywords": [
+      "seventeen",
+      "सत्रह",
+      "सतरा",
+      "sat-raa",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 229,
+    "kangri": "अठारा",
+    "hindi": "अठारह",
+    "english": "Eighteen",
+    "pronunciation": "ath-aa-raa",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 18",
+    "synonyms": [
+      "अठारह"
+    ],
+    "keywords": [
+      "eighteen",
+      "अठारह",
+      "अठारा",
+      "ath-aa-raa",
+      "numbers",
+      "aठारा"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 230,
+    "kangri": "उन्नी",
+    "hindi": "उम्मीद / उन्नीस",
+    "english": "Nineteen",
+    "pronunciation": "un-nee",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 19",
+    "synonyms": [
+      "उम्मीद / उन्नीस"
+    ],
+    "keywords": [
+      "nineteen",
+      "उम्मीद / उन्नीस",
+      "उन्नी",
+      "un-nee",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 231,
+    "kangri": "बीह",
+    "hindi": "बीस",
+    "english": "Twenty",
+    "pronunciation": "beeh",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 20",
+    "synonyms": [
+      "बीस"
+    ],
+    "keywords": [
+      "twenty",
+      "बीस",
+      "बीह",
+      "beeh",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 232,
+    "kangri": "सो",
+    "hindi": "सौ",
+    "english": "Hundred",
+    "pronunciation": "so",
+    "part_of_speech": "numeral",
+    "category": "Numbers",
+    "description": "Cardinal number 100",
+    "synonyms": [
+      "सौ"
+    ],
+    "keywords": [
+      "hundred",
+      "सौ",
+      "सो",
+      "so",
+      "numbers"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 233,
+    "kangri": "सवेरा",
+    "hindi": "प्रातःकाल",
+    "english": "Morning",
+    "pronunciation": "sa-vee-raa",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Early morning daylight",
+    "synonyms": [
+      "प्रातःकाल"
+    ],
+    "keywords": [
+      "morning",
+      "प्रातःकाल",
+      "सवेरा",
+      "sa-vee-raa",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 234,
+    "kangri": "दोपहर",
+    "hindi": "मध्याह्न",
+    "english": "Noon / Afternoon",
+    "pronunciation": "do-pa-har",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Midday afternoon period",
+    "synonyms": [
+      "मध्याह्न"
+    ],
+    "keywords": [
+      "noon / afternoon",
+      "मध्याह्न",
+      "दोपहर",
+      "do-pa-har",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 235,
+    "kangri": "संझायली",
+    "hindi": "संध्याकाल",
+    "english": "Evening / Dusk",
+    "pronunciation": "san-jhaa-y-lee",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Twilight evening sunset",
+    "synonyms": [
+      "संध्याकाल"
+    ],
+    "keywords": [
+      "evening / dusk",
+      "संध्याकाल",
+      "संझायली",
+      "san-jhaa-y-lee",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 236,
+    "kangri": "रात",
+    "hindi": "रात्रि",
+    "english": "Night",
+    "pronunciation": "raat",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Dark nighttime hours",
+    "synonyms": [
+      "रात्रि"
+    ],
+    "keywords": [
+      "night",
+      "रात्रि",
+      "रात",
+      "raat",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 237,
+    "kangri": "आज",
+    "hindi": "आज",
+    "english": "Today",
+    "pronunciation": "aaj",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Current day period",
+    "synonyms": [
+      "आज"
+    ],
+    "keywords": [
+      "today",
+      "आज",
+      "aaj",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 238,
+    "kangri": "कल",
+    "hindi": "कल (बीता या आने वाला)",
+    "english": "Tomorrow / Yesterday",
+    "pronunciation": "kal",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Adjacent day period",
+    "synonyms": [
+      "कल (बीता या आने वाला)"
+    ],
+    "keywords": [
+      "tomorrow / yesterday",
+      "कल (बीता या आने वाला)",
+      "कल",
+      "kal",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 239,
+    "kangri": "परसों",
+    "hindi": "परसों",
+    "english": "Day after tomorrow",
+    "pronunciation": "par-son",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Two days distance period",
+    "synonyms": [
+      "परसों"
+    ],
+    "keywords": [
+      "day after tomorrow",
+      "परसों",
+      "par-son",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 240,
+    "kangri": "हफ्ता",
+    "hindi": "सप्ताह",
+    "english": "Week",
+    "pronunciation": "haf-taa",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Seven day calendar period",
+    "synonyms": [
+      "सप्ताह"
+    ],
+    "keywords": [
+      "week",
+      "सप्ताह",
+      "हफ्ता",
+      "haf-taa",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 241,
+    "kangri": "महीना",
+    "hindi": "मास",
+    "english": "Month",
+    "pronunciation": "ma-hee-naa",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Monthly calendar unit",
+    "synonyms": [
+      "मास"
+    ],
+    "keywords": [
+      "month",
+      "मास",
+      "महीना",
+      "ma-hee-naa",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 242,
+    "kangri": "साल",
+    "hindi": "वर्ष",
+    "english": "Year",
+    "pronunciation": "saal",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Annual calendar unit",
+    "synonyms": [
+      "वर्ष"
+    ],
+    "keywords": [
+      "year",
+      "वर्ष",
+      "साल",
+      "saal",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 243,
+    "kangri": "घड़ी",
+    "hindi": "समय / घड़ी",
+    "english": "Time / Hour",
+    "pronunciation": "gha-dee",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Clock time unit",
+    "synonyms": [
+      "समय / घड़ी"
+    ],
+    "keywords": [
+      "time / hour",
+      "समय / घड़ी",
+      "घड़ी",
+      "gha-dee",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 244,
+    "kangri": "बखत",
+    "hindi": "समय",
+    "english": "Moment / Epoch",
+    "pronunciation": "bak-hat",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Occasion or time period",
+    "synonyms": [
+      "समय"
+    ],
+    "keywords": [
+      "moment / epoch",
+      "समय",
+      "बखत",
+      "bak-hat",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 245,
+    "kangri": "उत्तर",
+    "hindi": "उत्तर दिशा",
+    "english": "North",
+    "pronunciation": "ut-tar",
+    "part_of_speech": "noun",
+    "category": "Directions",
+    "description": "Cardinal compass north",
+    "synonyms": [
+      "उत्तर दिशा"
+    ],
+    "keywords": [
+      "north",
+      "उत्तर दिशा",
+      "उत्तर",
+      "ut-tar",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 246,
+    "kangri": "दक्षिण",
+    "hindi": "दक्षिण दिशा",
+    "english": "South",
+    "pronunciation": "dak-shin",
+    "part_of_speech": "noun",
+    "category": "Directions",
+    "description": "Cardinal compass south",
+    "synonyms": [
+      "दक्षिण दिशा"
+    ],
+    "keywords": [
+      "south",
+      "दक्षिण दिशा",
+      "दक्षिण",
+      "dak-shin",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 247,
+    "kangri": "पूर्व",
+    "hindi": "पूर्व दिशा",
+    "english": "East",
+    "pronunciation": "poor-va",
+    "part_of_speech": "noun",
+    "category": "Directions",
+    "description": "Cardinal compass east",
+    "synonyms": [
+      "पूर्व दिशा"
+    ],
+    "keywords": [
+      "east",
+      "पूर्व दिशा",
+      "पूर्व",
+      "poor-va",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 248,
+    "kangri": "पश्चिम",
+    "hindi": "पश्चिम दिशा",
+    "english": "West",
+    "pronunciation": "pas-chim",
+    "part_of_speech": "noun",
+    "category": "Directions",
+    "description": "Cardinal compass west",
+    "synonyms": [
+      "पश्चिम दिशा"
+    ],
+    "keywords": [
+      "west",
+      "पश्चिम दिशा",
+      "पश्चिम",
+      "pas-chim",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 249,
+    "kangri": "ऊपर",
+    "hindi": "ऊपर",
+    "english": "Up / Above",
+    "pronunciation": "oo-par",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Vertical elevated position",
+    "synonyms": [
+      "ऊपर"
+    ],
+    "keywords": [
+      "up / above",
+      "ऊपर",
+      "oo-par",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 250,
+    "kangri": "थल्ले",
+    "hindi": "नीचे",
+    "english": "Down / Below",
+    "pronunciation": "thal-le",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Lower position",
+    "synonyms": [
+      "नीचे"
+    ],
+    "keywords": [
+      "down / below",
+      "नीचे",
+      "थल्ले",
+      "thal-le",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 251,
+    "kangri": "अंदर",
+    "hindi": "भीतर",
+    "english": "Inside / Interior",
+    "pronunciation": "an-dar",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Interior inner space",
+    "synonyms": [
+      "भीतर"
+    ],
+    "keywords": [
+      "inside / interior",
+      "भीतर",
+      "अंदर",
+      "an-dar",
+      "directions",
+      "aंदर"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 252,
+    "kangri": "बाहर",
+    "hindi": "बाहर",
+    "english": "Outside / Exterior",
+    "pronunciation": "baa-har",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Exterior outer space",
+    "synonyms": [
+      "बाहर"
+    ],
+    "keywords": [
+      "outside / exterior",
+      "बाहर",
+      "baa-har",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 253,
+    "kangri": "नेड़े",
+    "hindi": "समीप / पास",
+    "english": "Near / Close",
+    "pronunciation": "ne-de",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Proximate nearby location",
+    "synonyms": [
+      "समीप / पास"
+    ],
+    "keywords": [
+      "near / close",
+      "समीप / पास",
+      "नेड़े",
+      "ne-de",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 254,
+    "kangri": "दूर",
+    "hindi": "दूर",
+    "english": "Far / Distant",
+    "pronunciation": "door",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Distant far location",
+    "synonyms": [
+      "दूर"
+    ],
+    "keywords": [
+      "far / distant",
+      "दूर",
+      "door",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 255,
+    "kangri": "नाटी",
+    "hindi": "नाटी नृत्य",
+    "english": "Nati Folk Dance",
+    "pronunciation": "naa-tee",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Traditional Pahari group folk dance",
+    "synonyms": [
+      "नाटी नृत्य"
+    ],
+    "keywords": [
+      "nati folk dance",
+      "नाटी नृत्य",
+      "नाटी",
+      "naa-tee",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 256,
+    "kangri": "जातरा",
+    "hindi": "मेला / उत्सव",
+    "english": "Fair / Festival Procession",
+    "pronunciation": "jaa-traa",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Religious procession fair",
+    "synonyms": [
+      "मेला / उत्सव"
+    ],
+    "keywords": [
+      "fair / festival procession",
+      "मेला / उत्सव",
+      "जातरा",
+      "jaa-traa",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 257,
+    "kangri": "झूला",
+    "hindi": "झूला गीत",
+    "english": "Jhula Song",
+    "pronunciation": "jhoo-laa",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Monsoon swing song tradition",
+    "synonyms": [
+      "झूला गीत"
+    ],
+    "keywords": [
+      "jhula song",
+      "झूला गीत",
+      "झूला",
+      "jhoo-laa",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 258,
+    "kangri": "लोकगीत",
+    "hindi": "पारंपरिक गीत",
+    "english": "Folk Song",
+    "pronunciation": "lok-geet",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Traditional regional vocal music",
+    "synonyms": [
+      "पारंपरिक गीत"
+    ],
+    "keywords": [
+      "folk song",
+      "पारंपरिक गीत",
+      "लोकगीत",
+      "lok-geet",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 259,
+    "kangri": "पहाड़ी",
+    "hindi": "हिमाचली संस्कृति",
+    "english": "Pahari Cultural Tradition",
+    "pronunciation": "pa-haa-dee",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Himalayan cultural heritage",
+    "synonyms": [
+      "हिमाचली संस्कृति"
+    ],
+    "keywords": [
+      "pahari cultural tradition",
+      "हिमाचली संस्कृति",
+      "पहाड़ी",
+      "pa-haa-dee",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 260,
+    "kangri": "वेशभूषा",
+    "hindi": "पारंपरिक वस्त्र",
+    "english": "Traditional Attire",
+    "pronunciation": "vesh-bhoo-shaa",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Regional ethnic clothing",
+    "synonyms": [
+      "पारंपरिक वस्त्र"
+    ],
+    "keywords": [
+      "traditional attire",
+      "पारंपरिक वस्त्र",
+      "वेशभूषा",
+      "vesh-bhoo-shaa",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 261,
+    "kangri": "साड़ी",
+    "hindi": "साड़ी",
+    "english": "Saree",
+    "pronunciation": "saa-dee",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Traditional drape garment",
+    "synonyms": [
+      "साड़ी"
+    ],
+    "keywords": [
+      "saree",
+      "साड़ी",
+      "साड़ी",
+      "saa-dee",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 262,
+    "kangri": "पट्टू",
+    "hindi": "पट्टू (शाल)",
+    "english": "Pattu (Woven Shawl)",
+    "pronunciation": "pat-too",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Handwoven wool blanket shawl",
+    "synonyms": [
+      "पट्टू (शाल)"
+    ],
+    "keywords": [
+      "pattu (woven shawl)",
+      "पट्टू (शाल)",
+      "पट्टू",
+      "pat-too",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 263,
+    "kangri": "कुल्लू",
+    "hindi": "कुल्लू घाटी",
+    "english": "Kullu Cultural Region",
+    "pronunciation": "kul-loo",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Famous valley cultural center",
+    "synonyms": [
+      "कुल्लू घाटी"
+    ],
+    "keywords": [
+      "kullu cultural region",
+      "कुल्लू घाटी",
+      "कुल्लू",
+      "kul-loo",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 264,
+    "kangri": "दीवाली",
+    "hindi": "दीपावली",
+    "english": "Diwali",
+    "pronunciation": "dee-waa-lee",
+    "part_of_speech": "noun",
+    "category": "Festivals",
+    "description": "Festival of light candles",
+    "synonyms": [
+      "दीपावली"
+    ],
+    "keywords": [
+      "diwali",
+      "दीपावली",
+      "दीवाली",
+      "dee-waa-lee",
+      "festivals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 265,
+    "kangri": "सैर",
+    "hindi": "सैर पर्व",
+    "english": "Sair Festival",
+    "pronunciation": "sair",
+    "part_of_speech": "noun",
+    "category": "Festivals",
+    "description": "Himachali autumn harvest thanksgiving festival",
+    "synonyms": [
+      "सैर पर्व"
+    ],
+    "keywords": [
+      "sair festival",
+      "सैर पर्व",
+      "सैर",
+      "sair",
+      "festivals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 266,
+    "kangri": "लोहड़ी",
+    "hindi": "लोहड़ी",
+    "english": "Lohri",
+    "pronunciation": "loh-dee",
+    "part_of_speech": "noun",
+    "category": "Festivals",
+    "description": "Winter solstice bonfire festival",
+    "synonyms": [
+      "लोहड़ी"
+    ],
+    "keywords": [
+      "lohri",
+      "लोहड़ी",
+      "लोहड़ी",
+      "loh-dee",
+      "festivals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 267,
+    "kangri": "होली",
+    "hindi": "होली",
+    "english": "Holi",
+    "pronunciation": "ho-lee",
+    "part_of_speech": "noun",
+    "category": "Festivals",
+    "description": "Spring color festival",
+    "synonyms": [
+      "होली"
+    ],
+    "keywords": [
+      "holi",
+      "होली",
+      "ho-lee",
+      "festivals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 268,
+    "kangri": "बैसाखी",
+    "hindi": "वैशाखी / बिसू",
+    "english": "Baisakhi / Bisu",
+    "pronunciation": "bai-saa-khee",
+    "part_of_speech": "noun",
+    "category": "Festivals",
+    "description": "New year harvest festival",
+    "synonyms": [
+      "वैशाखी / बिसू"
+    ],
+    "keywords": [
+      "baisakhi / bisu",
+      "वैशाखी / बिसू",
+      "बैसाखी",
+      "bai-saa-khee",
+      "festivals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 269,
+    "kangri": "शिवरात्रि",
+    "hindi": "महाशिवरात्रि",
+    "english": "Shivratri",
+    "pronunciation": "shiv-raat-ree",
+    "part_of_speech": "noun",
+    "category": "Festivals",
+    "description": "Mandi International Shivratri festival",
+    "synonyms": [
+      "महाशिवरात्रि"
+    ],
+    "keywords": [
+      "shivratri",
+      "महाशिवरात्रि",
+      "शिवरात्रि",
+      "shiv-raat-ree",
+      "festivals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 270,
+    "kangri": "नवरात्रे",
+    "hindi": "नवरात्रि",
+    "english": "Navratri",
+    "pronunciation": "nav-raat-re",
+    "part_of_speech": "noun",
+    "category": "Festivals",
+    "description": "Nine nights goddess festival",
+    "synonyms": [
+      "नवरात्रि"
+    ],
+    "keywords": [
+      "navratri",
+      "नवरात्रि",
+      "नवरात्रे",
+      "nav-raat-re",
+      "festivals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 271,
+    "kangri": "जन्माष्टमी",
+    "hindi": "कृष्ण जन्माष्टमी",
+    "english": "Janmashtami",
+    "pronunciation": "jan-mash-ta-mee",
+    "part_of_speech": "noun",
+    "category": "Festivals",
+    "description": "Lord Krishna birthday festival",
+    "synonyms": [
+      "कृष्ण जन्माष्टमी"
+    ],
+    "keywords": [
+      "janmashtami",
+      "कृष्ण जन्माष्टमी",
+      "जन्माष्टमी",
+      "jan-mash-ta-mee",
+      "festivals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 272,
+    "kangri": "दुशहरा",
+    "hindi": "कुल्लू दशहरा",
+    "english": "Kullu Dussehra",
+    "pronunciation": "dus-seh-raa",
+    "part_of_speech": "noun",
+    "category": "Festivals",
+    "description": "Week-long Kullu valley festival",
+    "synonyms": [
+      "कुल्लू दशहरा"
+    ],
+    "keywords": [
+      "kullu dussehra",
+      "कुल्लू दशहरा",
+      "दुशहरा",
+      "dus-seh-raa",
+      "festivals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 273,
+    "kangri": "पोता",
+    "hindi": "पोता",
+    "english": "Grandson",
+    "pronunciation": "po-taa",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Paternal grandson",
+    "synonyms": [
+      "पोता"
+    ],
+    "keywords": [
+      "grandson",
+      "पोता",
+      "po-taa",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 274,
+    "kangri": "पोती",
+    "hindi": "पोती",
+    "english": "Granddaughter",
+    "pronunciation": "po-tee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Paternal granddaughter",
+    "synonyms": [
+      "पोती"
+    ],
+    "keywords": [
+      "granddaughter",
+      "पोती",
+      "po-tee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 275,
+    "kangri": "दोहता",
+    "hindi": "नाती",
+    "english": "Maternal Grandson",
+    "pronunciation": "doh-taa",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Maternal grandson",
+    "synonyms": [
+      "नाती"
+    ],
+    "keywords": [
+      "maternal grandson",
+      "नाती",
+      "दोहता",
+      "doh-taa",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 276,
+    "kangri": "दोहती",
+    "hindi": "नातिन",
+    "english": "Maternal Granddaughter",
+    "pronunciation": "doh-tee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Maternal granddaughter",
+    "synonyms": [
+      "नातिन"
+    ],
+    "keywords": [
+      "maternal granddaughter",
+      "नातिन",
+      "दोहती",
+      "doh-tee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 277,
+    "kangri": "साला",
+    "hindi": "साला",
+    "english": "Brother-in-law",
+    "pronunciation": "saa-laa",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Wife's brother",
+    "synonyms": [
+      "साला"
+    ],
+    "keywords": [
+      "brother-in-law",
+      "साला",
+      "saa-laa",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 278,
+    "kangri": "साली",
+    "hindi": "साली",
+    "english": "Sister-in-law",
+    "pronunciation": "saa-lee",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Wife's sister",
+    "synonyms": [
+      "साली"
+    ],
+    "keywords": [
+      "sister-in-law",
+      "साली",
+      "saa-lee",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 279,
+    "kangri": "जेठ",
+    "hindi": "जेठ",
+    "english": "Husband's Elder Brother",
+    "pronunciation": "jeth",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Elder brother of husband",
+    "synonyms": [
+      "जेठ"
+    ],
+    "keywords": [
+      "husband's elder brother",
+      "जेठ",
+      "jeth",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 280,
+    "kangri": "देवर",
+    "hindi": "देवर",
+    "english": "Husband's Younger Brother",
+    "pronunciation": "de-war",
+    "part_of_speech": "noun",
+    "category": "Family",
+    "description": "Younger brother of husband",
+    "synonyms": [
+      "देवर"
+    ],
+    "keywords": [
+      "husband's younger brother",
+      "देवर",
+      "de-war",
+      "family"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 281,
+    "kangri": "अचार",
+    "hindi": "अचार",
+    "english": "Pickle",
+    "pronunciation": "a-chaar",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Spiced vegetable or fruit pickle",
+    "synonyms": [
+      "अचार"
+    ],
+    "keywords": [
+      "pickle",
+      "अचार",
+      "a-chaar",
+      "food",
+      "aचार"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 282,
+    "kangri": "तेल",
+    "hindi": "सरसों का तेल",
+    "english": "Mustard Oil",
+    "pronunciation": "tel",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Cooking mustard seed oil",
+    "synonyms": [
+      "सरसों का तेल"
+    ],
+    "keywords": [
+      "mustard oil",
+      "सरसों का तेल",
+      "तेल",
+      "tel",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 283,
+    "kangri": "नमक",
+    "hindi": "नमक",
+    "english": "Salt",
+    "pronunciation": "na-mak",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Seasoning mineral salt",
+    "synonyms": [
+      "नमक"
+    ],
+    "keywords": [
+      "salt",
+      "नमक",
+      "na-mak",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 284,
+    "kangri": "मिर्च",
+    "hindi": "मिर्च",
+    "english": "Chili Pepper",
+    "pronunciation": "mirch",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Spicy green or red pepper",
+    "synonyms": [
+      "मिर्च"
+    ],
+    "keywords": [
+      "chili pepper",
+      "मिर्च",
+      "mirch",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 285,
+    "kangri": "हल्दी",
+    "hindi": "हल्दी",
+    "english": "Turmeric",
+    "pronunciation": "hal-dee",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Yellow spice powder",
+    "synonyms": [
+      "हल्दी"
+    ],
+    "keywords": [
+      "turmeric",
+      "हल्दी",
+      "hal-dee",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 286,
+    "kangri": "जीरा",
+    "hindi": "जीरा",
+    "english": "Cumin Seeds",
+    "pronunciation": "jee-raa",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Aromatic spice seed",
+    "synonyms": [
+      "जीरा"
+    ],
+    "keywords": [
+      "cumin seeds",
+      "जीरा",
+      "jee-raa",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 287,
+    "kangri": "गुड़",
+    "hindi": "गुड़",
+    "english": "Jaggery",
+    "pronunciation": "gud",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Unrefined sugarcane jaggery",
+    "synonyms": [
+      "गुड़"
+    ],
+    "keywords": [
+      "jaggery",
+      "गुड़",
+      "gud",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 288,
+    "kangri": "शक्कर",
+    "hindi": "चीनी",
+    "english": "Sugar",
+    "pronunciation": "shak-kar",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Sweet granulated sugar",
+    "synonyms": [
+      "चीनी"
+    ],
+    "keywords": [
+      "sugar",
+      "चीनी",
+      "शक्कर",
+      "shak-kar",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 289,
+    "kangri": "आलू",
+    "hindi": "आलू",
+    "english": "Potato",
+    "pronunciation": "aa-loo",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Tuber potato vegetable",
+    "synonyms": [
+      "आलू"
+    ],
+    "keywords": [
+      "potato",
+      "आलू",
+      "aa-loo",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 290,
+    "kangri": "प्याज",
+    "hindi": "प्याज",
+    "english": "Onion",
+    "pronunciation": "pyaa-j",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Allium onion bulb",
+    "synonyms": [
+      "प्याज"
+    ],
+    "keywords": [
+      "onion",
+      "प्याज",
+      "pyaa-j",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 291,
+    "kangri": "लहसुन",
+    "hindi": "लहसुन",
+    "english": "Garlic",
+    "pronunciation": "lah-sun",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Pungent garlic cloves",
+    "synonyms": [
+      "लहसुन"
+    ],
+    "keywords": [
+      "garlic",
+      "लहसुन",
+      "lah-sun",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 292,
+    "kangri": "अदरक",
+    "hindi": "अदरक",
+    "english": "Ginger",
+    "pronunciation": "ad-rak",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Rhizome spice ginger",
+    "synonyms": [
+      "अदरक"
+    ],
+    "keywords": [
+      "ginger",
+      "अदरक",
+      "ad-rak",
+      "food",
+      "aदरक"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 293,
+    "kangri": "टमाटर",
+    "hindi": "टमाटर",
+    "english": "Tomato",
+    "pronunciation": "ta-maa-tar",
+    "part_of_speech": "noun",
+    "category": "Food",
+    "description": "Red tomato fruit vegetable",
+    "synonyms": [
+      "टमाटर"
+    ],
+    "keywords": [
+      "tomato",
+      "टमाटर",
+      "ta-maa-tar",
+      "food"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 294,
+    "kangri": "गदहा",
+    "hindi": "गधा",
+    "english": "Donkey",
+    "pronunciation": "gad-haa",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Work pack animal",
+    "synonyms": [
+      "गधा"
+    ],
+    "keywords": [
+      "donkey",
+      "गधा",
+      "गदहा",
+      "gad-haa",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 295,
+    "kangri": "खच्चर",
+    "hindi": "खच्चर",
+    "english": "Mule",
+    "pronunciation": "khach-char",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Himalayan transport mule",
+    "synonyms": [
+      "खच्चर"
+    ],
+    "keywords": [
+      "mule",
+      "खच्चर",
+      "khach-char",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 296,
+    "kangri": "ऊंट",
+    "hindi": "ऊंट",
+    "english": "Camel",
+    "pronunciation": "oont",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Arid pack camel",
+    "synonyms": [
+      "ऊंट"
+    ],
+    "keywords": [
+      "camel",
+      "ऊंट",
+      "oont",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 297,
+    "kangri": "गीदड़",
+    "hindi": "सियार",
+    "english": "Jackal",
+    "pronunciation": "gee-dad",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Mountain jackal scavenger",
+    "synonyms": [
+      "सियार"
+    ],
+    "keywords": [
+      "jackal",
+      "सियार",
+      "गीदड़",
+      "gee-dad",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 298,
+    "kangri": "लोमड़ी",
+    "hindi": "लोमड़ी",
+    "english": "Fox",
+    "pronunciation": "lom-dee",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Wild mountain fox",
+    "synonyms": [
+      "लोमड़ी"
+    ],
+    "keywords": [
+      "fox",
+      "लोमड़ी",
+      "lom-dee",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 299,
+    "kangri": "मक्खी",
+    "hindi": "मक्खी",
+    "english": "Housefly",
+    "pronunciation": "mak-khee",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Winged insect fly",
+    "synonyms": [
+      "मक्खी"
+    ],
+    "keywords": [
+      "housefly",
+      "मक्खी",
+      "mak-khee",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 300,
+    "kangri": "मच्छर",
+    "hindi": "मच्छर",
+    "english": "Mosquito",
+    "pronunciation": "mach-char",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Biting insect mosquito",
+    "synonyms": [
+      "मच्छर"
+    ],
+    "keywords": [
+      "mosquito",
+      "मच्छर",
+      "mach-char",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 301,
+    "kangri": "तितली",
+    "hindi": "तितली",
+    "english": "Butterfly",
+    "pronunciation": "tit-lee",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Colorful winged butterfly",
+    "synonyms": [
+      "तितली"
+    ],
+    "keywords": [
+      "butterfly",
+      "तितली",
+      "tit-lee",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 302,
+    "kangri": "चींटी",
+    "hindi": "चींटी",
+    "english": "Ant",
+    "pronunciation": "cheen-tee",
+    "part_of_speech": "noun",
+    "category": "Animals",
+    "description": "Small social insect ant",
+    "synonyms": [
+      "चींटी"
+    ],
+    "keywords": [
+      "ant",
+      "चींटी",
+      "cheen-tee",
+      "animals"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 303,
+    "kangri": "सुर्य",
+    "hindi": "सूर्य",
+    "english": "Sun",
+    "pronunciation": "sur-ya",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Central solar star",
+    "synonyms": [
+      "सूर्य"
+    ],
+    "keywords": [
+      "sun",
+      "सूर्य",
+      "सुर्य",
+      "sur-ya",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 304,
+    "kangri": "चंदा",
+    "hindi": "चंद्रमा",
+    "english": "Moon",
+    "pronunciation": "chan-daa",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Lunar nighttime moon",
+    "synonyms": [
+      "चंद्रमा"
+    ],
+    "keywords": [
+      "moon",
+      "चंद्रमा",
+      "चंदा",
+      "chan-daa",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 305,
+    "kangri": "तारे",
+    "hindi": "तारे",
+    "english": "Stars",
+    "pronunciation": "taa-re",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Night sky celestial stars",
+    "synonyms": [
+      "तारे"
+    ],
+    "keywords": [
+      "stars",
+      "तारे",
+      "taa-re",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 306,
+    "kangri": "आकाश",
+    "hindi": "आसमान",
+    "english": "Sky",
+    "pronunciation": "aa-kaash",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Overhead sky atmosphere",
+    "synonyms": [
+      "आसमान"
+    ],
+    "keywords": [
+      "sky",
+      "आसमान",
+      "आकाश",
+      "aa-kaash",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 307,
+    "kangri": "समुंदर",
+    "hindi": "समुद्र",
+    "english": "Ocean / Sea",
+    "pronunciation": "sa-mun-dar",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Saltwater body sea",
+    "synonyms": [
+      "समुद्र"
+    ],
+    "keywords": [
+      "ocean / sea",
+      "समुद्र",
+      "समुंदर",
+      "sa-mun-dar",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 308,
+    "kangri": "झरना",
+    "hindi": "प्रपात",
+    "english": "Waterfall",
+    "pronunciation": "jhar-naa",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Cascade mountain waterfall",
+    "synonyms": [
+      "प्रपात"
+    ],
+    "keywords": [
+      "waterfall",
+      "प्रपात",
+      "झरना",
+      "jhar-naa",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 309,
+    "kangri": "गुफा",
+    "hindi": "गुफा",
+    "english": "Cave",
+    "pronunciation": "gu-faa",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Natural stone cavern",
+    "synonyms": [
+      "गुफा"
+    ],
+    "keywords": [
+      "cave",
+      "गुफा",
+      "gu-faa",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 310,
+    "kangri": "घाटी",
+    "hindi": "उपत्यका",
+    "english": "Valley",
+    "pronunciation": "ghaa-tee",
+    "part_of_speech": "noun",
+    "category": "Nature",
+    "description": "Himalayan mountain valley",
+    "synonyms": [
+      "उपत्यका"
+    ],
+    "keywords": [
+      "valley",
+      "उपत्यका",
+      "घाटी",
+      "ghaa-tee",
+      "nature"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 311,
+    "kangri": "दरांती",
+    "hindi": "दराती",
+    "english": "Sickle",
+    "pronunciation": "da-raan-tee",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Curved harvest sickle blade",
+    "synonyms": [
+      "दराती"
+    ],
+    "keywords": [
+      "sickle",
+      "दराती",
+      "दरांती",
+      "da-raan-tee",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 312,
+    "kangri": "कुल्हाड़ी",
+    "hindi": "कुल्हाड़ी",
+    "english": "Axe",
+    "pronunciation": "kul-haa-dee",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Woodcutting axe tool",
+    "synonyms": [
+      "कुल्हाड़ी"
+    ],
+    "keywords": [
+      "axe",
+      "कुल्हाड़ी",
+      "kul-haa-dee",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 313,
+    "kangri": "फावड़ा",
+    "hindi": "फावड़ा",
+    "english": "Spade / Hoe",
+    "pronunciation": "phaaw-daa",
+    "part_of_speech": "noun",
+    "category": "Agriculture",
+    "description": "Digging soil spade",
+    "synonyms": [
+      "फावड़ा"
+    ],
+    "keywords": [
+      "spade / hoe",
+      "फावड़ा",
+      "phaaw-daa",
+      "agriculture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 314,
+    "kangri": "टोकरी",
+    "hindi": "टोकरी",
+    "english": "Basket",
+    "pronunciation": "tok-ree",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Woven bamboo basket",
+    "synonyms": [
+      "टोकरी"
+    ],
+    "keywords": [
+      "basket",
+      "टोकरी",
+      "tok-ree",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 315,
+    "kangri": "घड़ा",
+    "hindi": "मटका",
+    "english": "Clay Pot",
+    "pronunciation": "gha-daa",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Earthen water pitcher",
+    "synonyms": [
+      "मटका"
+    ],
+    "keywords": [
+      "clay pot",
+      "मटका",
+      "घड़ा",
+      "gha-daa",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 316,
+    "kangri": "चम्मच",
+    "hindi": "चम्मच",
+    "english": "Spoon",
+    "pronunciation": "cham-mach",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Dining metal spoon",
+    "synonyms": [
+      "चम्मच"
+    ],
+    "keywords": [
+      "spoon",
+      "चम्मच",
+      "cham-mach",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 317,
+    "kangri": "चाकू",
+    "hindi": "छुरी",
+    "english": "Knife",
+    "pronunciation": "chaa-koo",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Cutting blade knife",
+    "synonyms": [
+      "छुरी"
+    ],
+    "keywords": [
+      "knife",
+      "छुरी",
+      "चाकू",
+      "chaa-koo",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 318,
+    "kangri": "कढ़ाई",
+    "hindi": "कड़ाही",
+    "english": "Wok / Pan",
+    "pronunciation": "ka-dhaa-ee",
+    "part_of_speech": "noun",
+    "category": "Household",
+    "description": "Deep frying metallic wok",
+    "synonyms": [
+      "कड़ाही"
+    ],
+    "keywords": [
+      "wok / pan",
+      "कड़ाही",
+      "कढ़ाई",
+      "ka-dhaa-ee",
+      "household"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 319,
+    "kangri": "सवेरे",
+    "hindi": "सुबह",
+    "english": "Early Morning",
+    "pronunciation": "sa-vee-re",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Dawn morning hours",
+    "synonyms": [
+      "सुबह"
+    ],
+    "keywords": [
+      "early morning",
+      "सुबह",
+      "सवेरे",
+      "sa-vee-re",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 320,
+    "kangri": "रातड़ी",
+    "hindi": "देर रात",
+    "english": "Late Night",
+    "pronunciation": "raat-dee",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Midnight dark hours",
+    "synonyms": [
+      "देर रात"
+    ],
+    "keywords": [
+      "late night",
+      "देर रात",
+      "रातड़ी",
+      "raat-dee",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 321,
+    "kangri": "हफ्ते",
+    "hindi": "हफ्ता",
+    "english": "Weekly",
+    "pronunciation": "haf-te",
+    "part_of_speech": "noun",
+    "category": "Time",
+    "description": "Seven day cycle",
+    "synonyms": [
+      "हफ्ता"
+    ],
+    "keywords": [
+      "weekly",
+      "हफ्ता",
+      "हफ्ते",
+      "haf-te",
+      "time"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 322,
+    "kangri": "सामने",
+    "hindi": "समुख",
+    "english": "In front",
+    "pronunciation": "saam-ne",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Facing ahead location",
+    "synonyms": [
+      "समुख"
+    ],
+    "keywords": [
+      "in front",
+      "समुख",
+      "सामने",
+      "saam-ne",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 323,
+    "kangri": "पीछे",
+    "hindi": "पीछे",
+    "english": "Behind",
+    "pronunciation": "pee-chhe",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Rearward location",
+    "synonyms": [
+      "पीछे"
+    ],
+    "keywords": [
+      "behind",
+      "पीछे",
+      "pee-chhe",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 324,
+    "kangri": "दाएं",
+    "hindi": "दाहिने",
+    "english": "Right",
+    "pronunciation": "daa-yen",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Right-hand direction",
+    "synonyms": [
+      "दाहिने"
+    ],
+    "keywords": [
+      "right",
+      "दाहिने",
+      "दाएं",
+      "daa-yen",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 325,
+    "kangri": "बाएं",
+    "hindi": "बायें",
+    "english": "Left",
+    "pronunciation": "baa-yen",
+    "part_of_speech": "adverb",
+    "category": "Directions",
+    "description": "Left-hand direction",
+    "synonyms": [
+      "बायें"
+    ],
+    "keywords": [
+      "left",
+      "बायें",
+      "बाएं",
+      "baa-yen",
+      "directions"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 326,
+    "kangri": "पैसा",
+    "hindi": "धन",
+    "english": "Cash Money",
+    "pronunciation": "pai-saa",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Currency money notes",
+    "synonyms": [
+      "धन"
+    ],
+    "keywords": [
+      "cash money",
+      "धन",
+      "पैसा",
+      "pai-saa",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 327,
+    "kangri": "हिसाब",
+    "hindi": "गणना / लेखा",
+    "english": "Account / Calculation",
+    "pronunciation": "hi-saab",
+    "part_of_speech": "noun",
+    "category": "Shopping",
+    "description": "Financial ledger balance",
+    "synonyms": [
+      "गणना / लेखा"
+    ],
+    "keywords": [
+      "account / calculation",
+      "गणना / लेखा",
+      "हिसाब",
+      "hi-saab",
+      "shopping"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 328,
+    "kangri": "गहने",
+    "hindi": "आभूषण",
+    "english": "Jewelry / Ornaments",
+    "pronunciation": "gah-ne",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Traditional gold or silver ornaments",
+    "synonyms": [
+      "आभूषण"
+    ],
+    "keywords": [
+      "jewelry / ornaments",
+      "आभूषण",
+      "गहने",
+      "gah-ne",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 329,
+    "kangri": "टोपी",
+    "hindi": "हिमाचली टोपी",
+    "english": "Himachali Cap",
+    "pronunciation": "to-pee",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Traditional velvet round cap",
+    "synonyms": [
+      "हिमाचली टोपी"
+    ],
+    "keywords": [
+      "himachali cap",
+      "हिमाचली टोपी",
+      "टोपी",
+      "to-pee",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 330,
+    "kangri": "शाल",
+    "hindi": "दुशाला",
+    "english": "Shawl",
+    "pronunciation": "shaal",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Woven wool warm drape",
+    "synonyms": [
+      "दुशाला"
+    ],
+    "keywords": [
+      "shawl",
+      "दुशाला",
+      "शाल",
+      "shaal",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 331,
+    "kangri": "ढोल",
+    "hindi": "ढोलना",
+    "english": "Dhol (Drum)",
+    "pronunciation": "dhol",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Traditional folk percussion drum",
+    "synonyms": [
+      "ढोलना"
+    ],
+    "keywords": [
+      "dhol (drum)",
+      "ढोलना",
+      "ढोल",
+      "dhol",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 332,
+    "kangri": "रन्सिंघा",
+    "hindi": "रणसिंगा",
+    "english": "Ransingha (Trumpet)",
+    "pronunciation": "ran-sing-haa",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Curved brass traditional trumpet",
+    "synonyms": [
+      "रणसिंगा"
+    ],
+    "keywords": [
+      "ransingha (trumpet)",
+      "रणसिंगा",
+      "रन्सिंघा",
+      "ran-sing-haa",
+      "culture"
+    ],
+    "confidence": 1.0
+  },
+  {
+    "id": 333,
+    "kangri": "शहनाई",
+    "hindi": "शहनाई",
+    "english": "Shehnai",
+    "pronunciation": "sheh-naa-ee",
+    "part_of_speech": "noun",
+    "category": "Culture",
+    "description": "Aromatic musical wind reed",
+    "synonyms": [
+      "शहनाई"
+    ],
+    "keywords": [
+      "shehnai",
+      "शहनाई",
+      "sheh-naa-ee",
+      "culture"
+    ],
+    "confidence": 1.0
+  }
+]

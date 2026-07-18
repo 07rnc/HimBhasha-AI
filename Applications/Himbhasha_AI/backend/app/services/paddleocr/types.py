@@ -1,15 +1,15 @@
 from pydantic import BaseModel
-from typing import List
+from typing import Optional
 
-class OcrBoundingBox(BaseModel):
-    points: List[List[float]]
-    text: str
+class OCRResult(BaseModel):
+    extracted_text: str
     confidence: float
+    processing_time: float
+    language: str
+    success: bool
+    error_message: Optional[str] = None
 
+# Backwards compatibility model for endpoints.py routing
 class OcrPayload(BaseModel):
     file_name: str
     content_base64: str
-
-class OcrResult(BaseModel):
-    extracted_text: str
-    boxes: List[OcrBoundingBox]

@@ -2,7 +2,14 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, Send, Sparkles, AlertCircle } from "lucide-react";
+import {
+  ArrowLeft,
+  Send,
+  Sparkles,
+  AlertCircle,
+  Mic,
+  MicOff,
+} from "lucide-react";
 import { useApp } from "../context/AppContext";
 import { ChatService } from "../../services/chat_service";
 import { Message } from "../../types";
@@ -16,13 +23,15 @@ export default function MeetVaani() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isListening, setIsListening] = useState(false);
+  const recognitionRef = useRef<any>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   // Initialize welcome message from Vaani if history is empty
   useEffect(() => {
     if (chatHistory.length === 0) {
       addChatMessage({
-        id: "welcome",
+        id: typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(),
         sender: "vaani",
         text: "बंदगी! मैं वाणी हूँ। मैं कांगड़ी सीखने और अनुवाद करने में आपकी मदद कर सकती हूँ। आज हम क्या बातचीत करेंगे?",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
@@ -34,6 +43,65 @@ export default function MeetVaani() {
   useEffect(() => {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [chatHistory, loading]);
+
+  // Handle browser speech input trigger
+  const startListening = () => {
+    if (typeof window === "undefined") return;
+
+    const SpeechRecognition =
+      (window as any).SpeechRecognition ||
+      (window as any).webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      setError("Speech recognition is not supported in this browser. Please use Google Chrome or Microsoft Edge.");
+      return;
+    }
+
+    try {
+      // Toggle off if already listening
+      if (isListening && recognitionRef.current) {
+        recognitionRef.current.stop();
+        setIsListening(false);
+        return;
+      }
+
+      const recognition = new SpeechRecognition();
+      recognition.lang = "hi-IN"; // Set to Hindi/Indic transcription locale
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.onstart = () => {
+        setIsListening(true);
+        setError(null);
+      };
+
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+
+      recognition.onerror = (event: any) => {
+        console.error("Speech recognition error:", event.error);
+        setIsListening(false);
+        if (event.error === "not-allowed") {
+          setError("Microphone permission was denied. Please allow microphone access in settings.");
+        } else {
+          setError(`Speech recognition error: ${event.error}`);
+        }
+      };
+
+      recognition.onresult = (event: any) => {
+        const transcript = event.results[0][0].transcript;
+        setInput(transcript);
+      };
+
+      recognitionRef.current = recognition;
+      recognition.start();
+    } catch (e: any) {
+      console.error("Failed to start speech recognition:", e);
+      setError("Failed to initialize speech recognition.");
+      setIsListening(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,6 +119,11 @@ export default function MeetVaani() {
     setLoading(true);
     setError(null);
 
+    // Stop speaking any current utterance
+    if (typeof window !== "undefined" && window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+
     try {
       const response = await ChatService.sendMessage(userMessage.text);
       
@@ -62,6 +135,14 @@ export default function MeetVaani() {
       };
       
       addChatMessage(vaaniMessage);
+
+      // Automatically speak response out loud using Web Speech Synthesis API
+      if (typeof window !== "undefined" && window.speechSynthesis) {
+        const utterance = new SpeechSynthesisUtterance(response.response);
+        utterance.lang = "hi-IN";
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utterance);
+      }
     } catch (err) {
       console.error(err);
       setError("Unable to reach Vaani. Please check your internet connection.");
@@ -106,7 +187,7 @@ export default function MeetVaani() {
             ))}
             
             {loading && (
-              <div className="flex items-center gap-1.5 p-3 bg-soft-gray rounded-2xl rounded-tl-none w-16 justify-center">
+              <div className="flex items-center gap-1.5 p-3 bg-soft-gray dark:bg-white/5 rounded-2xl rounded-tl-none w-16 justify-center">
                 <span className="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                 <span className="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
                 <span className="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
@@ -132,15 +213,32 @@ export default function MeetVaani() {
             onChange={(e) => setInput(e.target.value)}
             disabled={loading}
             placeholder="Ask Vaani something in Kangdi, Hindi, or English..."
-            className="w-full h-14 pl-6 pr-16 bg-white dark:bg-[#1C1C1E] border border-border-val rounded-2xl text-sm font-medium text-apple-text shadow-sm focus:outline-none focus:border-primary/50 focus:shadow-md transition-all"
+            className="w-full h-14 pl-6 pr-24 bg-white dark:bg-[#1C1C1E] border border-border-val rounded-2xl text-sm font-medium text-apple-text shadow-sm focus:outline-none focus:border-primary/50 focus:shadow-md transition-all"
           />
-          <button
-            type="submit"
-            disabled={!input.trim() || loading}
-            className="absolute right-3 h-9 w-9 rounded-xl bg-primary text-white flex items-center justify-center disabled:bg-soft-gray disabled:text-gray-400 hover:opacity-90 active:scale-95 transition-all shadow-sm"
-          >
-            <Send size={16} />
-          </button>
+          <div className="absolute right-3 flex items-center gap-2">
+            <button
+              type="button"
+              onClick={startListening}
+              disabled={loading}
+              className={`h-9 w-9 rounded-xl flex items-center justify-center transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed ${
+                isListening
+                  ? "bg-red-500 text-white animate-pulse"
+                  : "bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-white/15 hover:text-primary"
+              }`}
+              title="Speak message using voice recognition"
+            >
+              {isListening ? <MicOff size={16} /> : <Mic size={16} />}
+            </button>
+
+            <button
+              type="submit"
+              disabled={!input.trim() || loading}
+              className="h-9 w-9 rounded-xl bg-primary text-white flex items-center justify-center disabled:bg-soft-gray disabled:text-gray-400 hover:opacity-90 active:scale-95 transition-all shadow-sm"
+              title="Send message"
+            >
+              <Send size={16} />
+            </button>
+          </div>
         </form>
       </main>
     </div>

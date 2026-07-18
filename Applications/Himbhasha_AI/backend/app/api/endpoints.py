@@ -2,7 +2,11 @@ from fastapi import APIRouter, HTTPException, Depends
 import uuid
 import logging
 from typing import Dict, Any
+from app.services.gnani.client import GnaniClient
 
+# Temporary dependency provider
+def get_gnani_client():
+    return GnaniClient()
 from app.schemas.api_models import (
     ChatRequest, ChatResponse,
     TranslateRequest, TranslateResponse,

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "edu_001",
+    "institution_name": "Himachal Pradesh University",
+    "location": "Shimla",
+    "established_year": 1970,
+    "courses": ["Linguistics", "Sanskrit", "Computer Science"]
+  }
+]

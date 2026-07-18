@@ -1,0 +1,56 @@
+[33mcommit c0b591a4b2eeb68ec0971092efac9ea7022e7ff4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Aryan Chauhan <aryan22chauhan07@gmail.com>
+Date:   Sat Jul 18 18:25:55 2026 +0530
+
+    feat(knowledge): add offline Kangri dictionary dataset
+
+ Applications/Himbhasha_AI/ROADMAP.md               |   19 [32m+[m
+ Applications/Himbhasha_AI/backend/.env.example     |   10 [32m+[m[31m-[m
+ .../backend/KnowledgeBase/agriculture/data.json    |   10 [32m+[m
+ .../backend/KnowledgeBase/culture/data.json        |    9 [32m+[m
+ .../backend/KnowledgeBase/dictionary/data.json     | 6913 [32m++++++++++++++++++++[m
+ .../backend/KnowledgeBase/education/data.json      |    9 [32m+[m
+ .../backend/KnowledgeBase/faq/data.json            |    8 [32m+[m
+ .../backend/KnowledgeBase/government/data.json     |   10 [32m+[m
+ .../backend/KnowledgeBase/healthcare/data.json     |    9 [32m+[m
+ .../backend/KnowledgeBase/metadata/data.json       |    8 [32m+[m
+ .../backend/KnowledgeBase/phrases/data.json        |   10 [32m+[m
+ .../backend/KnowledgeBase/tourism/data.json        |    9 [32m+[m
+ .../backend/app/__pycache__/config.cpython-310.pyc |  Bin [31m584[m -> [32m1083[m bytes
+ .../backend/app/__pycache__/main.cpython-310.pyc   |  Bin [31m1061[m -> [32m1061[m bytes
+ .../app/api/__pycache__/endpoints.cpython-310.pyc  |  Bin [31m8023[m -> [32m10743[m bytes
+ .../Himbhasha_AI/backend/app/api/endpoints.py      |    4 [32m+[m
+ Applications/Himbhasha_AI/backend/app/config.py    |   21 [32m+[m
+ .../schemas/__pycache__/api_models.cpython-310.pyc |  Bin [31m2802[m -> [32m4063[m bytes
+ .../gemini/__pycache__/client.cpython-310.pyc      |  Bin [31m1194[m -> [32m1272[m bytes
+ .../gemini/__pycache__/config.cpython-310.pyc      |  Bin [31m712[m -> [32m1211[m bytes
+ .../gemini/__pycache__/service.cpython-310.pyc     |  Bin [31m1831[m -> [32m3622[m bytes
+ .../backend/app/services/gemini/client.py          |   13 [32m+[m[31m-[m
+ .../backend/app/services/gemini/config.py          |   21 [32m+[m
+ .../backend/app/services/gemini/service.py         |  101 [32m+[m[31m-[m
+ .../gnani/__pycache__/client.cpython-310.pyc       |  Bin [31m1446[m -> [32m1446[m bytes
+ .../backend/app/services/knowledge/README.md       |   80 [32m+[m
+ .../backend/app/services/knowledge/config.py       |    8 [32m+[m
+ .../backend/app/services/knowledge/exceptions.py   |   15 [32m+[m
+ .../backend/app/services/knowledge/loader.py       |  116 [32m+[m
+ .../backend/app/services/knowledge/models.py       |   85 [32m+[m
+ .../backend/app/services/paddleocr/__init__.py     |    3 [32m+[m
+ .../paddleocr/__pycache__/client.cpython-310.pyc   |  Bin [31m896[m -> [32m2270[m bytes
+ .../paddleocr/__pycache__/config.cpython-310.pyc   |  Bin [31m645[m -> [32m620[m bytes
+ .../paddleocr/__pycache__/service.cpython-310.pyc  |  Bin [31m1967[m -> [32m2295[m bytes
+ .../paddleocr/__pycache__/types.cpython-310.pyc    |  Bin [31m956[m -> [32m843[m bytes
+ .../backend/app/services/paddleocr/client.py       |   53 [32m+[m[31m-[m
+ .../backend/app/services/paddleocr/config.py       |   15 [32m+[m[31m-[m
+ .../backend/app/services/paddleocr/image_ocr.py    |   63 [32m+[m
+ .../backend/app/services/paddleocr/pdf_ocr.py      |   96 [32m+[m
+ .../backend/app/services/paddleocr/service.py      |   78 [32m+[m[31m-[m
+ .../backend/app/services/paddleocr/types.py        |   18 [32m+[m[31m-[m
+ .../backend/app/services/paddleocr/utils.py        |   64 [32m+[m
+ Applications/Himbhasha_AI/backend/imagetobase64.py |    8 [32m+[m
+ .../Himbhasha_AI/backend/test_paddleocr.py         |   10 [32m+[m
+ Applications/Himbhasha_AI/backend/testimage.png    |  Bin [31m0[m -> [32m2199840[m bytes
+ .../frontend/app/context/AppContext.tsx            |    9 [32m+[m
+ .../Himbhasha_AI/frontend/app/meet-vaani/page.tsx  |  120 [32m+[m[31m-[m
+ .../frontend/components/DocumentOCR.tsx            |  177 [32m+[m
+ Applications/Himbhasha_AI/frontend/public/sw.js    |   70 [32m+[m
+ 49 files changed, 8194 insertions(+), 78 deletions(-)

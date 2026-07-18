@@ -1,0 +1,10 @@
+[
+  {
+    "id": "agr_001",
+    "crop_name": "Himachal Apple (Seb)",
+    "ideal_season": "Spring blossom, Autumn harvest",
+    "soil_type": "Loamy soil with good drainage",
+    "common_diseases": ["Apple Scab", "Powdery Mildew"],
+    "recommendations": "Maintain orchard spacing and apply organic mulching."
+  }
+]

@@ -1,29 +1,67 @@
-from .client import PaddleOCRClient
-from .types import OcrPayload, OcrResult, OcrBoundingBox
 import logging
+from .types import OCRResult, OcrPayload
+from .utils import save_upload, delete_temporary_files
+from .image_ocr import extract_text_from_image
+from .pdf_ocr import extract_text_from_pdf
 
-logger = logging.getLogger("paddle_ocr_service")
+logger = logging.getLogger("paddleocr_service")
 
 class PaddleOCRService:
-    def __init__(self, client: PaddleOCRClient):
+    """Business layer wrapping OCR requests on images and PDF files."""
+    
+    def __init__(self, client=None):
+        # Support dependency injection initialization
         self.client = client
-        self.client.initialize_detector()
 
-    async def extract_text(self, payload: OcrPayload) -> OcrResult:
-        logger.info(f"Extracting text from file: {payload.file_name}")
+    @staticmethod
+    def extract_from_image(content_base64: str, file_name: str) -> OCRResult:
+        logger.info(f"PaddleOCRService: Starting image extraction for: {file_name}")
+        temp_file = None
         try:
-            # Simulated OCR reading
-            mock_text = (
-                "हिमाचल प्रदेश सरकार - कृषि योजना विभाग।\n"
-                "दस्तावेज़ संख्या: HP-AGRI-2026-908\n"
-                "योजना: किसानों को सोलर पंप सिंचाई सब्सिडी योजना।\n"
-                "विवरण: सीमांत किसानों को 80% सब्सिडी। आवेदन पंचायत कार्यालय में जमा करें।"
-            )
-            mock_boxes = [
-                OcrBoundingBox(points=[[0, 0], [10, 0], [10, 10], [0, 10]], text="कृषि योजना", confidence=0.98),
-                OcrBoundingBox(points=[[20, 20], [30, 20], [30, 30], [20, 30]], text="सब्सिडी योजना", confidence=0.95)
-            ]
-            return OcrResult(extracted_text=mock_text, boxes=mock_boxes)
+            temp_file = save_upload(content_base64, file_name)
+            result = extract_text_from_image(temp_file)
+            return result
         except Exception as e:
-            logger.error(f"OCR extraction failed: {e}")
-            raise RuntimeError(f"OCR processing failed: {e}")
+            logger.error(f"Service extract_from_image exception: {e}")
+            return OCRResult(
+                extracted_text="",
+                confidence=0.0,
+                processing_time=0.0,
+                language="hi",
+                success=False,
+                error_message=str(e)
+            )
+        finally:
+            if temp_file:
+                delete_temporary_files(temp_file)
+
+    @staticmethod
+    def extract_from_pdf(content_base64: str, file_name: str) -> OCRResult:
+        logger.info(f"PaddleOCRService: Starting PDF extraction for: {file_name}")
+        temp_file = None
+        try:
+            temp_file = save_upload(content_base64, file_name)
+            result = extract_text_from_pdf(temp_file)
+            return result
+        except Exception as e:
+            logger.error(f"Service extract_from_pdf exception: {e}")
+            return OCRResult(
+                extracted_text="",
+                confidence=0.0,
+                processing_time=0.0,
+                language="hi",
+                success=False,
+                error_message=str(e)
+            )
+        finally:
+            if temp_file:
+                delete_temporary_files(temp_file)
+
+    # Backwards compatibility method matching endpoints.py routing
+    async def extract_text(self, payload: OcrPayload) -> OCRResult:
+        logger.info(f"PaddleOCRService compatibility wrapper query for file: {payload.file_name}")
+        fn = payload.file_name.lower()
+        if fn.endswith(".pdf"):
+            return self.extract_from_pdf(payload.content_base64, payload.file_name)
+        else:
+            return self.extract_from_image(payload.content_base64, payload.file_name)

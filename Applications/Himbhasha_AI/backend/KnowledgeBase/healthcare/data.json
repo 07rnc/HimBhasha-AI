@@ -1,0 +1,9 @@
+[
+  {
+    "id": "hlth_001",
+    "facility_name": "Regional Hospital Kangra",
+    "services_offered": ["General Medicine", "Pediatrics", "Emergency Care"],
+    "district": "Kangra",
+    "contact": "+91-1892-222111"
+  }
+]
