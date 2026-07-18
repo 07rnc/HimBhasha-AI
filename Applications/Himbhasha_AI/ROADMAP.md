@@ -19,3 +19,7 @@
   - **Objective**: Replaced Gemini chat engine in `POST /chat` route with `KnowledgeService` hybrid search engine over `KnowledgeBase/` categories.
 - [x] **Ticket 5.4: 9-Dataset Search Engine & In-Memory Performance Upgrade**
   - **Objective**: Upgraded `SearchEngine` and `KnowledgeService` to search across all 9 dataset categories (Dictionary, Phrases, FAQ, Government, Agriculture, Healthcare, Culture, Education, Tourism) using 6-tier matching algorithms and in-memory dataset caching.
+- [x] **Ticket 5.5: Offline Intent Detection Engine & Dataset Routing**
+  - **Objective**: Created rule-based `IntentClassifier` for fast (<10ms) query classification across 12 supported intents with target dataset routing and low-confidence fallback.
+- [x] **Ticket 5.6: Response Engine & Intent-Aware Conversational Output**
+  - **Objective**: Created `ResponseEngine` to format raw search results into rich, intent-aware markdown responses with suggestions, summaries, and zero hallucinations.
