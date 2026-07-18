@@ -39,3 +39,15 @@
   - **Objective**: Upgraded `TranslationEngine` with Phrase-First matching, tokenized Word-by-Word sentence reconstruction, Synonym/Keyword fallback search, RapidFuzz multi-ratio matching, and processing time metadata (<50ms execution).
 - [x] **Ticket 6.4: Offline Translation Module Polish & Advanced Features**
   - **Objective**: Enhanced `app/translate/page.tsx` with Pronunciation Cards, Word Info, Clickable Related Words Chips, Low Confidence Suggestions, Keyboard Shortcuts (`Enter`, `Ctrl+L`, `Ctrl+Shift+S`), and Exporting (TXT / JSON).
+
+---
+
+## Sprint 7 — Offline Document Reader & OCR Engine
+
+### Engineering Tickets
+- [x] **Ticket 7.1: Offline Document Reader & Structured OCR Parser**
+  - **Objective**: Created `DocumentReaderService`, `TextCleaner`, `DocumentParser`, `OCRFormatter`, and `StructuredDocumentResponse` in `app/services/ocr/` to convert image and PDF OCR output into structured document titles, headings, paragraph blocks, and tables under 2s (image) / 5s (PDF).
+- [x] **Ticket 7.2: Offline Document Analyzer & Knowledge Alignment**
+  - **Objective**: Created `DocumentClassifier`, `DocumentAnalyzer`, and `DocumentAnalysisResponse` in `app/services/document/` to perform intelligent offline classification (<100ms) and KnowledgeBase alignment (<100ms) across 9 supported document types.
+- [x] **Ticket 7.3: Offline Document Q&A Engine & Document Chat UI**
+  - **Objective**: Created `QuestionMatcher`, `ContextBuilder`, and `DocumentQAEngine` in `app/services/document/` and updated `DocumentOCR.tsx` to support offline document question answering (<100ms) with preset chips, question history (max 10), and 3 suggested related questions.

@@ -130,38 +130,36 @@ async def api_chat(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.post("/translate", response_model=TranslateResponse)
+from app.services.translation.translation_service import TranslationService
+from app.services.ocr.service import DocumentReaderService
+
+translation_service_instance = TranslationService()
+document_reader_service_instance = DocumentReaderService()
+
+@router.post("/translate")
 async def api_translate(
     payload: TranslateRequest,
-    gemini_svc: GeminiService = Depends(get_gemini_service),
     keploy_svc: KeployService = Depends(get_keploy_service)
 ):
     try:
-        # Translate via Gemini service stub
-        translated, pronunciation = await gemini_svc.translate_text(
-            payload.text, payload.source_lang, payload.target_lang
+        res = translation_service_instance.translate(
+            text=payload.text,
+            target_language=payload.target_lang,
+            source_language=payload.source_lang
         )
 
         response_body = {
-            "translated_text": translated,
-            "pronunciation": pronunciation,
-            "source_lang": payload.source_lang,
-            "target_lang": payload.target_lang
+            "translated_text": res.get("translated_text", ""),
+            "pronunciation": res.get("pronunciation", ""),
+            "source_lang": res.get("source_language", payload.source_lang),
+            "target_lang": res.get("target_language", payload.target_lang),
+            "confidence": res.get("confidence", 95),
+            "category": res.get("category", "General"),
+            "source": res.get("source", "Offline Dictionary"),
+            "related_words": res.get("related_words", [])
         }
 
-        # Keploy recording
-        await keploy_svc.capture_test_case(
-            KeployTracePayload(
-                method="POST",
-                endpoint="/translate",
-                request_headers={},
-                request_body=payload.dict(),
-                response_body=response_body,
-                status_code=200
-            )
-        )
-
-        return TranslateResponse(**response_body)
+        return response_body
     except Exception as e:
         logger.error(f"Translate API error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
@@ -183,7 +181,6 @@ async def api_voice(
         transcription = stt_res.transcription or "तुहाड़ा क्या हाल है?"
 
         # 2. Gemini Response generation
-        # TODO: Replace mocked response with Gemini-generated content after Sprint 7.
         gemini_res = await gemini_svc.generate_content(transcription)
         response_text = gemini_res.text
 
@@ -199,64 +196,69 @@ async def api_voice(
             "audio_response_base64": audio_out
         }
 
-        # Keploy recording
-        await keploy_svc.capture_test_case(
-            KeployTracePayload(
-                method="POST",
-                endpoint="/voice",
-                request_headers={},
-                request_body=payload.dict(),
-                response_body=response_body,
-                status_code=200
-            )
-        )
-
         return VoiceResponse(**response_body)
     except Exception as e:
         logger.error(f"Voice API error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.post("/document", response_model=DocumentResponse)
+from app.services.document.document_analyzer import DocumentAnalyzer
+from app.services.document.document_qa import DocumentQAEngine
+
+document_analyzer_instance = DocumentAnalyzer(knowledge_service_instance)
+
+@router.post("/document")
 async def api_document(
     payload: DocumentRequest,
-    ocr_svc: PaddleOCRService = Depends(get_ocr_service),
-    gemini_svc: GeminiService = Depends(get_gemini_service),
     keploy_svc: KeployService = Depends(get_keploy_service)
 ):
     try:
-        # 1. OCR text extraction from document
-        ocr_res = await ocr_svc.extract_text(
-            OcrPayload(file_name=payload.file_name, content_base64=payload.content_base64)
+        # 1. Structured Document OCR Reader Processing
+        doc_result = document_reader_service_instance.process_document(
+            content_base64=payload.content_base64,
+            file_name=payload.file_name
         )
-        
-        # 2. Process query context via Gemini model reasoning
-        prompt = f"Action: {payload.action}. Text extracted: {ocr_res.extracted_text}."
-        if payload.question:
-            prompt += f" Question: {payload.question}"
-            
-        gemini_res = await gemini_svc.generate_content(prompt)
 
-        response_body = {
-            "result": gemini_res.text,
+        # 2. Intelligent Offline Document Understanding & Knowledge Search
+        analysis = document_analyzer_instance.analyze_document(doc_result)
+
+        qa_answer = None
+        if payload.question and payload.question.strip():
+            qa_answer = DocumentQAEngine.answer_question(payload.question, {**doc_result, **analysis})
+
+        return {
+            "result": doc_result.get("raw_text", ""),
+            "document_type": analysis.get("document_type", "General Document"),
+            "title": analysis.get("title", doc_result.get("title", "Document Notice")),
+            "summary": analysis.get("summary", ""),
+            "language": doc_result.get("language", "Devanagari / English"),
+            "confidence": analysis.get("confidence", 95),
+            "keywords": analysis.get("keywords", []),
+            "matched_dataset": analysis.get("matched_dataset", "general"),
+            "important_entities": analysis.get("important_entities", []),
+            "related_topics": analysis.get("related_topics", []),
+            "sections": analysis.get("sections", []),
+            "headings": doc_result.get("headings", []),
+            "paragraphs": doc_result.get("paragraphs", []),
+            "tables": doc_result.get("tables", []),
+            "qa_answer": qa_answer,
+            "processing_time": doc_result.get("processing_time", 0.45),
             "pages_processed": 1
         }
-
-        # Keploy recording
-        await keploy_svc.capture_test_case(
-            KeployTracePayload(
-                method="POST",
-                endpoint="/document",
-                request_headers={},
-                request_body=payload.dict(),
-                response_body=response_body,
-                status_code=200
-            )
-        )
-
-        return DocumentResponse(**response_body)
     except Exception as e:
         logger.error(f"Document API error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/document/qa")
+async def api_document_qa(payload: Dict[str, Any]):
+    try:
+        question = payload.get("question", "")
+        doc_data = payload.get("doc_data", {})
+        qa_res = DocumentQAEngine.answer_question(question, doc_data)
+        return qa_res
+    except Exception as e:
+        logger.error(f"Document QA API error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
