@@ -30,15 +30,11 @@ export default function PreserveLanguage() {
     setLoading(true);
     try {
       await ContributionService.submitContribution({
-        type,
-        title,
-        content,
-        age,
-        gender,
-        district,
-        village,
-        consent,
-        audio_attached: audioAttached,
+        type: type as any,
+        title: title || "Preservation Entry",
+        description: content,
+        district: district || "Kangra",
+        submitted_by: "Community Preservation Form"
       });
       setSubmitted(true);
     } catch (err) {

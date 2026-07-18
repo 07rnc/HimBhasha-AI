@@ -51,3 +51,11 @@
   - **Objective**: Created `DocumentClassifier`, `DocumentAnalyzer`, and `DocumentAnalysisResponse` in `app/services/document/` to perform intelligent offline classification (<100ms) and KnowledgeBase alignment (<100ms) across 9 supported document types.
 - [x] **Ticket 7.3: Offline Document Q&A Engine & Document Chat UI**
   - **Objective**: Created `QuestionMatcher`, `ContextBuilder`, and `DocumentQAEngine` in `app/services/document/` and updated `DocumentOCR.tsx` to support offline document question answering (<100ms) with preset chips, question history (max 10), and 3 suggested related questions.
+
+---
+
+## Sprint 8 — Community Language Preservation Platform
+
+### Engineering Tickets
+- [x] **Sprint 8: Community Preservation Platform & Moderation Engine**
+  - **Objective**: Built `ContributionService`, `ContributionValidator`, `DuplicateDetector`, `ModerationManager`, and `ContributionExportService` in `app/services/contributions/` with persistent queue storage (`pending/`, `approved/`, `rejected/`), REST API routes (`POST /contributions`, `GET /contributions`, `GET /statistics`, `PUT approve/reject`), User Contribution Form (`app/contribute/page.tsx`), and Admin Moderation Dashboard (`app/admin/contributions/page.tsx`).

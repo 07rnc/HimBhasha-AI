@@ -3,12 +3,10 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useApp } from "../app/context/AppContext";
-import { Settings, Info, Home, ShieldCheck, ShieldAlert } from "lucide-react";
+import { Home, Info, HeartHandshake, ShieldCheck } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   const pathname = usePathname();
-  const { apiStatus } = useApp();
 
   return (
     <header className="sticky top-0 z-50 w-full glass-panel border-t-0 border-x-0 rounded-none bg-opacity-70">
@@ -21,7 +19,7 @@ export const Navbar: React.FC = () => {
         </Link>
 
         {/* Navigation Items */}
-        <nav className="flex items-center gap-6">
+        <nav className="flex items-center gap-5">
           <Link
             href="/"
             className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
@@ -31,6 +29,27 @@ export const Navbar: React.FC = () => {
             <Home size={16} />
             <span>Home</span>
           </Link>
+          
+          <Link
+            href="/contribute"
+            className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
+              pathname === "/contribute" ? "text-primary" : "text-gray-500 hover:text-primary"
+            }`}
+          >
+            <HeartHandshake size={16} />
+            <span>Contribute</span>
+          </Link>
+
+          <Link
+            href="/admin/contributions"
+            className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
+              pathname.startsWith("/admin") ? "text-primary" : "text-gray-500 hover:text-primary"
+            }`}
+          >
+            <ShieldCheck size={16} />
+            <span>Moderation</span>
+          </Link>
+
           <Link
             href="/about"
             className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
@@ -40,22 +59,13 @@ export const Navbar: React.FC = () => {
             <Info size={16} />
             <span>About</span>
           </Link>
-          <Link
-            href="/settings"
-            className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
-              pathname === "/settings" ? "text-primary" : "text-gray-500 hover:text-primary"
-            }`}
-          >
-            <Settings size={16} />
-            <span>Settings</span>
-          </Link>
 
           {/* Health Status Indicator */}
-          <div className="h-6 w-px bg-border-val" />
-          <div className="flex items-center gap-2" title={`Server status: ${apiStatus}`}>
+          <div className="h-6 w-px bg-border-val hidden sm:block" />
+          <div className="hidden sm:flex items-center gap-2">
             <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-0.5 rounded-full border border-emerald-200/50">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>🟢 Offline Knowledge Engine Active</span>
+              <span>🟢 Offline Engine</span>
             </span>
           </div>
         </nav>

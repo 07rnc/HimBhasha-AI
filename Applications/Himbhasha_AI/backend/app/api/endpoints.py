@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 import uuid
 import logging
-from typing import Dict, Any
+from typing import Dict, Any, Optional, List
 from app.services.gnani.client import GnaniClient
 
 # Temporary dependency provider
@@ -301,54 +301,118 @@ async def api_feedback(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.post("/contribute", response_model=ContributeResponse)
-async def api_contribute(
-    payload: ContributeRequest,
-    slashy_svc: SlashyService = Depends(get_slashy_service),
-    keploy_svc: KeployService = Depends(get_keploy_service)
+from app.services.contributions.contribution_service import ContributionService
+from app.services.contributions.schemas import ContributionCreateRequest, ContributionRejectRequest
+
+contribution_service_instance = ContributionService()
+
+@router.post("/contributions")
+async def create_contribution(payload: ContributionCreateRequest):
+    try:
+        success, msg, model = contribution_service_instance.submit_contribution(payload)
+        if not success:
+            raise HTTPException(status_code=400, detail=msg)
+        return {"success": True, "message": msg, "data": model.model_dump() if model else None}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error creating contribution: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/contributions")
+async def get_contributions(
+    status: Optional[str] = None,
+    type_filter: Optional[str] = None,
+    district_filter: Optional[str] = None,
+    search_query: Optional[str] = None
 ):
     try:
-        # Register a moderation review workflow ticket with Slashy Service
-        title = f"Preserve: {payload.title}"
-        description = (
-            f"Type: {payload.type}\n"
-            f"Content: {payload.content}\n"
-            f"Speaker Demographics - District: {payload.district or 'N/A'}, "
-            f"Village: {payload.village or 'N/A'}, Age: {payload.age or 'N/A'}, "
-            f"Gender: {payload.gender or 'N/A'}\n"
-            f"Consent given: {payload.consent}, Audio attached: {payload.audio_attached}"
+        items = contribution_service_instance.get_contributions(
+            status=status,
+            type_filter=type_filter,
+            district_filter=district_filter,
+            search_query=search_query
         )
-        
-        ticket_res = await slashy_svc.create_workflow_ticket(
-            SlashyTicketPayload(
-                type="moderation",
-                title=title,
-                description=description
-            )
-        )
-        logger.info(f"Registered contribution verification ticket ID: {ticket_res.ticket_id}")
-
-        contribution_id = f"contrib_{str(uuid.uuid4())[:8]}"
-        response_body = {
-            "status": "success",
-            "contribution_id": contribution_id
-        }
-
-        # Keploy test capturing
-        await keploy_svc.capture_test_case(
-            KeployTracePayload(
-                method="POST",
-                endpoint="/contribute",
-                request_headers={},
-                request_body=payload.dict(),
-                response_body=response_body,
-                status_code=200
-            )
-        )
-
-        return ContributeResponse(**response_body)
+        return {"success": True, "count": len(items), "data": [item.model_dump() for item in items]}
     except Exception as e:
-        logger.error(f"Contribute API error: {e}")
+        logger.error(f"Error fetching contributions: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/contributions/pending")
+async def get_pending_contributions():
+    try:
+        items = contribution_service_instance.get_contributions(status="pending")
+        return {"success": True, "count": len(items), "data": [item.model_dump() for item in items]}
+    except Exception as e:
+        logger.error(f"Error fetching pending contributions: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/contributions/approved")
+async def get_approved_contributions():
+    try:
+        items = contribution_service_instance.get_contributions(status="approved")
+        return {"success": True, "count": len(items), "data": [item.model_dump() for item in items]}
+    except Exception as e:
+        logger.error(f"Error fetching approved contributions: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.put("/contributions/{item_id}/approve")
+async def approve_contribution(item_id: str):
+    try:
+        approved = contribution_service_instance.approve_contribution(item_id)
+        if not approved:
+            raise HTTPException(status_code=404, detail="Contribution ID not found.")
+        return {"success": True, "message": "Contribution approved successfully.", "data": approved.model_dump()}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error approving contribution {item_id}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.put("/contributions/{item_id}/reject")
+async def reject_contribution(item_id: str, payload: Optional[ContributionRejectRequest] = None):
+    try:
+        reason = payload.reason if payload else "Does not meet guidelines"
+        rejected = contribution_service_instance.reject_contribution(item_id, reason)
+        if not rejected:
+            raise HTTPException(status_code=404, detail="Contribution ID not found.")
+        return {"success": True, "message": "Contribution rejected.", "data": rejected.model_dump()}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error rejecting contribution {item_id}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.delete("/contributions/{item_id}")
+async def delete_contribution(item_id: str):
+    try:
+        deleted = contribution_service_instance.delete_contribution(item_id)
+        if not deleted:
+            raise HTTPException(status_code=404, detail="Contribution ID not found.")
+        return {"success": True, "message": "Contribution deleted successfully."}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error deleting contribution {item_id}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/contributions/export")
+async def export_contributions(format: str = "json", status: Optional[str] = None):
+    try:
+        content, filename = contribution_service_instance.export_contributions(format_type=format, status=status)
+        media_type = "text/csv" if format.lower() == "csv" else "application/json"
+        return {"success": True, "filename": filename, "content": content, "format": format}
+    except Exception as e:
+        logger.error(f"Error exporting contributions: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/statistics")
+async def get_statistics():
+    try:
+        stats = contribution_service_instance.get_statistics()
+        return {"success": True, "data": stats}
+    except Exception as e:
+        logger.error(f"Error fetching statistics: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
