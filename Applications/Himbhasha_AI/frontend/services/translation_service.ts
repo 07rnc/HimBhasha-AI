@@ -2,10 +2,22 @@ import { api } from "../lib/api";
 import { Language } from "../types";
 
 export interface TranslationResponseData {
+  success?: boolean;
   translated_text: string;
   pronunciation?: string;
-  source_lang: Language;
-  target_lang: Language;
+  source_language?: string;
+  target_language?: string;
+  source_lang?: Language | string;
+  target_lang?: Language | string;
+  confidence?: number;
+  category?: string;
+  source?: string;
+  source_dataset?: string;
+  match_type?: string;
+  processing_time_ms?: number;
+  related_words?: string[];
+  message?: string;
+  suggestions?: string[];
 }
 
 /**
@@ -20,16 +32,11 @@ export const TranslationService = {
    */
   translateText: async (
     text: string,
-    sourceLang: Language,
-    targetLang: Language
+    sourceLang?: Language | string,
+    targetLang?: Language | string
   ): Promise<TranslationResponseData> => {
-    // TODO: [AI Integration - Gemini Translation model]
-    // 1. Hook direct translation pipelines utilizing Gemini translator parameters (low temperature, system prompt grounding).
-    // 2. grounding on regional terminology guidelines defined in HIMCorpus dictionary.
-    // 3. For now, call the FastAPI backend to fetch dictionary aligned translation response.
-    
     try {
-      const response = await api.translate(text, sourceLang, targetLang);
+      const response = await api.translate(text, sourceLang as any, targetLang as any);
       return response;
     } catch (error) {
       console.error("TranslationService: failed to execute translation.", error);

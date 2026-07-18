@@ -53,21 +53,10 @@ export const Navbar: React.FC = () => {
           {/* Health Status Indicator */}
           <div className="h-6 w-px bg-border-val" />
           <div className="flex items-center gap-2" title={`Server status: ${apiStatus}`}>
-            {apiStatus === "online" && (
-              <span className="flex items-center gap-1 text-xs font-semibold text-leaf-green">
-                <ShieldCheck size={14} />
-                <span className="hidden sm:inline">Vaani Active</span>
-              </span>
-            )}
-            {apiStatus === "checking" && (
-              <span className="h-2 w-2 rounded-full bg-gray-400 animate-pulse" />
-            )}
-            {apiStatus === "offline" && (
-              <span className="flex items-center gap-1 text-xs font-semibold text-soft-red">
-                <ShieldAlert size={14} />
-                <span className="hidden sm:inline">Offline Mode</span>
-              </span>
-            )}
+            <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-0.5 rounded-full border border-emerald-200/50">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>🟢 Offline Knowledge Engine Active</span>
+            </span>
           </div>
         </nav>
       </div>

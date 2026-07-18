@@ -9,35 +9,89 @@ import {
   AlertCircle,
   Mic,
   MicOff,
+  History,
+  BookOpen,
+  Globe,
+  Building,
+  Sprout,
+  HeartPulse,
+  Mountain,
+  CheckCircle2,
 } from "lucide-react";
 import { useApp } from "../context/AppContext";
 import { ChatService } from "../../services/chat_service";
 import { Message } from "../../types";
 import { Navbar } from "../../components/Navbar";
 import { ChatBubble } from "../../components/ChatBubble";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+const QUICK_CHIPS = [
+  { label: "📖 Dictionary", query: "बंदगी" },
+  { label: "🌐 Translate", query: "Translate बंदगी in Hindi" },
+  { label: "🏛 Government", query: "PM Kisan" },
+  { label: "🌾 Agriculture", query: "Himachal Apple" },
+  { label: "🏥 Healthcare", query: "Fever symptoms" },
+  { label: "🏔 Culture", query: "Kangra Dham" },
+];
+
+const LOADING_MESSAGES = [
+  "Searching Offline Knowledge...",
+  "Searching Dictionary...",
+  "Searching Government...",
+  "Searching Agriculture...",
+  "Searching FAQ...",
+];
 
 export default function MeetVaani() {
   const router = useRouter();
   const { chatHistory, addChatMessage, clearChatHistory } = useApp();
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingMsgIdx, setLoadingMsgIdx] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [isListening, setIsListening] = useState(false);
+  const [searchHistory, setSearchHistory] = useState<string[]>([]);
+  const [showHistory, setShowHistory] = useState(false);
+
   const recognitionRef = useRef<any>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  // Initialize welcome message from Vaani if history is empty
+  // Load search history from localStorage on client render
   useEffect(() => {
-    if (chatHistory.length === 0) {
-      addChatMessage({
-        id: typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(),
-        sender: "vaani",
-        text: "बंदगी! मैं वाणी हूँ। मैं कांगड़ी सीखने और अनुवाद करने में आपकी मदद कर सकती हूँ। आज हम क्या बातचीत करेंगे?",
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      });
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("ask_vaani_history");
+      if (saved) {
+        try {
+          setSearchHistory(JSON.parse(saved));
+        } catch (e) {
+          console.error("Failed parsing search history:", e);
+        }
+      }
     }
-  }, [chatHistory, addChatMessage]);
+  }, []);
+
+  // Save query to localStorage search history
+  const saveSearchToHistory = (query: string) => {
+    if (typeof window === "undefined" || !query.trim()) return;
+    setSearchHistory((prev) => {
+      const updated = [query.trim(), ...prev.filter((q) => q !== query.trim())].slice(0, 10);
+      localStorage.setItem("ask_vaani_history", JSON.stringify(updated));
+      return updated;
+    });
+  };
+
+  // Cycle loading messages when loading is active
+  useEffect(() => {
+    let interval: any;
+    if (loading) {
+      interval = setInterval(() => {
+        setLoadingMsgIdx((prev) => (prev + 1) % LOADING_MESSAGES.length);
+      }, 700);
+    } else {
+      setLoadingMsgIdx(0);
+    }
+    return () => clearInterval(interval);
+  }, [loading]);
 
   // Scroll to bottom on new message
   useEffect(() => {
@@ -53,12 +107,11 @@ export default function MeetVaani() {
       (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
-      setError("Speech recognition is not supported in this browser. Please use Google Chrome or Microsoft Edge.");
+      setError("Speech recognition is not supported in this browser. Please use Chrome or Edge.");
       return;
     }
 
     try {
-      // Toggle off if already listening
       if (isListening && recognitionRef.current) {
         recognitionRef.current.stop();
         setIsListening(false);
@@ -66,7 +119,7 @@ export default function MeetVaani() {
       }
 
       const recognition = new SpeechRecognition();
-      recognition.lang = "hi-IN"; // Set to Hindi/Indic transcription locale
+      recognition.lang = "hi-IN";
       recognition.continuous = false;
       recognition.interimResults = false;
 
@@ -82,11 +135,7 @@ export default function MeetVaani() {
       recognition.onerror = (event: any) => {
         console.error("Speech recognition error:", event.error);
         setIsListening(false);
-        if (event.error === "not-allowed") {
-          setError("Microphone permission was denied. Please allow microphone access in settings.");
-        } else {
-          setError(`Speech recognition error: ${event.error}`);
-        }
+        setError(`Speech recognition error: ${event.error}`);
       };
 
       recognition.onresult = (event: any) => {
@@ -103,14 +152,17 @@ export default function MeetVaani() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!input.trim() || loading) return;
+  const handleSubmit = async (e: React.FormEvent, customQuery?: string) => {
+    if (e) e.preventDefault();
+    const queryToSend = customQuery || input;
+    if (!queryToSend.trim() || loading) return;
+
+    saveSearchToHistory(queryToSend);
 
     const userMessage: Message = {
       id: Math.random().toString(),
       sender: "user",
-      text: input,
+      text: queryToSend,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     };
 
@@ -119,7 +171,6 @@ export default function MeetVaani() {
     setLoading(true);
     setError(null);
 
-    // Stop speaking any current utterance
     if (typeof window !== "undefined" && window.speechSynthesis) {
       window.speechSynthesis.cancel();
     }
@@ -136,7 +187,6 @@ export default function MeetVaani() {
       
       addChatMessage(vaaniMessage);
 
-      // Automatically speak response out loud using Web Speech Synthesis API
       if (typeof window !== "undefined" && window.speechSynthesis) {
         const utterance = new SpeechSynthesisUtterance(response.response);
         utterance.lang = "hi-IN";
@@ -145,7 +195,7 @@ export default function MeetVaani() {
       }
     } catch (err) {
       console.error(err);
-      setError("Unable to reach Vaani. Please check your internet connection.");
+      setError("Unable to reach offline engine. Ensure backend server is running.");
     } finally {
       setLoading(false);
     }
@@ -156,42 +206,142 @@ export default function MeetVaani() {
       <Navbar />
 
       <main className="flex-grow max-w-3xl w-full mx-auto px-6 py-6 flex flex-col justify-between">
-        {/* Header toolbar */}
-        <div className="flex items-center justify-between mb-6">
-          <button
-            onClick={() => router.push("/")}
-            className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-primary transition-colors"
-          >
-            <ArrowLeft size={16} />
-            <span>Back to Home</span>
-          </button>
+        {/* Header toolbar with Offline Mode Indicator */}
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => router.push("/")}
+              className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-primary transition-colors"
+            >
+              <ArrowLeft size={16} />
+              <span>Back to Home</span>
+            </button>
+
+            {/* Offline Mode Indicator Badge */}
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/50 text-emerald-700 dark:text-emerald-300 text-[11px] font-bold shadow-2xs">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>🟢 Offline Knowledge Engine Active</span>
+            </div>
+          </div>
           
-          <button
-            onClick={clearChatHistory}
-            className="text-[10px] font-bold text-gray-400 hover:text-soft-red transition-colors"
-          >
-            Clear Conversation
-          </button>
+          <div className="flex items-center gap-2">
+            {searchHistory.length > 0 && (
+              <button
+                onClick={() => setShowHistory(!showHistory)}
+                className="flex items-center gap-1 text-[11px] font-semibold text-gray-500 hover:text-primary transition-colors px-2 py-1 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5"
+              >
+                <History size={14} />
+                <span>History ({searchHistory.length})</span>
+              </button>
+            )}
+
+            <button
+              onClick={clearChatHistory}
+              className="text-[11px] font-bold text-gray-400 hover:text-soft-red transition-colors px-2 py-1"
+            >
+              Clear Chat
+            </button>
+          </div>
         </div>
 
+        {/* Local History Dropdown Drawer */}
+        <AnimatePresence>
+          {showHistory && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="mb-4 bg-white dark:bg-[#1C1C1E] border border-border-val rounded-2xl p-4 shadow-sm overflow-hidden"
+            >
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-apple-text">Recent Local Searches</span>
+                <button onClick={() => setShowHistory(false)} className="text-[10px] text-gray-400 hover:text-gray-600">Close</button>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {searchHistory.map((q, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setInput(q);
+                      setShowHistory(false);
+                    }}
+                    className="text-xs font-medium px-2.5 py-1 rounded-xl bg-gray-100 dark:bg-white/10 text-apple-text hover:bg-primary/10 hover:text-primary transition-colors"
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* Chat Workspace Panel */}
-        <div className="flex-grow bg-white dark:bg-[#1C1C1E] border border-border-val rounded-3xl p-6 shadow-sm flex flex-col h-[55vh] overflow-y-auto mb-6">
+        <div className="flex-grow bg-white dark:bg-[#1C1C1E] border border-border-val rounded-3xl p-6 shadow-sm flex flex-col h-[52vh] overflow-y-auto mb-4 relative">
           <div className="flex-grow space-y-4">
+            {/* Empty State Presentation */}
+            {chatHistory.length === 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="h-full flex flex-col items-center justify-center text-center p-6 space-y-4 my-auto"
+              >
+                <div className="h-14 w-14 rounded-3xl bg-primary/10 text-primary flex items-center justify-center shadow-sm">
+                  <Sparkles size={28} />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-apple-text">Welcome to Ask Vaani</h2>
+                  <p className="text-xs text-gray-400 mt-1">Your Offline Himalayan Knowledge Assistant</p>
+                </div>
+                
+                <div className="w-full max-w-sm pt-2">
+                  <p className="text-xs font-semibold text-gray-500 mb-2">Try asking:</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {["• बंदगी", "• PM Kisan", "• Kangra Dham", "• Wheat Disease"].map((prompt, i) => (
+                      <button
+                        key={i}
+                        onClick={() => handleSubmit(null as any, prompt.replace("• ", ""))}
+                        className="p-2.5 rounded-xl border border-border-val text-xs font-medium text-apple-text hover:border-primary/50 hover:bg-primary/5 transition-all text-left"
+                      >
+                        {prompt}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Render Conversation Messages */}
             {chatHistory.map((msg) => (
-              <ChatBubble
+              <motion.div
                 key={msg.id}
-                sender={msg.sender}
-                text={msg.text}
-                timestamp={msg.timestamp}
-              />
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ChatBubble
+                  sender={msg.sender}
+                  text={msg.text}
+                  timestamp={msg.timestamp}
+                />
+              </motion.div>
             ))}
             
+            {/* Animated Loading Experience */}
             {loading && (
-              <div className="flex items-center gap-1.5 p-3 bg-soft-gray dark:bg-white/5 rounded-2xl rounded-tl-none w-16 justify-center">
-                <span className="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <span className="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <span className="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center gap-3 p-3.5 bg-soft-gray dark:bg-white/5 border border-border-val/50 rounded-2xl rounded-tl-none max-w-sm"
+              >
+                <div className="flex items-center gap-1">
+                  <span className="h-2 w-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                  <span className="h-2 w-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                  <span className="h-2 w-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                </div>
+                <span className="text-xs font-semibold text-primary animate-pulse">
+                  {LOADING_MESSAGES[loadingMsgIdx]}
+                </span>
+              </motion.div>
             )}
             
             {error && (
@@ -205,14 +355,27 @@ export default function MeetVaani() {
           </div>
         </div>
 
+        {/* Quick Action Chips Bar */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          {QUICK_CHIPS.map((chip, idx) => (
+            <button
+              key={idx}
+              onClick={() => setInput(chip.query)}
+              className="px-3 py-1.5 rounded-full bg-white dark:bg-[#1C1C1E] border border-border-val text-xs font-medium text-apple-text hover:border-primary/50 hover:text-primary hover:scale-105 transition-all flex-shrink-0 shadow-2xs"
+            >
+              {chip.label}
+            </button>
+          ))}
+        </div>
+
         {/* Message Input Box */}
-        <form onSubmit={handleSubmit} className="relative flex items-center">
+        <form onSubmit={handleSubmit} className="relative flex items-center mt-1">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             disabled={loading}
-            placeholder="Ask Vaani something in Kangdi, Hindi, or English..."
+            placeholder="Ask Vaani in Kangri, Hindi, or English..."
             className="w-full h-14 pl-6 pr-24 bg-white dark:bg-[#1C1C1E] border border-border-val rounded-2xl text-sm font-medium text-apple-text shadow-sm focus:outline-none focus:border-primary/50 focus:shadow-md transition-all"
           />
           <div className="absolute right-3 flex items-center gap-2">
