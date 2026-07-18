@@ -80,6 +80,14 @@ def get_keploy_service() -> KeployService:
     return KeployService(keploy_client)
 
 
+from app.services.knowledge.knowledge_service import KnowledgeService
+
+# Global Singleton Instances
+knowledge_service_instance = KnowledgeService()
+
+def get_knowledge_service() -> KnowledgeService:
+    return knowledge_service_instance
+
 @router.get("/health")
 def health_check():
     return {"status": "healthy", "service": "HimBhasha AI Server"}
@@ -88,30 +96,23 @@ def health_check():
 @router.post("/chat", response_model=ChatResponse)
 async def api_chat(
     payload: ChatRequest,
-    gemini_svc: GeminiService = Depends(get_gemini_service),
-    mem0_svc: Mem0Service = Depends(get_memory_service),
+    knowledge_svc: KnowledgeService = Depends(get_knowledge_service),
     keploy_svc: KeployService = Depends(get_keploy_service)
 ):
     try:
         session_id = payload.session_id or str(uuid.uuid4())
         
-        # 1. Consult Mem0 memory context
-        memories = await mem0_svc.get_memories(
-            MemorySearchPayload(user_id=session_id, query=payload.message)
-        )
-        logger.info(f"Loaded {len(memories)} user context tokens from Mem0.")
-
-        # 2. Invoke Gemini Content generation
-        result = await gemini_svc.generate_content(payload.message)
+        # 1. Query KnowledgeService
+        knowledge_res = knowledge_svc.query(payload.message)
         
-        # 3. Store conversation event in Mem0 memory
-        await mem0_svc.add_memory(
-            MemoryUpdatePayload(user_id=session_id, text=payload.message)
-        )
+        if knowledge_res.get("success") is False:
+            response_text = knowledge_res.get("message", "I couldn't find this information in the offline knowledge base.")
+        else:
+            response_text = knowledge_res.get("answer", "")
 
-        response_body = {"response": result.text, "session_id": session_id}
+        response_body = {"response": response_text, "session_id": session_id}
 
-        # 4. Keploy test recording hooks
+        # 2. Keploy test recording hooks
         await keploy_svc.capture_test_case(
             KeployTracePayload(
                 method="POST",

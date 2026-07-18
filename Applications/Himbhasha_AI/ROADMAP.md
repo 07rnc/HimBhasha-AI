@@ -15,5 +15,5 @@
   - **Objective**: Build `DocumentOCR.tsx` component with drag-and-drop file support (PNG, JPG, PDF), base64 encoding, and `/api/document` endpoint integration.
 - [ ] **Ticket 5.2: OCR Extraction Results Viewer**
   - **Objective**: Implement text preview modal, copy-to-clipboard, confidence score indicator, and translation triggers.
-- [ ] **Ticket 5.3: Preserve Page Document Upload Workflow**
-  - **Objective**: Integrate `DocumentOCR` component into `/preserve` page.
+- [x] **Ticket 5.3: Offline Knowledge Base Chat Engine Integration**
+  - **Objective**: Replaced Gemini chat engine in `POST /chat` route with `KnowledgeService` hybrid search engine over `KnowledgeBase/` categories.
